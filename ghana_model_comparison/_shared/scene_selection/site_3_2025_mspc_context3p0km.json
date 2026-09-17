@@ -1,0 +1,18 @@
+{
+  "site": "site_3",
+  "bbox": [
+    -0.6867288628671077,
+    10.226111443486245,
+    -0.6593433593551145,
+    10.253060778735977
+  ],
+  "processing_context_size_km": 3.0,
+  "year": 2025,
+  "stac_host": "mspc",
+  "s2_collection": "c1",
+  "cloud_cover_max": 20,
+  "buffer_days": 14,
+  "nodata_max": 50,
+  "window_a": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20250525T101621_R065_T30PYS_20250525T141616",
+  "window_b": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20251103T103601_R065_T30PYS_20251103T135916"
+}
