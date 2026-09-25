@@ -1,0 +1,10 @@
+# Python virtual environments
+venv/
+.venv-planet/
+.venv-google-maps/  
+env/
+ENV/
+*.pyc
+*.pyo
+*.egg-info/
+__pycache__/

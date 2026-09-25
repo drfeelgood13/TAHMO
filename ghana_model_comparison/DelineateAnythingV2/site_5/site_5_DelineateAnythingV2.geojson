@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "site_5_DelineateAnythingV2",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32630" } },
-"features": [
-
-]
-}

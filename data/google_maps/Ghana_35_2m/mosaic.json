@@ -1,0 +1,66 @@
+{
+    "location_label": "Ghana_35_2m",
+    "zoom_level": 17,
+    "target_resolution_m": 2,
+    "pixel_width": 1700,
+    "pixel_height": 1700,
+    "requested": {
+        "center_lat": 9.290815265560159,
+        "center_lon": -0.11514064360055087,
+        "width_km": 2
+    },
+    "utm_epsg": "EPSG:32630",
+    "bounding_box": {
+        "north_lat": 9.299808469197405,
+        "south_lat": 9.281822061922913,
+        "west_lon": -0.12425339182609245,
+        "east_lon": -0.1060278953750093
+    },
+    "vertices": {
+        "north_west": {
+            "lat": 9.29980847,
+            "lon": -0.12425339
+        },
+        "north_east": {
+            "lat": 9.29980847,
+            "lon": -0.1060279
+        },
+        "south_east": {
+            "lat": 9.28182206,
+            "lon": -0.1060279
+        },
+        "south_west": {
+            "lat": 9.28182206,
+            "lon": -0.12425339
+        }
+    },
+    "center_coordinates": {
+        "lat": 9.29081527,
+        "lon": -0.11514064
+    },
+    "real_world": {
+        "width_m": 2000.0,
+        "height_m": 2000.0,
+        "area_m2": 3999999.999,
+        "area_hectares": 400.0,
+        "area_km2": 4.0,
+        "ground_sample_distance_m_per_px": {
+            "x": 1.176471,
+            "y": 1.176471
+        }
+    },
+    "real_world_utm": {
+        "crs": "EPSG:32630",
+        "width_px": 1010,
+        "height_px": 1004,
+        "width_m": 2020.0,
+        "height_m": 2008.0,
+        "area_m2": 4056160.0,
+        "area_hectares": 405.616,
+        "area_km2": 4.05616,
+        "ground_sample_distance_m_per_px": {
+            "x": 2.0,
+            "y": 2.0
+        }
+    }
+}
