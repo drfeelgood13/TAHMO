@@ -1,0 +1,450 @@
+
+Starting run 1/32
+
+=== GHANA_area004_GH0004386_0p3m_2m | Center: 10.9771585, -0.318535 | Bounds: (-0.321617, 10.973813, -0.315453, 10.980504) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area004_GH0004386_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area004_GH0004386_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area004_GH0004386_0p3m_2m
+
+Starting run 2/32
+
+=== GHANA_area006_GH0171173_0p3m_2m | Center: 9.602516, -1.033554 | Bounds: (-1.036675, 9.599169, -1.030433, 9.605863) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area006_GH0171173_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area006_GH0171173_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area006_GH0171173_0p3m_2m
+
+Starting run 3/32
+
+=== GHANA_area008_GH0022256_0p3m_2m | Center: 10.817499999999999, -0.9735 | Bounds: (-0.976, 10.815, -0.971, 10.82) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area008_GH0022256_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area008_GH0022256_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area008_GH0022256_0p3m_2m
+
+Starting run 4/32
+
+=== GHANA_area012_GH0418403_0p3m_2m | Center: 7.6676035, -1.6485705 | Bounds: (-1.651377, 7.664563, -1.645764, 7.670644) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area012_GH0418403_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area012_GH0418403_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area012_GH0418403_0p3m_2m
+
+Starting run 5/32
+
+=== GHANA_area017_GH0177376_0p3m_2m | Center: 9.5524935, -0.97348 | Bounds: (-0.976612, 9.549085, -0.970348, 9.555902) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area017_GH0177376_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area017_GH0177376_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area017_GH0177376_0p3m_2m
+
+Starting run 6/32
+
+=== GHANA_area020_GH0193764_0p3m_2m | Center: 9.417567, -1.0985615 | Bounds: (-1.101705, 9.414276, -1.095418, 9.420858) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area020_GH0193764_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area020_GH0193764_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area020_GH0193764_0p3m_2m
+
+Starting run 7/32
+
+=== GHANA_area029_GH0167033_0p3m_2m | Center: 9.6375185, 0.191503 | Bounds: (0.188314, 9.634142, 0.194692, 9.640895) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32631
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area029_GH0167033_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area029_GH0167033_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area029_GH0167033_0p3m_2m
+
+Starting run 8/32
+
+=== GHANA_area034_GH0016064_0p3m_2m | Center: 10.8725, -0.6585 | Bounds: (-0.660999, 10.870001, -0.656001, 10.874999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area034_GH0016064_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area034_GH0016064_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area034_GH0016064_0p3m_2m
+
+Starting run 9/32
+
+=== GHANA_area035_GH0442589_0p3m_2m | Center: 7.4923245000000005, -1.823699 | Bounds: (-1.826397, 7.48965, -1.821001, 7.494999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area035_GH0442589_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area035_GH0442589_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area035_GH0442589_0p3m_2m
+
+Starting run 10/32
+
+=== GHANA_area036_GH0463047_0p3m_2m | Center: 7.349638000000001, -1.393613 | Bounds: (-1.396534, 7.344276, -1.390692, 7.355) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 25 (5x5 grid)
+Full Canvas Resolution: 1280 x 1280 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area036_GH0463047_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area036_GH0463047_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area036_GH0463047_0p3m_2m
+
+Starting run 11/32
+
+=== GHANA_area039_GH0419907_0p3m_2m | Center: 7.6574925, -1.083527 | Bounds: (-1.086388, 7.65429, -1.080666, 7.660695) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area039_GH0419907_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area039_GH0419907_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area039_GH0419907_0p3m_2m
+
+Starting run 12/32
+
+=== GHANA_area046_GH0163287_0p3m_2m | Center: 9.667446, 0.18142750000000002 | Bounds: (0.178272, 9.664143, 0.184583, 9.670749) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32631
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area046_GH0163287_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area046_GH0163287_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area046_GH0163287_0p3m_2m
+
+Starting run 13/32
+
+=== GHANA_area052_GH0131337_0p3m_2m | Center: 9.9225155, -0.8884305 | Bounds: (-0.891514, 9.919253, -0.885347, 9.925778) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area052_GH0131337_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area052_GH0131337_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area052_GH0131337_0p3m_2m
+
+Starting run 14/32
+
+=== GHANA_area055_GH0196555_0p3m_2m | Center: 9.397493, -0.108508 | Bounds: (-0.111574, 9.394208, -0.105442, 9.400778) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area055_GH0196555_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area055_GH0196555_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area055_GH0196555_0p3m_2m
+
+Starting run 15/32
+
+=== GHANA_area058_GH0419917_0p3m_2m | Center: 7.657501, -1.033474 | Bounds: (-1.036433, 7.654319, -1.030515, 7.660683) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area058_GH0419917_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area058_GH0419917_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area058_GH0419917_0p3m_2m
+
+Starting run 16/32
+
+=== GHANA_area060_GH0074950_0p3m_2m | Center: 10.367461500000001, -2.288517 | Bounds: (-2.291481, 10.364291, -2.285553, 10.370632) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area060_GH0074950_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area060_GH0074950_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area060_GH0074950_0p3m_2m
+
+Starting run 17/32
+
+=== GHANA_area064_GH0483305_0p3m_2m | Center: 7.207452, -1.3685345 | Bounds: (-1.371381, 7.204247, -1.365688, 7.210657) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area064_GH0483305_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area064_GH0483305_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area064_GH0483305_0p3m_2m
+
+Starting run 18/32
+
+=== GHANA_area069_GH0482576_0p3m_2m | Center: 7.212536500000001, -1.4086155 | Bounds: (-1.411562, 7.209348, -1.405669, 7.215725) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area069_GH0482576_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area069_GH0482576_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area069_GH0482576_0p3m_2m
+
+Starting run 19/32
+
+=== GHANA_area072_GH0486996_0p3m_2m | Center: 7.1825, -0.9884999999999999 | Bounds: (-0.990999, 7.180001, -0.986001, 7.184999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area072_GH0486996_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area072_GH0486996_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area072_GH0486996_0p3m_2m
+
+Starting run 20/32
+
+=== GHANA_area074_GH0182658_0p3m_2m | Center: 9.5075, -1.2835 | Bounds: (-1.285999, 9.505001, -1.281001, 9.509999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area074_GH0182658_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area074_GH0182658_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area074_GH0182658_0p3m_2m
+
+Starting run 21/32
+
+=== GHANA_area076_GH0486205_0p3m_2m | Center: 7.1875, -1.3235000000000001 | Bounds: (-1.325999, 7.185001, -1.321001, 7.189999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area076_GH0486205_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area076_GH0486205_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area076_GH0486205_0p3m_2m
+
+Starting run 22/32
+
+=== GHANA_area079_GH0059408_0p3m_2m | Center: 10.4975, -0.9984999999999999 | Bounds: (-1.000999, 10.495001, -0.996001, 10.499999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area079_GH0059408_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area079_GH0059408_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area079_GH0059408_0p3m_2m
+
+Starting run 23/32
+
+=== GHANA_area080_GH0153721_0p3m_2m | Center: 9.742616, -0.8485345 | Bounds: (-0.851675, 9.739352, -0.845394, 9.74588) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area080_GH0153721_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area080_GH0153721_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area080_GH0153721_0p3m_2m
+
+Starting run 24/32
+
+=== GHANA_area084_GH0010697_0p3m_2m | Center: 10.9175, -2.1285 | Bounds: (-2.130999, 10.915001, -2.126001, 10.919999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area084_GH0010697_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area084_GH0010697_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area084_GH0010697_0p3m_2m
+
+Starting run 25/32
+
+=== GHANA_area085_GH0060014_0p3m_2m | Center: 10.4924985, -0.9984999999999999 | Bounds: (-1.000999, 10.490001, -0.996001, 10.494996) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area085_GH0060014_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area085_GH0060014_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area085_GH0060014_0p3m_2m
+
+Starting run 26/32
+
+=== GHANA_area086_GH0463066_0p3m_2m | Center: 7.3475, -1.2985 | Bounds: (-1.300999, 7.345001, -1.296001, 7.349999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area086_GH0463066_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area086_GH0463066_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area086_GH0463066_0p3m_2m
+
+Starting run 27/32
+
+=== GHANA_area087_GH0048147_0p3m_2m | Center: 10.592500000000001, -0.27849999999999997 | Bounds: (-0.280999, 10.590001, -0.276001, 10.594999) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area087_GH0048147_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area087_GH0048147_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area087_GH0048147_0p3m_2m
+
+Starting run 28/32
+
+=== GHANA_area094_GH0078300_0p3m_2m | Center: 10.342437499999999, -1.2884925 | Bounds: (-1.291557, 10.339153, -1.285428, 10.345722) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area094_GH0078300_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area094_GH0078300_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area094_GH0078300_0p3m_2m
+
+Starting run 29/32
+
+=== GHANA_area096_GH0104250_0p3m_2m | Center: 10.137529, -0.963498 | Bounds: (-0.966576, 10.134188, -0.96042, 10.14087) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area096_GH0104250_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area096_GH0104250_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area096_GH0104250_0p3m_2m
+
+Starting run 30/32
+
+=== GHANA_area100_GH0079570_0p3m_2m | Center: 10.332485, -1.2633925000000001 | Bounds: (-1.266432, 10.329274, -1.260353, 10.335696) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area100_GH0079570_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area100_GH0079570_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area100_GH0079570_0p3m_2m
+
+Starting run 31/32
+
+=== GHANA_area105_GH0353750_0p3m_2m | Center: 8.147294500000001, -2.343312 | Bounds: (-2.345858, 8.144373, -2.340766, 8.150216) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 9 (3x3 grid)
+Full Canvas Resolution: 768 x 768 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area105_GH0353750_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area105_GH0353750_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area105_GH0353750_0p3m_2m
+
+Starting run 32/32
+
+=== GHANA_area108_GH0091085_0p3m_2m | Center: 10.242486, -0.8284959999999999 | Bounds: (-0.831614, 10.239168, -0.825378, 10.245804) | Width: manifest box ===
+Format: GEOTIFF | Stitch Master File: True
+Target resolution: 2 m/px | Download zoom: 17
+UTM CRS: EPSG:32630
+Zoom Level: 17 | Total Tiles: 16 (4x4 grid)
+Full Canvas Resolution: 1024 x 1024 pixels
+Grid: 1x1 (1 chunk files required)
+
+
+[GHANA_area108_GH0091085_0p3m_2m] Attempting final master sweep stitch...
+[GHANA_area108_GH0091085_0p3m_2m] Master file saved successfully to: data/google_maps_test_set/GHANA_area108_GH0091085_0p3m_2m
+
+All 32 coordinate/resolution runs processed. Output saved under: data/google_maps_test_set

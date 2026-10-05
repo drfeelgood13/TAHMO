@@ -1,0 +1,152 @@
+Mon Oct  5 10:13:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:2C:00.0 Off |                    0 |
+| N/A   47C    P0             49W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+NVIDIA A100 80GB PCIe
+Loading FTP-PRUE+ B7 (taylor-geospatial/ftp-b7) on cuda ...
+
+=== [1/32] GHANA_area004_GH0004386 ===
+Inference tile 1/1
+GHANA_area004_GH0004386: wrote GHANA_area004_GH0004386_classes.tif, GHANA_area004_GH0004386_probabilities.tif, polygons.parquet, GHANA_area004_GH0004386_fields.gpkg (1 fields)
+
+=== [2/32] GHANA_area006_GH0171173 ===
+Inference tile 1/1
+GHANA_area006_GH0171173: wrote GHANA_area006_GH0171173_classes.tif, GHANA_area006_GH0171173_probabilities.tif, polygons.parquet, GHANA_area006_GH0171173_fields.gpkg (55 fields)
+
+=== [3/32] GHANA_area008_GH0022256 ===
+Inference tile 1/1
+GHANA_area008_GH0022256: wrote GHANA_area008_GH0022256_classes.tif, GHANA_area008_GH0022256_probabilities.tif, polygons.parquet, GHANA_area008_GH0022256_fields.gpkg (1 fields)
+
+=== [4/32] GHANA_area012_GH0418403 ===
+Inference tile 1/1
+GHANA_area012_GH0418403: wrote GHANA_area012_GH0418403_classes.tif, GHANA_area012_GH0418403_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [5/32] GHANA_area017_GH0177376 ===
+Inference tile 1/1
+GHANA_area017_GH0177376: wrote GHANA_area017_GH0177376_classes.tif, GHANA_area017_GH0177376_probabilities.tif, polygons.parquet, GHANA_area017_GH0177376_fields.gpkg (1 fields)
+
+=== [6/32] GHANA_area020_GH0193764 ===
+Inference tile 1/1
+GHANA_area020_GH0193764: wrote GHANA_area020_GH0193764_classes.tif, GHANA_area020_GH0193764_probabilities.tif, polygons.parquet, GHANA_area020_GH0193764_fields.gpkg (25 fields)
+
+=== [7/32] GHANA_area029_GH0167033 ===
+Inference tile 1/1
+GHANA_area029_GH0167033: wrote GHANA_area029_GH0167033_classes.tif, GHANA_area029_GH0167033_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [8/32] GHANA_area034_GH0016064 ===
+Inference tile 1/1
+GHANA_area034_GH0016064: wrote GHANA_area034_GH0016064_classes.tif, GHANA_area034_GH0016064_probabilities.tif, polygons.parquet, GHANA_area034_GH0016064_fields.gpkg (1 fields)
+
+=== [9/32] GHANA_area035_GH0442589 ===
+Inference tile 1/1
+GHANA_area035_GH0442589: wrote GHANA_area035_GH0442589_classes.tif, GHANA_area035_GH0442589_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [10/32] GHANA_area036_GH0463047 ===
+Inference tile 1/1
+GHANA_area036_GH0463047: wrote GHANA_area036_GH0463047_classes.tif, GHANA_area036_GH0463047_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [11/32] GHANA_area039_GH0419907 ===
+Inference tile 1/1
+GHANA_area039_GH0419907: wrote GHANA_area039_GH0419907_classes.tif, GHANA_area039_GH0419907_probabilities.tif, polygons.parquet, GHANA_area039_GH0419907_fields.gpkg (13 fields)
+
+=== [12/32] GHANA_area046_GH0163287 ===
+Inference tile 1/1
+GHANA_area046_GH0163287: wrote GHANA_area046_GH0163287_classes.tif, GHANA_area046_GH0163287_probabilities.tif, polygons.parquet, GHANA_area046_GH0163287_fields.gpkg (4 fields)
+
+=== [13/32] GHANA_area052_GH0131337 ===
+Inference tile 1/1
+GHANA_area052_GH0131337: wrote GHANA_area052_GH0131337_classes.tif, GHANA_area052_GH0131337_probabilities.tif, polygons.parquet, GHANA_area052_GH0131337_fields.gpkg (1 fields)
+
+=== [14/32] GHANA_area055_GH0196555 ===
+Inference tile 1/1
+GHANA_area055_GH0196555: wrote GHANA_area055_GH0196555_classes.tif, GHANA_area055_GH0196555_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [15/32] GHANA_area058_GH0419917 ===
+Inference tile 1/1
+GHANA_area058_GH0419917: wrote GHANA_area058_GH0419917_classes.tif, GHANA_area058_GH0419917_probabilities.tif, polygons.parquet, GHANA_area058_GH0419917_fields.gpkg (25 fields)
+
+=== [16/32] GHANA_area060_GH0074950 ===
+Inference tile 1/1
+GHANA_area060_GH0074950: wrote GHANA_area060_GH0074950_classes.tif, GHANA_area060_GH0074950_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [17/32] GHANA_area064_GH0483305 ===
+Inference tile 1/1
+GHANA_area064_GH0483305: wrote GHANA_area064_GH0483305_classes.tif, GHANA_area064_GH0483305_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [18/32] GHANA_area069_GH0482576 ===
+Inference tile 1/1
+GHANA_area069_GH0482576: wrote GHANA_area069_GH0482576_classes.tif, GHANA_area069_GH0482576_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [19/32] GHANA_area072_GH0486996 ===
+Inference tile 1/1
+GHANA_area072_GH0486996: wrote GHANA_area072_GH0486996_classes.tif, GHANA_area072_GH0486996_probabilities.tif, polygons.parquet, GHANA_area072_GH0486996_fields.gpkg (6 fields)
+
+=== [20/32] GHANA_area074_GH0182658 ===
+Inference tile 1/1
+GHANA_area074_GH0182658: wrote GHANA_area074_GH0182658_classes.tif, GHANA_area074_GH0182658_probabilities.tif, polygons.parquet, GHANA_area074_GH0182658_fields.gpkg (1 fields)
+
+=== [21/32] GHANA_area076_GH0486205 ===
+Inference tile 1/1
+GHANA_area076_GH0486205: wrote GHANA_area076_GH0486205_classes.tif, GHANA_area076_GH0486205_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [22/32] GHANA_area079_GH0059408 ===
+Inference tile 1/1
+GHANA_area079_GH0059408: wrote GHANA_area079_GH0059408_classes.tif, GHANA_area079_GH0059408_probabilities.tif, polygons.parquet, GHANA_area079_GH0059408_fields.gpkg (2 fields)
+
+=== [23/32] GHANA_area080_GH0153721 ===
+Inference tile 1/1
+GHANA_area080_GH0153721: wrote GHANA_area080_GH0153721_classes.tif, GHANA_area080_GH0153721_probabilities.tif, polygons.parquet, GHANA_area080_GH0153721_fields.gpkg (20 fields)
+
+=== [24/32] GHANA_area084_GH0010697 ===
+Inference tile 1/1
+GHANA_area084_GH0010697: wrote GHANA_area084_GH0010697_classes.tif, GHANA_area084_GH0010697_probabilities.tif, polygons.parquet, GHANA_area084_GH0010697_fields.gpkg (3 fields)
+
+=== [25/32] GHANA_area085_GH0060014 ===
+Inference tile 1/1
+GHANA_area085_GH0060014: wrote GHANA_area085_GH0060014_classes.tif, GHANA_area085_GH0060014_probabilities.tif, polygons.parquet, GHANA_area085_GH0060014_fields.gpkg (1 fields)
+
+=== [26/32] GHANA_area086_GH0463066 ===
+Inference tile 1/1
+GHANA_area086_GH0463066: wrote GHANA_area086_GH0463066_classes.tif, GHANA_area086_GH0463066_probabilities.tif, polygons.parquet, GHANA_area086_GH0463066_fields.gpkg (2 fields)
+
+=== [27/32] GHANA_area087_GH0048147 ===
+Inference tile 1/1
+GHANA_area087_GH0048147: wrote GHANA_area087_GH0048147_classes.tif, GHANA_area087_GH0048147_probabilities.tif, polygons.parquet, GHANA_area087_GH0048147_fields.gpkg (1 fields)
+
+=== [28/32] GHANA_area094_GH0078300 ===
+Inference tile 1/1
+GHANA_area094_GH0078300: wrote GHANA_area094_GH0078300_classes.tif, GHANA_area094_GH0078300_probabilities.tif, polygons.parquet, GHANA_area094_GH0078300_fields.gpkg (2 fields)
+
+=== [29/32] GHANA_area096_GH0104250 ===
+Inference tile 1/1
+GHANA_area096_GH0104250: wrote GHANA_area096_GH0104250_classes.tif, GHANA_area096_GH0104250_probabilities.tif, polygons.parquet, GHANA_area096_GH0104250_fields.gpkg (1 fields)
+
+=== [30/32] GHANA_area100_GH0079570 ===
+Inference tile 1/1
+GHANA_area100_GH0079570: wrote GHANA_area100_GH0079570_classes.tif, GHANA_area100_GH0079570_probabilities.tif, polygons.parquet, GHANA_area100_GH0079570_fields.gpkg (7 fields)
+
+=== [31/32] GHANA_area105_GH0353750 ===
+Inference tile 1/1
+GHANA_area105_GH0353750: wrote GHANA_area105_GH0353750_classes.tif, GHANA_area105_GH0353750_probabilities.tif, polygons.parquet (no fields survived filtering)
+
+=== [32/32] GHANA_area108_GH0091085 ===
+Inference tile 1/1
+GHANA_area108_GH0091085: wrote GHANA_area108_GH0091085_classes.tif, GHANA_area108_GH0091085_probabilities.tif, polygons.parquet, GHANA_area108_GH0091085_fields.gpkg (6 fields)
+
+Done: 32/32 areas succeeded.

@@ -48,14 +48,66 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
 
 def load_areas(path):
-    """Load {"prefix", "width_km", "coordinates": [[lat, lon], ...]} from JSON."""
+    """Load labeled boxes from a test-set manifest or legacy coordinate JSON."""
     data = json.loads(Path(path).read_text())
+    if "locations" in data:
+        if data.get("coordinate_crs", "EPSG:4326") != "EPSG:4326":
+            raise ValueError("Location bounding boxes must use EPSG:4326")
+        locations = data["locations"]
+        if not isinstance(locations, list) or not locations:
+            raise ValueError("'locations' must be a non-empty list")
+        areas = []
+        labels = set()
+        for index, location in enumerate(locations, start=1):
+            if not isinstance(location, dict):
+                raise ValueError(f"Location {index} must be an object")
+            label = location.get("location_label")
+            box_data = location.get("bounding_box")
+            keys = ("west_lon", "south_lat", "east_lon", "north_lat")
+            if not isinstance(box_data, dict) or not all(
+                isinstance(box_data.get(key), Real)
+                and not isinstance(box_data.get(key), bool)
+                and math.isfinite(box_data[key])
+                for key in keys
+            ):
+                raise ValueError(f"Location {index} needs numeric bounds: {keys}")
+            west, south, east, north = (box_data[key] for key in keys)
+            if not (-180 <= west < east <= 180 and -90 <= south < north <= 90):
+                raise ValueError(f"Location {index} has an invalid WGS84 bounding box")
+            if (
+                not isinstance(label, str)
+                or not label.strip()
+                or label in (".", "..")
+                or "/" in label
+                or "\\" in label
+            ):
+                raise ValueError(f"Location {index} needs a safe location_label")
+            if label in labels:
+                raise ValueError(f"Duplicate location label: {label}")
+            labels.add(label)
+            areas.append({
+                "label": label,
+                "center": ((south + north) / 2, (west + east) / 2),
+                "bbox": (west, south, east, north),
+                "width_km": None,
+            })
+        return areas
+
     prefix = data["prefix"]
     width_km = data["width_km"]
     centers = [(lat, lon) for lat, lon in data["coordinates"]]
     if not centers:
         raise ValueError(f"{path}: coordinates must contain at least one [lat, lon] pair")
-    return prefix, width_km, centers
+    areas = []
+    for index, (lat, lon) in enumerate(centers, start=1):
+        north, south, west, east = bbox_from_center_and_width(lat, lon, width_km)
+        areas.append({
+            "label": f"{prefix}_{index:02d}",
+            "center": (lat, lon),
+            "bbox": (west, south, east, north),
+            "width_km": width_km,
+        })
+    return areas
 
 
 def destination_point(lat, lon, bearing_deg, distance_km):
@@ -256,6 +308,12 @@ def format_resolution_label(target_res_m):
     return f"{value}m"
 
 
+def format_location_label(area_label, resolution_label):
+    """Use the requested output resolution instead of the source dataset suffix."""
+    source_label = area_label.removesuffix("_0p3m")
+    return f"{source_label}_{resolution_label}"
+
+
 def crop_to_requested_bounds(
     image, requested_north, requested_south, requested_west, requested_east,
     tile_x_min, tile_y_min, zoom,
@@ -412,6 +470,7 @@ def process_location(
     center_lat,
     center_lon,
     width_km,
+    requested_bbox,
     zoom,
     output_dir,
     location_label,
@@ -419,9 +478,7 @@ def process_location(
 ):
     """Runs the full download -> chunk -> save -> stitch pipeline for a single center."""
     target_crs = utm_epsg_from_center(center_lat, center_lon)
-    req_north_lat, req_south_lat, req_west_lon, req_east_lon = bbox_from_center_and_width(
-        center_lat, center_lon, width_km
-    )
+    req_west_lon, req_south_lat, req_east_lon, req_north_lat = requested_bbox
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -446,7 +503,8 @@ def process_location(
     chunk_y_size = math.ceil(total_y_tiles / splits_y)
 
     print(
-        f"\n=== {location_label} | Center: {center_lat}, {center_lon} | Width: {width_km} km square ==="
+        f"\n=== {location_label} | Center: {center_lat}, {center_lon} | "
+        f"Bounds: {requested_bbox} | Width: {width_km if width_km else 'manifest box'} ==="
     )
     print(
         f"Format: {EXPORT_FORMAT.upper()} | Stitch Master File: {STITCH_FINAL_IMAGE}"
@@ -502,10 +560,11 @@ def process_location(
                     url = f"https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={zoom}"
                     tile_data = fetch_tile_with_retry(session, url, headers)
 
-                    if tile_data:
-                        tile_img = Image.open(BytesIO(tile_data))
-                        chunk_img.paste(tile_img, (x_idx * tile_size, y_idx * tile_size))
-                        time.sleep(0.01)
+                    if not tile_data:
+                        raise RuntimeError(f"Failed to download Google Maps tile z={zoom}, x={x}, y={y}")
+                    tile_img = Image.open(BytesIO(tile_data))
+                    chunk_img.paste(tile_img, (x_idx * tile_size, y_idx * tile_size))
+                    time.sleep(0.01)
 
                 top_left_lat, top_left_lon = tile_to_latlon(sub_x_min, sub_y_min, zoom)
                 bottom_right_lat, bottom_right_lon = tile_to_latlon(
@@ -644,7 +703,13 @@ def process_location(
                 "requested": {
                     "center_lat": center_lat,
                     "center_lon": center_lon,
-                    "width_km": width_km,
+                    "bounding_box": {
+                        "west_lon": req_west_lon,
+                        "south_lat": req_south_lat,
+                        "east_lon": req_east_lon,
+                        "north_lat": req_north_lat,
+                    },
+                    **({"width_km": width_km} if width_km is not None else {}),
                 },
                 "utm_epsg": target_crs,
                 "bounding_box": {
@@ -706,18 +771,24 @@ def process_location(
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True, help="JSON file with prefix, width_km, coordinates")
+    parser.add_argument("--input", type=Path, required=True, help="Test-set manifest or legacy coordinate JSON")
     parser.add_argument("--output", type=Path, required=True, help="Output directory")
     parser.add_argument("--start-index", type=int, default=1,
                          help="Label number for the first coordinate in --input; use to continue numbering across batches")
+    parser.add_argument("--skip-existing", action="store_true",
+                        help="Skip an area if its master UTM mosaic and metadata already exist")
     return parser.parse_args(argv)
 
 
 def main(argv=None):
     cli = parse_args(argv)
-    prefix, width_km, centers = load_areas(cli.input)
+    input_data = json.loads(cli.input.read_text())
+    manifest_input = "locations" in input_data
+    areas = load_areas(cli.input)
     if cli.start_index < 1:
         raise ValueError("--start-index must be at least 1")
+    if cli.start_index != 1 and manifest_input:
+        raise ValueError("--start-index only applies to legacy coordinate JSON files")
 
     if isinstance(TARGET_RES_M, Real):
         target_resolutions = [TARGET_RES_M]
@@ -733,25 +804,48 @@ def main(argv=None):
     ):
         raise ValueError("Every TARGET_RES_M value must be a positive number.")
 
-    total_runs = len(centers) * len(target_resolutions)
+    total_runs = len(areas) * len(target_resolutions)
     run_number = 0
-    for idx, (lat, lon) in enumerate(centers, start=cli.start_index):
+    failures = []
+    cli.output.mkdir(parents=True, exist_ok=True)
+    for idx, area in enumerate(areas, start=1):
+        if not manifest_input:
+            area = area.copy()
+            area["label"] = f"{area['label'].rsplit('_', 1)[0]}_{idx + cli.start_index - 1:02d}"
+        lat, lon = area["center"]
         for target_res_m in target_resolutions:
             run_number += 1
             resolution_label = format_resolution_label(target_res_m)
-            location_label = f"{prefix}_{idx:02d}_{resolution_label}"
+            location_label = format_location_label(area["label"], resolution_label)
             print(f"\nStarting run {run_number}/{total_runs}")
             zoom = zoom_from_target_resolution(target_res_m)
-            location_output_dir = os.path.join(cli.output, location_label)
-            process_location(
-                lat,
-                lon,
-                width_km,
-                zoom,
-                location_output_dir,
-                location_label,
-                target_res_m,
-            )
+            location_output_dir = cli.output / location_label
+            if cli.skip_existing and all(
+                (location_output_dir / filename).is_file()
+                for filename in ("mosaic_utm.tif", "mosaic.json")
+            ):
+                print(f"{location_label}: complete, skipping")
+                continue
+            try:
+                process_location(
+                    lat,
+                    lon,
+                    area["width_km"],
+                    area["bbox"],
+                    zoom,
+                    str(location_output_dir),
+                    location_label,
+                    target_res_m,
+                )
+            except Exception as exc:
+                failures.append({"location": location_label, "error": str(exc)})
+                print(f"{location_label}: FAILED: {exc}", flush=True)
+
+    failure_path = cli.output / "failed_areas.json"
+    failure_path.write_text(json.dumps(failures, indent=2) + "\n")
+    if failures:
+        print(f"\n{len(failures)} location/resolution run(s) failed; see {failure_path}")
+        raise SystemExit(1)
 
     print(
         f"\nAll {total_runs} coordinate/resolution runs processed. "

@@ -1,0 +1,23 @@
+{
+  "expected_locations": 32,
+  "evaluated_locations": 32,
+  "missing_locations": [],
+  "error_locations": [],
+  "complete": true,
+  "metric_scope": "successfully evaluated locations only",
+  "iou_threshold": 0.5,
+  "coverage_threshold": 0.5,
+  "minimum_label_area_m2": 20,
+  "n_gt": 1534.0,
+  "n_pred": 244.0,
+  "tp": 18.0,
+  "sum_iou": 10.54857643442812,
+  "over_seg": 34.0,
+  "under_seg": 20.0,
+  "precision": 0.07377049180327869,
+  "recall": 0.011734028683181226,
+  "f1": 0.020247469066366704,
+  "mean_iou_of_matches": 0.5860320241348956,
+  "over_seg_fraction": 0.02216427640156454,
+  "under_seg_fraction": 0.08196721311475409
+}

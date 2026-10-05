@@ -14,6 +14,7 @@ from ftw_tools.cli import (
     inference_run_instance_segmentation_all,
     scene_selection,
 )
+from ftw_tools.inference.utils import features_to_dataframe
 
 
 @pytest.fixture(scope="session")
@@ -183,6 +184,16 @@ def test_inference_polygonize(tmp_path: Path):
     assert "Polygonizing input file:" in result.output
     assert "Finished polygonizing output" in result.output
     assert os.path.exists(str(out_path))
+
+
+def test_features_to_dataframe_handles_no_polygons():
+    columns = ["geometry", "determination:method", "metrics:area"]
+
+    result = features_to_dataframe([], columns)
+
+    assert list(result.columns) == columns
+    assert result.geometry.name == "geometry"
+    assert result.empty
 
 
 def test_ftw_inference_all(tmp_path: Path, mock_crop_calendar_downloads):

@@ -183,7 +183,7 @@ def features_to_dataframe(features, columns):
             else:
                 row[col] = feature["properties"].get(col, None)
         data.append(row)
-    return gpd.GeoDataFrame(data, geometry="geometry")
+    return gpd.GeoDataFrame(data, columns=columns, geometry="geometry")
 
 
 def convert_to_fiboa(polygons: gpd.GeoDataFrame, output: str, timestamp: str | None):

@@ -30,21 +30,105 @@ WINDOW_A = ("2025-04-01", "2025-05-31")
 WINDOW_B = ("2025-08-01", "2025-09-30")
 MAX_CLOUD = 0.10
 MIN_COVERAGE = 0.999
+SEARCH_WINDOWS_A = (WINDOW_A, ("2025-03-01", "2025-06-30"), ("2025-01-01", "2025-07-15"))
+SEARCH_WINDOWS_B = (WINDOW_B, ("2025-07-16", "2025-11-30"), ("2025-07-16", "2025-12-31"))
+SEARCH_FILTERS = ((MAX_CLOUD, MIN_COVERAGE), (0.20, 0.99), (0.35, 0.95))
 POLL_SECONDS = 30
 WAIT_HOURS = 12
 API = "https://api.planet.com"
 ORDERS = API + "/compute/ops/orders/v2"
 
 
+class NoEligibleSceneError(RuntimeError):
+    """Raised when no acquisition matches one bounded scene-search attempt."""
+
+
 def load_areas(path):
-    """Load {"prefix", "width_km", "coordinates": [[lat, lon], ...]} from JSON."""
+    """Load labeled AOIs from a test-set manifest or legacy coordinate JSON."""
     data = json.loads(Path(path).read_text())
+    if "locations" in data:
+        if data.get("coordinate_crs", "EPSG:4326") != "EPSG:4326":
+            raise ValueError("Location bounding boxes must use EPSG:4326")
+        locations = data["locations"]
+        if not isinstance(locations, list) or not locations:
+            raise ValueError("'locations' must be a non-empty list")
+        areas = []
+        labels = set()
+        for index, location in enumerate(locations, start=1):
+            if not isinstance(location, dict):
+                raise ValueError(f"Location {index} must be an object")
+            label = location.get("location_label")
+            bounds = location.get("bounding_box")
+            keys = ("west_lon", "south_lat", "east_lon", "north_lat")
+            if not isinstance(bounds, dict) or not all(
+                isinstance(bounds.get(key), (int, float))
+                and not isinstance(bounds.get(key), bool)
+                and math.isfinite(bounds[key])
+                for key in keys
+            ):
+                raise ValueError(f"Location {index} needs numeric bounds: {keys}")
+            west, south, east, north = (bounds[key] for key in keys)
+            if not (-180 <= west < east <= 180 and -90 <= south < north <= 90):
+                raise ValueError(f"Location {index} has an invalid WGS84 bounding box")
+            if (
+                not isinstance(label, str)
+                or not label.strip()
+                or label in (".", "..")
+                or "/" in label
+                or "\\" in label
+            ):
+                raise ValueError(f"Location {index} needs a safe location_label")
+            if label in labels:
+                raise ValueError(f"Duplicate location label: {label}")
+            labels.add(label)
+            aoi = mapping(box(west, south, east, north))
+            areas.append({
+                "label": label,
+                "folder": label,
+                "work_folder": f".orders/{label}",
+                "file_prefix": label.lower(),
+                "aoi": aoi,
+                "utm_epsg": utm_epsg_for_aoi(aoi),
+            })
+        return areas
+
     prefix = data["prefix"]
     width_km = data["width_km"]
     centers = [(lat, lon) for lat, lon in data["coordinates"]]
     if not centers:
         raise ValueError(f"{path}: coordinates must contain at least one [lat, lon] pair")
-    return prefix, width_km, centers
+    areas = []
+    for index, center in enumerate(centers, start=1):
+        aoi = aoi_bbox(*center, width_km)
+        folder = f"{prefix}_{index:02d}_planet3m"
+        areas.append({
+            "label": folder,
+            "folder": folder,
+            "work_folder": f"{prefix}_{index:02d}",
+            "file_prefix": f"{prefix.lower()}-{index:02d}",
+            "aoi": aoi,
+            "utm_epsg": utm_epsg_for_aoi(aoi),
+            "legacy_prefix": prefix,
+            "legacy_number": index,
+        })
+    return areas
+
+
+def apply_start_index(area, start_index):
+    if "legacy_number" not in area:
+        return area
+    area = area.copy()
+    number = area["legacy_number"] + start_index - 1
+    area["label"] = area["folder"] = f"{area['legacy_prefix']}_{number:02d}_planet3m"
+    area["work_folder"] = f"{area['legacy_prefix']}_{number:02d}"
+    area["file_prefix"] = f"{area['legacy_prefix'].lower()}-{number:02d}"
+    return area
+
+
+def utm_epsg_for_aoi(aoi):
+    centroid = shape(aoi).centroid
+    zone = min(60, max(1, math.floor((centroid.x + 180) / 6) + 1))
+    return (32600 if centroid.y >= 0 else 32700) + zone
 
 
 def aoi_bbox(lat, lon, width_km):
@@ -112,7 +196,7 @@ def find_best_scene(http, aoi, start, end, max_cloud, min_coverage):
     ]
     page = api_json(http, "POST", API + "/data/v1/quick-search",
                     json={"item_types": ["PSScene"], "filter": {"type": "AndFilter", "config": filters}})
-    project = Transformer.from_crs(4326, 32630, always_xy=True).transform
+    project = Transformer.from_crs(4326, utm_epsg_for_aoi(aoi), always_xy=True).transform
     footprint = transform(project, shape(aoi))
     candidates = []
     while True:
@@ -129,12 +213,38 @@ def find_best_scene(http, aoi, start, end, max_cloud, min_coverage):
             break
         page = api_json(http, "GET", url)
     if not candidates:
-        raise RuntimeError(f"No eligible scene for {start} through {end}; widen dates or cloud threshold")
+        raise NoEligibleSceneError(
+            f"No eligible scene for {start} through {end} at cloud <= {max_cloud:.0%} "
+            f"and AOI coverage >= {min_coverage:.1%}"
+        )
     candidates.sort(key=lambda x: (x["cloud_cover"], -x["coverage"], x["acquired"], x["id"]))
     return candidates[0]
 
 
-def build_order_request(name, aoi, scene_a, scene_b):
+def find_scene_with_fallback(http, aoi, windows, search=find_best_scene):
+    attempts = [
+        (window, max_cloud, min_coverage)
+        for window in windows
+        for max_cloud, min_coverage in SEARCH_FILTERS
+    ]
+    last_error = None
+    for index, ((start, end), max_cloud, min_coverage) in enumerate(attempts):
+        try:
+            scene = search(http, aoi, start, end, max_cloud, min_coverage)
+        except NoEligibleSceneError as exc:
+            last_error = exc
+            continue
+        if index:
+            print(
+                f"Selected fallback scene for {start} through {end} "
+                f"(cloud <= {max_cloud:.0%}, AOI coverage >= {min_coverage:.1%})",
+                flush=True,
+            )
+        return scene
+    raise last_error
+
+
+def build_order_request(name, aoi, scene_a, scene_b, utm_epsg):
     return {
         "name": name, "source_type": "scenes", "order_type": "full",
         "products": [{"item_ids": [scene_a["id"], scene_b["id"]], "item_type": "PSScene",
@@ -142,7 +252,7 @@ def build_order_request(name, aoi, scene_a, scene_b):
         "tools": [
             {"coregister": {"anchor_item": scene_a["id"]}},
             {"clip": {"aoi": aoi}},
-            {"reproject": {"projection": "EPSG:32630", "resolution": 3, "kernel": "bilinear"}},
+            {"reproject": {"projection": f"EPSG:{utm_epsg}", "resolution": 3, "kernel": "bilinear"}},
             {"file_format": {"format": "COG"}},
         ],
     }
@@ -205,7 +315,7 @@ def download_file(http, url, path):
         raise RuntimeError("Download interrupted; rerun to repair the same order") from None
 
 
-def finalize_order(order, root, state, out_dir, prefix, area_index):
+def finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg):
     """Download the order's delivery, verify the two SR rasters, and move them to out_dir."""
     # Signed delivery URLs must not receive API credentials or enter state/logs.
     results = {r["name"]: r["location"] for r in order.get("_links", {}).get("results", [])}
@@ -236,18 +346,18 @@ def finalize_order(order, root, state, out_dir, prefix, area_index):
         if len(matches) != 1:
             raise RuntimeError(f"Expected one 4-band SR raster for {scene_id}")
         with rasterio.open(matches[0]) as src:
-            if src.count != 4 or src.crs is None or src.crs.to_epsg() != 32630 or any(abs(r - 3) > 1e-6 for r in src.res):
+            if src.count != 4 or src.crs is None or src.crs.to_epsg() != utm_epsg or any(abs(r - 3) > 1e-6 for r in src.res):
                 raise RuntimeError(f"Unexpected raster layout: {matches[0]}")
             for _, block in src.block_windows(1):
                 src.read(window=block)  # Catch truncated/corrupt TIFFs.
         rasters[window] = (matches[0], scene_id)
 
     # Only move final rasters out before discarding the rest of the order artifacts.
-    final_dir = out_dir / f"{prefix}_{area_index:02d}_planet3m"
+    final_dir = out_dir / folder
     final_dir.mkdir(exist_ok=True)
     finals = {}
     for window, (path, scene_id) in rasters.items():
-        dest = final_dir / f"{prefix.lower()}-{area_index:02d}-{scene_id}.tif"
+        dest = final_dir / f"{file_prefix}-{scene_id}.tif"
         path.replace(dest)
         finals[window] = dest
     shutil.rmtree(root)
@@ -267,12 +377,14 @@ def parse_args(argv=None):
 
 def main(argv=None):
     args = parse_args(argv)
-    prefix, width_km, centers = load_areas(args.input)
-    if args.areas and any(not 1 <= i <= len(centers) for i in args.areas):
-        raise ValueError(f"--area must be between 1 and {len(centers)}")
+    areas = load_areas(args.input)
+    if args.areas and any(not 1 <= i <= len(areas) for i in args.areas):
+        raise ValueError(f"--area must be between 1 and {len(areas)}")
     if args.start_index < 1:
         raise ValueError("--start-index must be at least 1")
-    areas = sorted(args.areas) if args.areas else range(1, len(centers) + 1)
+    if args.start_index != 1 and "locations" in json.loads(args.input.read_text()):
+        raise ValueError("--start-index only applies to legacy coordinate JSON files")
+    selected_areas = sorted(args.areas) if args.areas else range(1, len(areas) + 1)
 
     if not 0 <= MAX_CLOUD <= 1 or not 0 < MIN_COVERAGE <= 1:
         raise ValueError("Cloud and coverage thresholds must be fractions between 0 and 1")
@@ -282,47 +394,63 @@ def main(argv=None):
     window_b_start, window_b_end = (date.fromisoformat(d) for d in WINDOW_B)
     if not window_a_start <= window_a_end < window_b_start <= window_b_end:
         raise ValueError("Require non-overlapping windows: A start <= A end < B start <= B end")
+    if max(date.fromisoformat(end) for _, end in SEARCH_WINDOWS_A) >= min(
+        date.fromisoformat(start) for start, _ in SEARCH_WINDOWS_B
+    ):
+        raise ValueError("Fallback acquisition windows must keep A earlier than B")
 
-    for i in areas:
-        print(f"{prefix}_{i + args.start_index - 1:02d}: {centers[i-1]}, {width_km} × {width_km} km, EPSG:32630", flush=True)
+    for i in selected_areas:
+        area = apply_start_index(areas[i - 1], args.start_index)
+        print(f"{area['label']}: {area['aoi']['coordinates'][0]}, EPSG:{area['utm_epsg']}", flush=True)
     key = os.environ.get("PL_API_KEY")
     if not key:
         raise ValueError("Set PL_API_KEY in your environment")
 
     out_dir = args.output.resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
+    failures = []
     # Lock released automatically on process death; state survives wall-time limits.
     with (out_dir / ".lock").open("a") as lock, open_session(key) as http:
         try:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise RuntimeError("Another downloader is using this output directory") from None
-        for i in areas:
-            label_index = i + args.start_index - 1
-            label = f"{prefix}_{label_index:02d}"
-            finished = sorted((out_dir / f"{label}_planet3m").glob(f"{prefix.lower()}-{label_index:02d}-*.tif"))
+        for i in selected_areas:
+            area = apply_start_index(areas[i - 1], args.start_index)
+            label = area["label"]
+            folder = area["folder"]
+            work_folder = area["work_folder"]
+            file_prefix = area["file_prefix"]
+            aoi = area["aoi"]
+            utm_epsg = area["utm_epsg"]
+            finished = sorted((out_dir / folder).glob(f"{file_prefix}-*.tif"))
             if len(finished) == 2:
                 print(label, "already finalized:", *(p.name for p in finished), flush=True)
                 continue
-            root = out_dir / label
-            root.mkdir(exist_ok=True)
+            root = out_dir / work_folder
+            root.mkdir(parents=True, exist_ok=True)
             state_path = root / "state.json"
-            aoi = aoi_bbox(*centers[i-1], width_km)
             config = {"aoi": aoi, "windows": [window_a_start.isoformat(), window_a_end.isoformat(),
                                                window_b_start.isoformat(), window_b_end.isoformat()],
+                      "utm_epsg": utm_epsg,
                       "max_cloud": MAX_CLOUD, "min_coverage": MIN_COVERAGE}
             if state_path.exists():
                 state = json.loads(state_path.read_text())
                 if state["config"] != config:
                     raise RuntimeError(f"{label}: settings differ from saved plan; use a different output directory for intentional new orders")
             else:
-                scene_a = find_best_scene(http, aoi, *config["windows"][:2], MAX_CLOUD, MIN_COVERAGE)
-                scene_b = find_best_scene(http, aoi, *config["windows"][2:], MAX_CLOUD, MIN_COVERAGE)
+                try:
+                    scene_a = find_scene_with_fallback(http, aoi, SEARCH_WINDOWS_A)
+                    scene_b = find_scene_with_fallback(http, aoi, SEARCH_WINDOWS_B)
+                except NoEligibleSceneError as exc:
+                    failures.append({"location": label, "error": str(exc)})
+                    print(f"{label}: no usable scene pair; continuing: {exc}", flush=True)
+                    continue
                 signature = hashlib.sha256(
                     json.dumps([config, scene_a["id"], scene_b["id"]], sort_keys=True).encode()
                 ).hexdigest()[:16]
                 state = {"config": config, "a": scene_a, "b": scene_b,
-                         "request": build_order_request(f"planet-{label}-{signature}", aoi, scene_a, scene_b)}
+                         "request": build_order_request(f"planet-{label}-{signature}", aoi, scene_a, scene_b, utm_epsg)}
                 save_json(state_path, state)
             print(label, "A:", state["a"], "B:", state["b"], flush=True)
             order_id = ensure_order(http, state, state_path)
@@ -340,8 +468,14 @@ def main(argv=None):
                 time.sleep(POLL_SECONDS)
             if state["status"] not in {"success", "partial"}:
                 raise RuntimeError(f"Order {order_id} ended as {state['status']}; inspect it in Planet Orders. No replacement submitted.")
-            finals = finalize_order(order, root, state, out_dir, prefix, label_index)
+            finals = finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg)
             print(label, "final files:", finals["a"], finals["b"], flush=True)
+    save_json(out_dir / "failed_areas.json", failures)
+    if failures:
+        print(f"No eligible scene pair for {len(failures)} location(s):", flush=True)
+        for failure in failures:
+            print(f"  {failure['location']}: {failure['error']}", flush=True)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

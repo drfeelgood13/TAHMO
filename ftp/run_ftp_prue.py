@@ -216,7 +216,9 @@ def discover_areas(input_dir):
     because PlanetScope filenames embed the acquisition timestamp.
     """
     areas = []
-    for sub in sorted(p for p in input_dir.iterdir() if p.is_dir()):
+    for sub in sorted(
+        p for p in input_dir.iterdir() if p.is_dir() and not p.name.startswith(".")
+    ):
         tifs = sorted(p for p in sub.iterdir() if p.suffix.lower() in TIF_SUFFIXES)
         if len(tifs) != 2:
             raise ValueError(f"{sub}: expected exactly 2 GeoTIFFs, found {len(tifs)}")
@@ -277,6 +279,7 @@ def run_area(label, window_a, window_b, out_dir, model, device, args):
     prob_path = out_prefix.with_name(out_prefix.name + "_probabilities.tif")
     cls_path = out_prefix.with_name(out_prefix.name + "_classes.tif")
     vec_path = out_prefix.with_name(out_prefix.name + "_fields.gpkg")
+    parquet_path = out_dir / "polygons.parquet"
 
     base_profile = {
         "driver": "GTiff",
@@ -310,6 +313,7 @@ def run_area(label, window_a, window_b, out_dir, model, device, args):
     )
     if len(gdf):
         gdf.to_file(vec_path, layer="fields", driver="GPKG")
+    gdf.to_parquet(parquet_path, index=False)
 
     return prob_path, cls_path, (vec_path if len(gdf) else None), len(gdf)
 
@@ -364,7 +368,11 @@ def main():
     for i, (label, window_a, window_b) in enumerate(areas, start=1):
         print(f"\n=== [{i}/{len(areas)}] {label} ===")
         out_dir = args.output / label
-        if args.skip_existing and (out_dir / f"{label}_classes.tif").exists():
+        outputs_exist = (
+            (out_dir / f"{label}_classes.tif").exists()
+            and (out_dir / "polygons.parquet").exists()
+        )
+        if args.skip_existing and outputs_exist:
             print(f"{label}: already done, skipping")
             continue
         try:
@@ -376,8 +384,14 @@ def main():
             traceback.print_exc()
             failures.append(label)
             continue
-        print(f"{label}: wrote {cls_path.name}, {prob_path.name}"
-              + (f", {vec_path.name} ({n_fields} fields)" if vec_path else " (no fields survived filtering)"))
+        print(
+            f"{label}: wrote {cls_path.name}, {prob_path.name}, polygons.parquet"
+            + (
+                f", {vec_path.name} ({n_fields} fields)"
+                if vec_path
+                else " (no fields survived filtering)"
+            )
+        )
 
     print(f"\nDone: {len(areas) - len(failures)}/{len(areas)} areas succeeded.")
     if failures:
