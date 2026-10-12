@@ -222,6 +222,9 @@ details.adv[open] > summary { margin-bottom: 10px; }
 #cmp-pair { max-width: 760px; }
 #cmp-bk.bk svg.bars.wide { max-width: 900px; }
 .cmp3 .xy-svg, .two .xy-svg { max-height: none; }
+.four { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start; }
+@media (max-width: 1100px) { .four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .four { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 560px) { .tl-v { font-size: 32px; } section.rep > h2 { font-size: 21px; } }
 </style>
 <style id="eggs">
@@ -403,6 +406,18 @@ html:root[data-egg="gold"] h1::after { content: " \1F3C6"; }
     <tr><td class="t"><span class="mk"><i class="sw3" style="background:var(--s5)"></i>FTW</span></td><td class="t">FTW-PRUE with an EfficientNet-B7 backbone <sup class="cite">[3]</sup></td><td class="t">None</td><td class="t">Sentinel-2, 10 m, two dates</td><td class="t">Experiment 1</td></tr>
   </tbody></table></div>
   <p class="cap tbl">The six models. Colours are the same in every chart.</p>
+  <h3>How the three DelAny V2 models were fine-tuned</h3>
+  <p class="prose">DelAny V2 is a YOLO11x-seg network with 62.1 M parameters in 24 layers: a backbone (layers 0–10), a neck that mixes features across scales (layers 11–22) and a segmentation head (layer 23). All three fine-tuned models start from the released DelAny V2 weights and use the same recipe (AdamW, 512 × 512 px tiles, 4 tiles per step with gradients accumulated over 64 tiles, cosine decay to 1% of the start learning rate, flips and colour jitter as in the original training, at most 30 epochs with early stopping after 10 epochs without improvement). Model (3) changes three settings relative to (2) and nothing else:</p>
+  <div class="tw"><table class="guide"><thead><tr><th>Setting</th><th>Ghana (1)</th><th>Ghana + Viedia (2)</th><th>Ghana + Viedia unfrozen (3)</th></tr></thead><tbody>
+    <tr><td class="t">Training data</td><td class="t">Ghana labels</td><td class="t">Ghana labels + VIEDIA</td><td class="t">Ghana labels + VIEDIA (same as 2)</td></tr>
+    <tr><td class="t">Frozen layers</td><td class="t">0–9: the stem and the four downsampling stages (convolutions and C3k2 blocks) up to and including SPPF; 25.6 M parameters (41%)</td><td class="t">0–9, as in (1)</td><td class="t"><b>None</b>: all 62.1 M parameters are trained</td></tr>
+    <tr><td class="t">Trained layers</td><td class="t">10–23: the C2PSA attention block at the end of the backbone, the neck and the segmentation head; 36.5 M parameters (59%)</td><td class="t">10–23, as in (1)</td><td class="t"><b>0–23</b>: the layers above plus the whole backbone</td></tr>
+    <tr><td class="t">Start learning rate</td><td class="t">1 × 10⁻⁴</td><td class="t">1 × 10⁻⁴</td><td class="t"><b>5 × 10⁻⁵</b>, halved so that the pretrained backbone features are not overwritten quickly</td></tr>
+    <tr><td class="t">Mosaic augmentation</td><td class="t">Off</td><td class="t">Off</td><td class="t"><b>On, probability 0.5</b> (four tiles combined into one), switched off for the last 10 epochs</td></tr>
+    <tr><td class="t">Rule for keeping the best epoch</td><td class="t">Ultralytics fitness (0.1 × mAP@0.5 + 0.9 × mAP@0.5:0.95, box + mask)</td><td class="t">Ultralytics fitness</td><td class="t"><b>Validation mask mAP@0.5</b> (here both rules pick the same epoch)</td></tr>
+    <tr><td class="t">Epochs run, best epoch</td><td class="t">30, epoch 24</td><td class="t">29 (early stop), epoch 19</td><td class="t">29 (early stop), epoch 19</td></tr>
+  </tbody></table></div>
+  <p class="cap tbl">Training settings of the fine-tuned models. Bold marks what changes in (3). Source: the Ultralytics run settings and logs in <code>finetune/runs/</code> (<code>ghana_1m</code>, <code>combined_1m</code>, <code>combined_1m_unfrozen_mosaic</code>).</p>
   <p class="prose"><b>Test set.</b> 32 images from the Ghana 110 dataset, 21 in the north and 11 in the east (ej), holding 1,534 reference fields after fields under 20 m² are removed. Labels come from a GPS field survey in 2021 (September in the north, December in ej) with a crop type and a confidence grade per polygon; a non-crop background polygon marks land that is not a field.
   The images carry no acquisition dates, and FTP and FTW use imagery from 2024 and 2025, so a time gap between labels and imagery is a known limitation (see the discussion in Experiment 1).</p>
 </section>
@@ -471,11 +486,11 @@ html:root[data-egg="gold"] h1::after { content: " \1F3C6"; }
 <section class="rep" id="r3">
   <h2><span class="sn">3</span>Field size and crop type</h2>
   <p class="prose">Field size is the strongest single factor. In all four models the smallest quarter of fields (up to about 740 m², roughly 27 × 27 m) is nearly invisible: only 2–4% are found. The fine-tuned models gain mostly on mid-sized and large fields, where the found share goes from 15–19% to 38–45%, and to 47–53% for DelAny V2: Ghana + Viedia unfrozen (3).</p>
-  <div class="two"><figure class="fig"><div id="cmp-bk-size-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by field-size quartile.</figcaption></figure>
-  <figure class="fig"><div id="cmp-bk-size-split" class="bk"></div><figcaption class="cap">Share of fields split into several polygons, by field-size quartile.</figcaption></figure></div>
-  <p class="prose">The split chart shows the new problem. Large fields are rarely split by DelAny V2 (11%) but are split about 40% of the time by all three fine-tuned models. The models have learned to find fields, but they cut big fields up. A merge step that joins neighbouring fragments of the same field would likely convert many of these into found fields.</p>
-  <div class="two"><figure class="fig"><div id="cmp-bk-crop-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by crop type.</figcaption></figure>
+  <div class="four"><figure class="fig"><div id="cmp-bk-size-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by field-size quartile.</figcaption></figure>
+  <figure class="fig"><div id="cmp-bk-size-split" class="bk"></div><figcaption class="cap">Share of fields split into several polygons, by field-size quartile.</figcaption></figure>
+  <figure class="fig"><div id="cmp-bk-crop-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by crop type.</figcaption></figure>
   <figure class="fig"><div id="cmp-bk-conf-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by label confidence.</figcaption></figure></div>
+  <p class="prose">The split chart shows the new problem. Large fields are rarely split by DelAny V2 (11%) but are split about 40% of the time by all three fine-tuned models. The models have learned to find fields, but they cut big fields up. A merge step that joins neighbouring fragments of the same field would likely convert many of these into found fields.</p>
   <p class="prose">By crop, rice is easiest for every model (46% already for DelAny V2, 49% for DelAny V2: Ghana + Viedia (2), 51% for DelAny V2: Ghana + Viedia unfrozen (3)), probably because rice fields are green, smooth and sharply bounded. All other crops are hard for DelAny V2 (4–10%) and improve two- to four-fold after fine-tuning (14–36%), but "other crops" stay the hardest. Interestingly, DelAny V2: Ghana (1) is <em>worse</em> than DelAny V2 on rice (34%); DelAny V2: Ghana + Viedia (2) recovers this, which suggests that the extra VIEDIA data helps the model keep what it already knew. Fields with high label confidence are found more often (32%) than low-confidence or unlabelled ones (17–22%), which hints that part of the "error" is label noise.</p>
 </section>
 
@@ -616,11 +631,11 @@ html:root[data-egg="gold"] h1::after { content: " \1F3C6"; }
 <section class="rep" id="r3">
   <h2><span class="sn">3</span>Field size and crop type</h2>
   <p class="prose">Field size is the strongest single factor for DelAny V2: the smallest quarter of fields (up to about 740 m², roughly 27 × 27 m) is nearly invisible, with only 2–4% found. FTP finds none of the smallest quarter and FTW one field; neither finds more than 5% of the fields in any size quarter. Coarser pixels make this harder: at 10 m, a field of 740 m² is only about seven pixels.</p>
-  <div class="two"><figure class="fig"><div id="cmp-bk-size-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by field-size quartile.</figcaption></figure>
-  <figure class="fig"><div id="cmp-bk-size-split" class="bk"></div><figcaption class="cap">Share of fields split into several polygons, by field-size quartile.</figcaption></figure></div>
-  <p class="prose">Splitting is not the problem for any of the base models: the largest fields are split by DelAny V2 only 11% of the time, and the other two rarely split fields at all because they draw so few polygons. The dominant error of all three is merging and missing.</p>
-  <div class="two"><figure class="fig"><div id="cmp-bk-crop-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by crop type.</figcaption></figure>
+  <div class="four"><figure class="fig"><div id="cmp-bk-size-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by field-size quartile.</figcaption></figure>
+  <figure class="fig"><div id="cmp-bk-size-split" class="bk"></div><figcaption class="cap">Share of fields split into several polygons, by field-size quartile.</figcaption></figure>
+  <figure class="fig"><div id="cmp-bk-crop-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by crop type.</figcaption></figure>
   <figure class="fig"><div id="cmp-bk-conf-found" class="bk"></div><figcaption class="cap">Share of fields found one-to-one, by label confidence.</figcaption></figure></div>
+  <p class="prose">Splitting is not the problem for any of the base models: the largest fields are split by DelAny V2 only 11% of the time, and the other two rarely split fields at all because they draw so few polygons. The dominant error of all three is merging and missing.</p>
   <p class="prose">By crop, rice is easiest for DelAny V2 (46%), probably because rice fields are green, smooth and sharply bounded; all other crops are hard (4–10%). FTP and FTW also find rice best (5% and 8%), but that is only 9 and 15 fields. Fields with high label confidence are found more often than low-confidence or unlabelled ones, which hints that part of the "error" is label noise.</p>
 </section>
 
@@ -2493,18 +2508,19 @@ const makeCompare = cfg => () => {
     const vals = MODELS.map(m => g.groups.map((_, gi) => { const rs = m.poly.fields.filter(r => g.of(r) === gi);
       return rs.length ? (met === "__cov" ? mean(rs.map(r => r[8])) : rs.filter(r => r[6] === met).length / rs.length) : null; }));
     const ns = g.groups.map((_, gi) => BASE.poly.fields.filter(r => g.of(r) === gi).length);
-    const W = 900, H = 330, ML = 46, MT = 22, MB = 56, pw = W - ML - 10, ph = H - MT - MB;
+    const cmp = !!host.closest(".four");   // compact layout for the four-up row
+    const W = cmp ? 400 : 900, H = cmp ? 340 : 330, ML = cmp ? 40 : 46, MT = 22, MB = 56, pw = W - ML - 10, ph = H - MT - MB;
     const mx = Math.max(0.05, ...vals.flat().filter(v => v !== null)), stp = mx < 0.3 ? 0.05 : mx < 0.6 ? 0.1 : 0.2, top = Math.min(1, Math.ceil(mx / stp) * stp), nt = Math.round(top / stp);
     let s = ""; for (let t = 0; t <= nt; t++) { const v = top * t / nt, y = MT + ph - v / top * ph;
       s += `<line x1="${ML}" x2="${W - 10}" y1="${y}" y2="${y}" class="g"/><text x="${ML - 6}" y="${y + 4}" text-anchor="end" class="ax">${Math.round(v * 100)}%</text>`; }
-    const gw = pw / g.groups.length, bw = Math.min(46, gw * 0.8 / MODELS.length);
+    const gw = pw / g.groups.length, bw = Math.min(46, gw * (cmp ? 0.88 : 0.8) / MODELS.length), gap = cmp ? 1 : 2;
     g.groups.forEach((lab, gi) => {
       const cx = ML + gw * (gi + 0.5);
       MODELS.forEach((m, mi) => { const v = vals[mi][gi]; if (v === null) return;
-        const h = v / top * ph, x = cx + (mi - MODELS.length / 2) * (bw + 2) + 1, y = MT + ph - h;
+        const h = v / top * ph, x = cx + (mi - MODELS.length / 2) * (bw + gap) + 1, y = MT + ph - h;
         s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw}" height="${Math.max(h, 0.5).toFixed(1)}" rx="3" style="fill:${m.col}"><title>${m.name} · ${lab}: ${pct(v)}</title></rect>`;
-        s += `<text x="${(x + bw / 2).toFixed(1)}" y="${(y - 5).toFixed(1)}" text-anchor="middle" class="bv">${Math.round(v * 100)}</text>`; });
-      s += `<text x="${cx}" y="${H - 30}" text-anchor="middle" class="bl">${esc(lab)}</text><text x="${cx}" y="${H - 14}" text-anchor="middle" class="ax">n = ${ns[gi].toLocaleString()} fields</text>`;
+        s += `<text x="${(x + bw / 2).toFixed(1)}" y="${(y - 5).toFixed(1)}" text-anchor="middle" class="bv"${cmp ? ' style="font-size:10px"' : ""}>${Math.round(v * 100)}</text>`; });
+      s += `<text x="${cx}" y="${H - 30}" text-anchor="middle" class="bl">${esc(lab)}</text><text x="${cx}" y="${H - 14}" text-anchor="middle" class="ax">n = ${ns[gi].toLocaleString()}${cmp ? "" : " fields"}</text>`;
     });
     host.innerHTML = `<svg class="bars wide" viewBox="0 0 ${W} ${H}" role="img" aria-label="Grouped bars by model">${s}</svg>`;
   }
