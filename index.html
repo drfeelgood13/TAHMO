@@ -481,11 +481,11 @@ html:root[data-egg="gold"] h1::after { content: " \1F3C6"; }
 
 <section class="rep" id="r4">
   <h2><span class="sn">4</span>Image by image</h2>
-  <p class="prose">Averages can hide a lot, so Table 2 lists every image. Pick a metric and sort by any column; the last column shows the change from DelAny V2 to DelAny V2: Ghana + Viedia (2), already corrected for metrics where lower is better (a ▲ always means an improvement). DelAny V2: Ghana + Viedia (2) beats DelAny V2 on F1 for 24 of 32 images, and DelAny V2: Ghana (1) does so on 23. For boundary error the improvement is almost universal: 30 of 32 images for both. Between models (1) and (2) there is no consistent winner (DelAny V2: Ghana + Viedia (2) is ahead on F1 on 19 of 32 images). Model (3) is more consistent: DelAny V2: Ghana + Viedia unfrozen (3) beats DelAny V2 on F1 for 27 of 32 images and model (2) for 21.</p>
+  <p class="prose">Averages can hide a lot, so Table 2 lists every image. Pick a metric and sort by any column; the last column shows the change from DelAny V2 to DelAny V2: Ghana + Viedia unfrozen (3), already corrected for metrics where lower is better (a ▲ always means an improvement). DelAny V2: Ghana + Viedia (2) beats DelAny V2 on F1 for 24 of 32 images, and DelAny V2: Ghana (1) does so on 23. For boundary error the improvement is almost universal: 30 of 32 images for both. Between models (1) and (2) there is no consistent winner (DelAny V2: Ghana + Viedia (2) is ahead on F1 on 19 of 32 images). Model (3) is more consistent: DelAny V2: Ghana + Viedia unfrozen (3) beats DelAny V2 on F1 for 27 of 32 images and model (2) for 21.</p>
   <figure class="fig"><div class="cbar"><label>Metric <select id="cmp-hm-m"></select></label></div>
     <div class="tw hm-scroll"><table class="heat" id="cmp-hm"></table></div><figcaption class="cap tbl" id="cmp-hm-sum"></figcaption></figure>
-  <div class="two"><figure class="fig"><div id="cmp-r-pair1" class="xy"></div><figcaption class="cap">F1 per image: DelAny V2 (X) against DelAny V2: Ghana + Viedia (2) (Y). Above the dashed line DelAny V2: Ghana + Viedia (2) is better.</figcaption></figure>
-  <figure class="fig"><div id="cmp-r-pair2" class="xy"></div><figcaption class="cap">PoLiS boundary error per image (axes reversed so that up and right are better). Above the dashed line DelAny V2: Ghana + Viedia (2) is better.</figcaption></figure></div>
+  <div class="two"><figure class="fig"><div id="cmp-r-pair1" class="xy"></div><figcaption class="cap">F1 per image: DelAny V2 (X) against DelAny V2: Ghana + Viedia unfrozen (3) (Y). Above the dashed line DelAny V2: Ghana + Viedia unfrozen (3) is better.</figcaption></figure>
+  <figure class="fig"><div id="cmp-r-pair2" class="xy"></div><figcaption class="cap">PoLiS boundary error per image (axes reversed so that up and right are better). Above the dashed line DelAny V2: Ghana + Viedia unfrozen (3) is better.</figcaption></figure></div>
   <p class="prose">The left plot shows most images above the line, but with a lot of spread: a few images get worse. In the right plot nearly every image (30 of 32) sits above the line: DelAny V2's typical boundary error is about 110 m (range 8–250 m), where the fine-tuned models typically reach about 22 m (about 17 m for model (3)). This is the most consistent result in the whole comparison.</p>
 </section>
 
@@ -2656,7 +2656,7 @@ const makeCompare = cfg => () => {
     {layer: "preds", label: "Size → on non-crop", x: "Area (m²)", y: "In non-crop", c: "Category", lx: true, hint: "false polygons on background; look for clusters of 'On non-crop background'."},
     {layer: "preds", label: "Size → fields covered", x: "Area (m²)", y: "Fields covered", c: "Category", lx: true, tr: "loess", hint: "how many reference fields one polygon spans; big polygons merge several fields."}]});
 };
-window.INIT["ft"] = makeCompare({keys: ["baseline", "ghana", "combined", "unfrozen"], target: 2, pair: [1, 2]});
+window.INIT["ft"] = makeCompare({keys: ["baseline", "ghana", "combined", "unfrozen"], target: 3, pair: [2, 3]});
 window.INIT["base"] = makeCompare({keys: ["baseline", "ftp", "ftw"], target: 1, pair: [1, 2]});
 </script>
 <script>
