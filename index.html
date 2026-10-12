@@ -153,6 +153,8 @@ main#view.wide { max-width: 1480px; }
 button.mini { font: 12px var(--f-body); color: var(--fg); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 3px 9px; cursor: pointer; }
 .cmp3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 18px; align-items: start; }
 .cmp3 > * { min-width: 0; }
+/* four models: one row, widened past the text column so each panel stays readable */
+@media (min-width: 1100px) { .cmp3.n4 { grid-template-columns: repeat(4, minmax(0, 1fr)); width: min(1680px, calc(100vw - 60px)); margin-left: calc((100% - min(1680px, calc(100vw - 60px))) / 2); } }
 .xy-panel { display: grid; gap: 8px; align-content: start; }
 .xy-panel h3 { font-size: 15px; }
 .sw3 { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 7px; vertical-align: -1px; }
@@ -926,6 +928,19 @@ html:root[data-egg="gold"] h1::after { content: " \1F3C6"; }
   <div class="facts"><span><b>32</b> images</span><span><b>1,534</b> reference fields</span><span><b>2,508</b> predicted polygons</span>
   <span>regions <b>north (21)</b>, <b>ej (11)</b></span><span>field F1 <b>0.246</b></span></div>
 </header>
+
+<section>
+  <h2>How this model was trained</h2>
+  <p class="col">DelAny V2 is a YOLO11x-seg network with 62.1 M parameters in 24 layers: a backbone (layers 0–10), a neck that mixes features across scales (layers 11–22) and a segmentation head (layer 23). This model starts from the released DelAny V2 weights and uses the same recipe as DelAny V2: Ghana + Viedia (2) (AdamW, 512 × 512 px tiles, 4 tiles per step with gradients accumulated over 64 tiles, cosine decay to 1% of the start learning rate, flips and colour jitter, at most 30 epochs with early stopping after 10 epochs without improvement). Relative to (2) it changes only the settings below:</p>
+  <dl>
+    <dt>Training data</dt><dd>Ghana labels + VIEDIA (Vietnam, Cambodia), the same as (2).</dd>
+    <dt>Backbone</dt><dd><b>Unfrozen</b>: all 24 layers (62.1 M parameters) are trained. Models (1) and (2) keep layers 0–9 frozen (the stem and the four downsampling stages, convolutions and C3k2 blocks, up to and including SPPF; 25.6 M parameters, 41%) and train only layers 10–23 (the C2PSA attention block at the end of the backbone, the neck and the segmentation head; 36.5 M parameters, 59%).</dd>
+    <dt>Start learning rate</dt><dd><b>5 × 10⁻⁵</b> instead of 1 × 10⁻⁴, halved so that the pretrained backbone features are not overwritten quickly.</dd>
+    <dt>Mosaic augmentation</dt><dd><b>On, probability 0.5</b> (four tiles combined into one), switched off for the last 10 epochs. Off in (1) and (2).</dd>
+    <dt>Best epoch</dt><dd>Chosen by <b>validation mask mAP@0.5</b> instead of the Ultralytics fitness (here both rules pick the same epoch). 29 epochs run (early stop), best epoch 19.</dd>
+  </dl>
+  <p class="note">Source: the Ultralytics run settings and logs in <code>finetune/runs/combined_1m_unfrozen_mosaic</code>.</p>
+</section>
 
 <section>
   <h2>Key findings</h2>
@@ -2577,7 +2592,7 @@ const makeCompare = cfg => () => {
         <label class="chk" title="PoLiS and area omission: lower is better, so reverse the axis to keep up/right = better"><input type="checkbox" id="${id}-mfl" checked> reverse lower-is-better axes</label>
         <label id="${id}-mfw">Show <select id="${id}-mf"></select></label></div>
       ${simple ? "" : `</details>`}
-      <div class="cmp3">${MODELS.map((m, i) => `<div class="xy-panel"><h3>${chip(m)}${m.name}</h3><div class="xy" id="${id}-p${i}"></div></div>`).join("")}</div>`;
+      <div class="cmp3${MODELS.length === 4 ? " n4" : ""}">${MODELS.map((m, i) => `<div class="xy-panel"><h3>${chip(m)}${m.name}</h3><div class="xy" id="${id}-p${i}"></div></div>`).join("")}</div>`;
     const g = s => document.getElementById(id + "-" + s);
     let cur = [];
     const unionVals = (L, name) => L.data.flatMap(d => { const i = ci(d.cols, name); return i < 0 ? [] : d.rows.map(r => r[i]); });
