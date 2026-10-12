@@ -1,0 +1,135 @@
+{
+    "location_label": "VIETNAM_area48_tile503(r1c7_1m)",
+    "zoom_level": 18,
+    "target_resolution_m": 1,
+    "pixel_width": 898,
+    "pixel_height": 904,
+    "requested": {
+        "center_lat": 11.824203466729152,
+        "center_lon": 108.79196288837211,
+        "bounding_box": {
+            "north_lat": 11.82657487315,
+            "south_lat": 11.821832053156689,
+            "west_lon": 108.78955608431171,
+            "east_lon": 108.79436973159281
+        }
+    },
+    "utm_epsg": "EPSG:32648",
+    "bounding_box": {
+        "north_lat": 11.82657487315,
+        "south_lat": 11.821832053156689,
+        "west_lon": 108.78955608431171,
+        "east_lon": 108.79436973159281
+    },
+    "vertices": {
+        "north_west": {
+            "lat": 11.82657487,
+            "lon": 108.78955608
+        },
+        "north_east": {
+            "lat": 11.82657487,
+            "lon": 108.79436973
+        },
+        "south_east": {
+            "lat": 11.82183205,
+            "lon": 108.79436973
+        },
+        "south_west": {
+            "lat": 11.82183205,
+            "lon": 108.78955608
+        }
+    },
+    "center_coordinates": {
+        "lat": 11.82420346,
+        "lon": 108.79196291
+    },
+    "real_world": {
+        "width_m": 523.896,
+        "height_m": 527.378,
+        "area_m2": 276291.513,
+        "area_hectares": 27.629151,
+        "area_km2": 0.27629151,
+        "ground_sample_distance_m_per_px": {
+            "x": 0.583403,
+            "y": 0.583383
+        }
+    },
+    "source_area": {
+        "area": 503,
+        "grid": "48_r1_c7",
+        "region": "vietnam",
+        "n_fields": 30,
+        "centre": {
+            "lat": 11.824203466729152,
+            "lon": 108.79196288837211
+        },
+        "bbox": {
+            "min_lat": 11.821832053156689,
+            "max_lat": 11.82657487315,
+            "min_lon": 108.78955608431171,
+            "max_lon": 108.79436973159281
+        },
+        "source_area_id": "48",
+        "tile_row": 1,
+        "tile_col": 7,
+        "tile_crs": "EPSG:32648",
+        "tile_bounds_utm": {
+            "xmin": 913077.5217367671,
+            "ymin": 1309664.2375270892,
+            "xmax": 913589.5217367671,
+            "ymax": 1310176.2375270892
+        },
+        "fields": [
+            2799,
+            1495,
+            1494,
+            2798,
+            2796,
+            2797,
+            1503,
+            8764,
+            1504,
+            1501,
+            1502,
+            1500,
+            1492,
+            1491,
+            1498,
+            1499,
+            8767,
+            8832,
+            1387,
+            1477,
+            1256,
+            1257,
+            1258,
+            1259,
+            1251,
+            1420,
+            8766,
+            1478,
+            1473,
+            1247
+        ]
+    },
+    "real_world_utm": {
+        "crs": "EPSG:32648",
+        "width_px": 512,
+        "height_px": 512,
+        "width_m": 512.0,
+        "height_m": 512.0,
+        "area_m2": 262144.0,
+        "area_hectares": 26.2144,
+        "area_km2": 0.262144,
+        "ground_sample_distance_m_per_px": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "exact_bounds_utm": {
+        "xmin": 913077.5217367671,
+        "ymin": 1309664.2375270892,
+        "xmax": 913589.5217367671,
+        "ymax": 1310176.2375270892
+    }
+}

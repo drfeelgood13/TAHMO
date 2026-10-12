@@ -1,0 +1,269 @@
+{
+    "location_label": "GHANA_area108_GH0091085_1m",
+    "zoom_level": 18,
+    "target_resolution_m": 1,
+    "pixel_width": 1164,
+    "pixel_height": 1258,
+    "requested": {
+        "center_lat": 10.242486,
+        "center_lon": -0.828496,
+        "bounding_box": {
+            "north_lat": 10.245804,
+            "south_lat": 10.239168,
+            "west_lon": -0.831614,
+            "east_lon": -0.825378
+        }
+    },
+    "utm_epsg": "EPSG:32630",
+    "bounding_box": {
+        "north_lat": 10.245804,
+        "south_lat": 10.239168,
+        "west_lon": -0.831614,
+        "east_lon": -0.825378
+    },
+    "vertices": {
+        "north_west": {
+            "lat": 10.245804,
+            "lon": -0.831614
+        },
+        "north_east": {
+            "lat": 10.245804,
+            "lon": -0.825378
+        },
+        "south_east": {
+            "lat": 10.239168,
+            "lon": -0.825378
+        },
+        "south_west": {
+            "lat": 10.239168,
+            "lon": -0.831614
+        }
+    },
+    "center_coordinates": {
+        "lat": 10.242486,
+        "lon": -0.828496
+    },
+    "real_world": {
+        "width_m": 682.362,
+        "height_m": 737.891,
+        "area_m2": 503508.706,
+        "area_hectares": 50.350871,
+        "area_km2": 0.50350871,
+        "ground_sample_distance_m_per_px": {
+            "x": 0.586222,
+            "y": 0.586558
+        }
+    },
+    "source_area": {
+        "area": 108,
+        "grid": "GH0091085",
+        "region": "north",
+        "centre": {
+            "lat": 10.242486,
+            "lon": -0.828496
+        },
+        "bbox": {
+            "min_lat": 10.239168,
+            "min_lon": -0.831614,
+            "max_lat": 10.245804,
+            "max_lon": -0.825378
+        },
+        "n_fields": 10,
+        "fields": [
+            {
+                "field": 1,
+                "id": "D3314",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.239493,
+                    "lon": -0.826588
+                },
+                "bbox": {
+                    "min_lat": 10.239168,
+                    "min_lon": -0.828237,
+                    "max_lat": 10.240054,
+                    "max_lon": -0.825454
+                }
+            },
+            {
+                "field": 2,
+                "id": "D3315",
+                "region": "north",
+                "crop": "rice",
+                "crop1": "rice",
+                "confidence": "medium",
+                "centre": {
+                    "lat": 10.245363,
+                    "lon": -0.825834
+                },
+                "bbox": {
+                    "min_lat": 10.244695,
+                    "min_lon": -0.826324,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.825378
+                }
+            },
+            {
+                "field": 3,
+                "id": "D3316",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.245466,
+                    "lon": -0.827135
+                },
+                "bbox": {
+                    "min_lat": 10.244922,
+                    "min_lon": -0.828147,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.826288
+                }
+            },
+            {
+                "field": 4,
+                "id": "D3317",
+                "region": "north",
+                "crop": "other",
+                "crop1": "cabbage",
+                "confidence": "low",
+                "centre": {
+                    "lat": 10.243627,
+                    "lon": -0.828148
+                },
+                "bbox": {
+                    "min_lat": 10.243006,
+                    "min_lon": -0.828352,
+                    "max_lat": 10.244186,
+                    "max_lon": -0.827682
+                }
+            },
+            {
+                "field": 5,
+                "id": "D3318",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.244373,
+                    "lon": -0.828957
+                },
+                "bbox": {
+                    "min_lat": 10.242836,
+                    "min_lon": -0.829417,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.82847
+                }
+            },
+            {
+                "field": 6,
+                "id": "D3319",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "low",
+                "centre": {
+                    "lat": 10.244412,
+                    "lon": -0.829663
+                },
+                "bbox": {
+                    "min_lat": 10.242919,
+                    "min_lon": -0.829893,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.829431
+                }
+            },
+            {
+                "field": 7,
+                "id": "D3320",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.244359,
+                    "lon": -0.830364
+                },
+                "bbox": {
+                    "min_lat": 10.242318,
+                    "min_lon": -0.831,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.82984
+                }
+            },
+            {
+                "field": 8,
+                "id": "D3321",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.242476,
+                    "lon": -0.831175
+                },
+                "bbox": {
+                    "min_lat": 10.241862,
+                    "min_lon": -0.831614,
+                    "max_lat": 10.242878,
+                    "max_lon": -0.830565
+                }
+            },
+            {
+                "field": 9,
+                "id": "D3322",
+                "region": "north",
+                "crop": "maize",
+                "crop1": "maize",
+                "confidence": "high",
+                "centre": {
+                    "lat": 10.240834,
+                    "lon": -0.83032
+                },
+                "bbox": {
+                    "min_lat": 10.239168,
+                    "min_lon": -0.831614,
+                    "max_lat": 10.242443,
+                    "max_lon": -0.828627
+                }
+            },
+            {
+                "field": 10,
+                "id": "D9936",
+                "region": "north",
+                "crop": "noncrop",
+                "crop1": "noncrop",
+                "confidence": null,
+                "centre": {
+                    "lat": 10.242401,
+                    "lon": -0.827758
+                },
+                "bbox": {
+                    "min_lat": 10.239168,
+                    "min_lon": -0.831614,
+                    "max_lat": 10.245804,
+                    "max_lon": -0.825378
+                }
+            }
+        ]
+    },
+    "real_world_utm": {
+        "crs": "EPSG:32630",
+        "width_px": 689,
+        "height_px": 739,
+        "width_m": 689.0,
+        "height_m": 739.0,
+        "area_m2": 509171.0,
+        "area_hectares": 50.9171,
+        "area_km2": 0.509171,
+        "ground_sample_distance_m_per_px": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    }
+}
