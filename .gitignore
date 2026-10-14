@@ -20,3 +20,5 @@ delany/finetune/VIEDIA 1m (TIFFANIES)-*/
 
 # Logs
 *.log
+
+data/
