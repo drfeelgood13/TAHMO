@@ -9,6 +9,7 @@ Tiles whose label file is empty are left out (unlabelled, not "no fields").
 Output: finetune/yolo_dataset_viedia/{images,labels}/{train,val,test}, data.yaml, splits.csv
         (splits.csv also lists each tile's image and label path, for evaluate.py)
 """
+import argparse
 import glob
 import os
 import random
@@ -24,7 +25,7 @@ from rasterio.features import rasterize
 from prepare_dataset import MAX_NODATA, MIN_FIELD_M2, TILE, tile_labels
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-IMAGES = os.path.join(ROOT, "VIEDIA*", "VIEDIA*")
+IMAGES = os.path.join(ROOT, "VIEDIA 1m (TIFs)")
 LABELS = os.path.join(ROOT, "labels_viedia")
 OUT = os.path.join(ROOT, "yolo_dataset_viedia")
 
@@ -40,8 +41,8 @@ def make_table():
         m = NAME.fullmatch(os.path.basename(d))
         key = f"{m['area']}_r{m['r']}_c{m['c']}"
         rows.append({"folder": os.path.basename(d), "grid": key, "area": int(m["area"]), "country": m["country"],
-                     "image": os.path.relpath(os.path.join(d, "mosaic_utm.tif"), ROOT),
-                     "labels": os.path.relpath(os.path.join(LABELS, m["area"], key + ".gpkg"), ROOT)})
+                     "image": os.path.abspath(os.path.join(d, "mosaic_utm.tif")),
+                     "labels": os.path.abspath(os.path.join(LABELS, m["area"], key + ".gpkg"))})
     df = pd.DataFrame(rows)
     # UNKNOWN_area45 tiles belong to VIETNAM_area45: the country of an area is its most common one
     df["region"] = df.groupby("area")["country"].transform(lambda c: c.mode()[0]).str.lower()
@@ -88,6 +89,14 @@ def process_tile(row, stats):
 
 
 def main():
+    global IMAGES, LABELS, OUT
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--images", default=IMAGES, help="folder with one <tile>/mosaic_utm.tif per VIEDIA tile")
+    ap.add_argument("--labels", default=LABELS, help="folder with <area>/<area>_r<row>_c<col>.gpkg label files")
+    ap.add_argument("--out", default=OUT, help="output YOLO dataset folder")
+    args = ap.parse_args()
+    IMAGES, LABELS, OUT = (os.path.abspath(p) for p in (args.images, args.labels, args.out))
+
     df = make_split(make_table())
     for split in ("train", "val", "test"):
         os.makedirs(os.path.join(OUT, "images", split), exist_ok=True)

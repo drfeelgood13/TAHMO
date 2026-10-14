@@ -1,7 +1,0 @@
-<PAMDataset>
-  <Metadata>
-    <MDI key="SIMPLIFICATION_EPSILON">6</MDI>
-    <MDI key="VERTEX_STEP_X">1.0</MDI>
-    <MDI key="VERTEX_STEP_Y">-1.0</MDI>
-  </Metadata>
-</PAMDataset>

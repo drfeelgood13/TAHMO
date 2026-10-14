@@ -773,6 +773,8 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True, help="Test-set manifest or legacy coordinate JSON")
     parser.add_argument("--output", type=Path, required=True, help="Output directory")
+    parser.add_argument("--resolutions", type=float, nargs="+", default=None, metavar="M",
+                         help=f"Target pixel sizes in metres, e.g. --resolutions 0.3 1 2 5 10 20 (default: {TARGET_RES_M})")
     parser.add_argument("--start-index", type=int, default=1,
                          help="Label number for the first coordinate in --input; use to continue numbering across batches")
     parser.add_argument("--skip-existing", action="store_true",
@@ -790,10 +792,11 @@ def main(argv=None):
     if cli.start_index != 1 and manifest_input:
         raise ValueError("--start-index only applies to legacy coordinate JSON files")
 
-    if isinstance(TARGET_RES_M, Real):
-        target_resolutions = [TARGET_RES_M]
+    resolutions = cli.resolutions if cli.resolutions is not None else TARGET_RES_M
+    if isinstance(resolutions, Real):
+        target_resolutions = [resolutions]
     else:
-        target_resolutions = list(TARGET_RES_M)
+        target_resolutions = list(resolutions)
 
     if not target_resolutions:
         raise ValueError("TARGET_RES_M must contain at least one resolution.")

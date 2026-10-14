@@ -1,0 +1,585 @@
+{
+    "split":  "test",
+    "dataset":  "GHANA 110",
+    "coordinate_crs":  "EPSG:4326",
+    "coordinate_units":  "degrees",
+    "location_count":  32,
+    "locations":  [
+                      {
+                          "id":  1,
+                          "location_label":  "GHANA_area004_GH0004386",
+                          "region":  "north",
+                          "area":  4,
+                          "grid":  "GH0004386",
+                          "bounding_box":  {
+                                               "north_lat":  10.980504,
+                                               "south_lat":  10.973813,
+                                               "west_lon":  -0.321617,
+                                               "east_lon":  -0.315453
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.9771585,
+                                                     "lon":  -0.318535
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  2,
+                          "location_label":  "GHANA_area006_GH0171173",
+                          "region":  "north",
+                          "area":  6,
+                          "grid":  "GH0171173",
+                          "bounding_box":  {
+                                               "north_lat":  9.605863,
+                                               "south_lat":  9.599169,
+                                               "west_lon":  -1.036675,
+                                               "east_lon":  -1.030433
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.602516,
+                                                     "lon":  -1.033554
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  3,
+                          "location_label":  "GHANA_area008_GH0022256",
+                          "region":  "north",
+                          "area":  8,
+                          "grid":  "GH0022256",
+                          "bounding_box":  {
+                                               "north_lat":  10.82,
+                                               "south_lat":  10.815,
+                                               "west_lon":  -0.976,
+                                               "east_lon":  -0.971
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.8175,
+                                                     "lon":  -0.9735
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  4,
+                          "location_label":  "GHANA_area012_GH0418403",
+                          "region":  "ej",
+                          "area":  12,
+                          "grid":  "GH0418403",
+                          "bounding_box":  {
+                                               "north_lat":  7.670644,
+                                               "south_lat":  7.664563,
+                                               "west_lon":  -1.651377,
+                                               "east_lon":  -1.645764
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.6676035,
+                                                     "lon":  -1.6485705
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  5,
+                          "location_label":  "GHANA_area017_GH0177376",
+                          "region":  "north",
+                          "area":  17,
+                          "grid":  "GH0177376",
+                          "bounding_box":  {
+                                               "north_lat":  9.555902,
+                                               "south_lat":  9.549085,
+                                               "west_lon":  -0.976612,
+                                               "east_lon":  -0.970348
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.5524935,
+                                                     "lon":  -0.97348
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  6,
+                          "location_label":  "GHANA_area020_GH0193764",
+                          "region":  "north",
+                          "area":  20,
+                          "grid":  "GH0193764",
+                          "bounding_box":  {
+                                               "north_lat":  9.420858,
+                                               "south_lat":  9.414276,
+                                               "west_lon":  -1.101705,
+                                               "east_lon":  -1.095418
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.417567,
+                                                     "lon":  -1.0985615
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  7,
+                          "location_label":  "GHANA_area029_GH0167033",
+                          "region":  "north",
+                          "area":  29,
+                          "grid":  "GH0167033",
+                          "bounding_box":  {
+                                               "north_lat":  9.640895,
+                                               "south_lat":  9.634142,
+                                               "west_lon":  0.188314,
+                                               "east_lon":  0.194692
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.6375185,
+                                                     "lon":  0.191503
+                                                 },
+                          "utm_epsg":  "EPSG:32631"
+                      },
+                      {
+                          "id":  8,
+                          "location_label":  "GHANA_area034_GH0016064",
+                          "region":  "north",
+                          "area":  34,
+                          "grid":  "GH0016064",
+                          "bounding_box":  {
+                                               "north_lat":  10.874999,
+                                               "south_lat":  10.870001,
+                                               "west_lon":  -0.660999,
+                                               "east_lon":  -0.656001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.8725,
+                                                     "lon":  -0.6585
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  9,
+                          "location_label":  "GHANA_area035_GH0442589",
+                          "region":  "ej",
+                          "area":  35,
+                          "grid":  "GH0442589",
+                          "bounding_box":  {
+                                               "north_lat":  7.494999,
+                                               "south_lat":  7.48965,
+                                               "west_lon":  -1.826397,
+                                               "east_lon":  -1.821001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.4923245,
+                                                     "lon":  -1.823699
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  10,
+                          "location_label":  "GHANA_area036_GH0463047",
+                          "region":  "ej",
+                          "area":  36,
+                          "grid":  "GH0463047",
+                          "bounding_box":  {
+                                               "north_lat":  7.355,
+                                               "south_lat":  7.344276,
+                                               "west_lon":  -1.396534,
+                                               "east_lon":  -1.390692
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.349638,
+                                                     "lon":  -1.393613
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  11,
+                          "location_label":  "GHANA_area039_GH0419907",
+                          "region":  "ej",
+                          "area":  39,
+                          "grid":  "GH0419907",
+                          "bounding_box":  {
+                                               "north_lat":  7.660695,
+                                               "south_lat":  7.65429,
+                                               "west_lon":  -1.086388,
+                                               "east_lon":  -1.080666
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.6574925,
+                                                     "lon":  -1.083527
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  12,
+                          "location_label":  "GHANA_area046_GH0163287",
+                          "region":  "north",
+                          "area":  46,
+                          "grid":  "GH0163287",
+                          "bounding_box":  {
+                                               "north_lat":  9.670749,
+                                               "south_lat":  9.664143,
+                                               "west_lon":  0.178272,
+                                               "east_lon":  0.184583
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.667446,
+                                                     "lon":  0.1814275
+                                                 },
+                          "utm_epsg":  "EPSG:32631"
+                      },
+                      {
+                          "id":  13,
+                          "location_label":  "GHANA_area052_GH0131337",
+                          "region":  "north",
+                          "area":  52,
+                          "grid":  "GH0131337",
+                          "bounding_box":  {
+                                               "north_lat":  9.925778,
+                                               "south_lat":  9.919253,
+                                               "west_lon":  -0.891514,
+                                               "east_lon":  -0.885347
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.9225155,
+                                                     "lon":  -0.8884305
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  14,
+                          "location_label":  "GHANA_area055_GH0196555",
+                          "region":  "north",
+                          "area":  55,
+                          "grid":  "GH0196555",
+                          "bounding_box":  {
+                                               "north_lat":  9.400778,
+                                               "south_lat":  9.394208,
+                                               "west_lon":  -0.111574,
+                                               "east_lon":  -0.105442
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.397493,
+                                                     "lon":  -0.108508
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  15,
+                          "location_label":  "GHANA_area058_GH0419917",
+                          "region":  "ej",
+                          "area":  58,
+                          "grid":  "GH0419917",
+                          "bounding_box":  {
+                                               "north_lat":  7.660683,
+                                               "south_lat":  7.654319,
+                                               "west_lon":  -1.036433,
+                                               "east_lon":  -1.030515
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.657501,
+                                                     "lon":  -1.033474
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  16,
+                          "location_label":  "GHANA_area060_GH0074950",
+                          "region":  "north",
+                          "area":  60,
+                          "grid":  "GH0074950",
+                          "bounding_box":  {
+                                               "north_lat":  10.370632,
+                                               "south_lat":  10.364291,
+                                               "west_lon":  -2.291481,
+                                               "east_lon":  -2.285553
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.3674615,
+                                                     "lon":  -2.288517
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  17,
+                          "location_label":  "GHANA_area064_GH0483305",
+                          "region":  "ej",
+                          "area":  64,
+                          "grid":  "GH0483305",
+                          "bounding_box":  {
+                                               "north_lat":  7.210657,
+                                               "south_lat":  7.204247,
+                                               "west_lon":  -1.371381,
+                                               "east_lon":  -1.365688
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.207452,
+                                                     "lon":  -1.3685345
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  18,
+                          "location_label":  "GHANA_area069_GH0482576",
+                          "region":  "ej",
+                          "area":  69,
+                          "grid":  "GH0482576",
+                          "bounding_box":  {
+                                               "north_lat":  7.215725,
+                                               "south_lat":  7.209348,
+                                               "west_lon":  -1.411562,
+                                               "east_lon":  -1.405669
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.2125365,
+                                                     "lon":  -1.4086155
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  19,
+                          "location_label":  "GHANA_area072_GH0486996",
+                          "region":  "ej",
+                          "area":  72,
+                          "grid":  "GH0486996",
+                          "bounding_box":  {
+                                               "north_lat":  7.184999,
+                                               "south_lat":  7.180001,
+                                               "west_lon":  -0.990999,
+                                               "east_lon":  -0.986001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.1825,
+                                                     "lon":  -0.9885
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  20,
+                          "location_label":  "GHANA_area074_GH0182658",
+                          "region":  "north",
+                          "area":  74,
+                          "grid":  "GH0182658",
+                          "bounding_box":  {
+                                               "north_lat":  9.509999,
+                                               "south_lat":  9.505001,
+                                               "west_lon":  -1.285999,
+                                               "east_lon":  -1.281001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.5075,
+                                                     "lon":  -1.2835
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  21,
+                          "location_label":  "GHANA_area076_GH0486205",
+                          "region":  "ej",
+                          "area":  76,
+                          "grid":  "GH0486205",
+                          "bounding_box":  {
+                                               "north_lat":  7.189999,
+                                               "south_lat":  7.185001,
+                                               "west_lon":  -1.325999,
+                                               "east_lon":  -1.321001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.1875,
+                                                     "lon":  -1.3235
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  22,
+                          "location_label":  "GHANA_area079_GH0059408",
+                          "region":  "north",
+                          "area":  79,
+                          "grid":  "GH0059408",
+                          "bounding_box":  {
+                                               "north_lat":  10.499999,
+                                               "south_lat":  10.495001,
+                                               "west_lon":  -1.000999,
+                                               "east_lon":  -0.996001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.4975,
+                                                     "lon":  -0.9985
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  23,
+                          "location_label":  "GHANA_area080_GH0153721",
+                          "region":  "north",
+                          "area":  80,
+                          "grid":  "GH0153721",
+                          "bounding_box":  {
+                                               "north_lat":  9.74588,
+                                               "south_lat":  9.739352,
+                                               "west_lon":  -0.851675,
+                                               "east_lon":  -0.845394
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  9.742616,
+                                                     "lon":  -0.8485345
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  24,
+                          "location_label":  "GHANA_area084_GH0010697",
+                          "region":  "north",
+                          "area":  84,
+                          "grid":  "GH0010697",
+                          "bounding_box":  {
+                                               "north_lat":  10.919999,
+                                               "south_lat":  10.915001,
+                                               "west_lon":  -2.130999,
+                                               "east_lon":  -2.126001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.9175,
+                                                     "lon":  -2.1285
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  25,
+                          "location_label":  "GHANA_area085_GH0060014",
+                          "region":  "north",
+                          "area":  85,
+                          "grid":  "GH0060014",
+                          "bounding_box":  {
+                                               "north_lat":  10.494996,
+                                               "south_lat":  10.490001,
+                                               "west_lon":  -1.000999,
+                                               "east_lon":  -0.996001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.4924985,
+                                                     "lon":  -0.9985
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  26,
+                          "location_label":  "GHANA_area086_GH0463066",
+                          "region":  "ej",
+                          "area":  86,
+                          "grid":  "GH0463066",
+                          "bounding_box":  {
+                                               "north_lat":  7.349999,
+                                               "south_lat":  7.345001,
+                                               "west_lon":  -1.300999,
+                                               "east_lon":  -1.296001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  7.3475,
+                                                     "lon":  -1.2985
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  27,
+                          "location_label":  "GHANA_area087_GH0048147",
+                          "region":  "north",
+                          "area":  87,
+                          "grid":  "GH0048147",
+                          "bounding_box":  {
+                                               "north_lat":  10.594999,
+                                               "south_lat":  10.590001,
+                                               "west_lon":  -0.280999,
+                                               "east_lon":  -0.276001
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.5925,
+                                                     "lon":  -0.2785
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  28,
+                          "location_label":  "GHANA_area094_GH0078300",
+                          "region":  "north",
+                          "area":  94,
+                          "grid":  "GH0078300",
+                          "bounding_box":  {
+                                               "north_lat":  10.345722,
+                                               "south_lat":  10.339153,
+                                               "west_lon":  -1.291557,
+                                               "east_lon":  -1.285428
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.3424375,
+                                                     "lon":  -1.2884925
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  29,
+                          "location_label":  "GHANA_area096_GH0104250",
+                          "region":  "north",
+                          "area":  96,
+                          "grid":  "GH0104250",
+                          "bounding_box":  {
+                                               "north_lat":  10.14087,
+                                               "south_lat":  10.134188,
+                                               "west_lon":  -0.966576,
+                                               "east_lon":  -0.96042
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.137529,
+                                                     "lon":  -0.963498
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  30,
+                          "location_label":  "GHANA_area100_GH0079570",
+                          "region":  "north",
+                          "area":  100,
+                          "grid":  "GH0079570",
+                          "bounding_box":  {
+                                               "north_lat":  10.335696,
+                                               "south_lat":  10.329274,
+                                               "west_lon":  -1.266432,
+                                               "east_lon":  -1.260353
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.332485,
+                                                     "lon":  -1.2633925
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  31,
+                          "location_label":  "GHANA_area105_GH0353750",
+                          "region":  "ej",
+                          "area":  105,
+                          "grid":  "GH0353750",
+                          "bounding_box":  {
+                                               "north_lat":  8.150216,
+                                               "south_lat":  8.144373,
+                                               "west_lon":  -2.345858,
+                                               "east_lon":  -2.340766
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  8.1472945,
+                                                     "lon":  -2.343312
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      },
+                      {
+                          "id":  32,
+                          "location_label":  "GHANA_area108_GH0091085",
+                          "region":  "north",
+                          "area":  108,
+                          "grid":  "GH0091085",
+                          "bounding_box":  {
+                                               "north_lat":  10.245804,
+                                               "south_lat":  10.239168,
+                                               "west_lon":  -0.831614,
+                                               "east_lon":  -0.825378
+                                           },
+                          "center_coordinates":  {
+                                                     "lat":  10.242486,
+                                                     "lon":  -0.828496
+                                                 },
+                          "utm_epsg":  "EPSG:32630"
+                      }
+                  ]
+}

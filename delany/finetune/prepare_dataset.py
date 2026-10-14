@@ -8,9 +8,9 @@ Split (by image, never by tile):
 
 Output: finetune/yolo_dataset/{images,labels}/{train,val,test}, data.yaml, splits.csv
 
-Other resolutions (same images and split, tiles smaller than 512 px are padded with nodata):
-    python finetune/prepare_dataset.py --images "DATASET (GHANA 110, 1m)*" --out yolo_dataset_1m \
-        --splits-from finetune/yolo_dataset/splits.csv
+Usage (from delany/):
+    python finetune/prepare_dataset.py --images /abs/path/data/ghana_1m --out /abs/path/data/yolo_ghana_1m
+The split is seeded, so it is the same at every resolution (tiles smaller than 512 px are padded with nodata).
 """
 import argparse
 import glob
@@ -124,14 +124,16 @@ def process_image(folder, split, labels, stats):
 def main():
     global OUT
     ap = argparse.ArgumentParser()
-    ap.add_argument("--images", default="DATASET*", help="dataset folder (glob) inside finetune/")
-    ap.add_argument("--out", default="yolo_dataset", help="output folder inside finetune/")
-    ap.add_argument("--splits-from", help="splits.csv of another resolution to reuse instead of drawing a new split")
+    ap.add_argument("--images", required=True, help="folder holding the GHANA_*/mosaic_utm.tif areas")
+    ap.add_argument("--labels", default=LABELS_PATH, help="Ghana field labels (filtered_grids.gpkg)")
+    ap.add_argument("--out", default="yolo_dataset", help="output folder (relative paths are inside finetune/)")
+    ap.add_argument("--splits-from", help="splits.csv of another resolution to reuse instead of drawing a new split "
+                                          "(not needed: the seeded split is identical at every resolution)")
     args = ap.parse_args()
     OUT = os.path.join(ROOT, args.out)
 
-    images = sorted(glob.glob(os.path.join(ROOT, args.images, "DATASET*", "GHANA_*")))
-    labels = gpd.read_file(LABELS_PATH)
+    images = sorted(glob.glob(os.path.join(args.images, "GHANA_*")))
+    labels = gpd.read_file(args.labels)
     labels = labels[(labels.crop != "noncrop") & labels.is_valid & (labels.area >= MIN_FIELD_M2)]
 
     df = copy_split(images, args.splits_from) if args.splits_from else make_split(images, labels)
