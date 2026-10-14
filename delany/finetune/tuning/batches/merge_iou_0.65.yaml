@@ -1,0 +1,22 @@
+base_config: finetune/tuning/configs/merge_iou_0.65.yaml
+data_root: finetune/DATASET (GHANA 110, 1m)-20261005T082143Z-1-001/DATASET (GHANA
+  110, 1m)
+output_root: finetune/tuning/results/merge_iou_0.65
+temp_root: finetune/tuning/temp_merge_iou_0.65
+keep_temp: false
+mask_root: finetune/no_masks
+include:
+- GHANA_area019_GH0495616_1m
+- GHANA_area023_GH0013257_1m
+- GHANA_area030_GH0016065_1m
+- GHANA_area033_GH0190609_1m
+- GHANA_area041_GH0043509_1m
+- GHANA_area059_GH0011255_1m
+- GHANA_area062_GH0007358_1m
+- GHANA_area067_GH0449527_1m
+- GHANA_area083_GH0157466_1m
+- GHANA_area090_GH0406693_1m
+- GHANA_area095_GH0486928_1m
+- GHANA_area107_GH0435813_1m
+exclude: null
+override: null

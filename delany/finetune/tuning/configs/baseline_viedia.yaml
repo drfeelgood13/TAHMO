@@ -1,0 +1,97 @@
+model:
+- finetune/runs/combined_1m/weights/best.pt
+method: main
+execution_args:
+  src_folder: ''
+  temp_folder: ''
+  output_path: ''
+  keep_temp: false
+  mask_filepath: null
+super_resolution: null
+treat_as_vrt: false
+mask_info:
+  range: 40
+  filter_classes:
+  - 1
+  - 10
+  - 11
+  - 12
+  - 23
+  clip_classes:
+  - 0
+  - 13
+  - 14
+background_info:
+  background_classes_from_mask: []
+  additional_source: null
+data_loader:
+  skip: false
+  bands:
+  - 3
+  - 2
+  - 1
+  nodata_band: null
+  nodata_value:
+  - 0
+  - 0
+  - 0
+  min: null
+  max: null
+execution_planner:
+  region_width: -1
+  region_height: -1
+  pixel_offset:
+  - 0
+  - 0
+postprocess_limits:
+  num_workers:
+  - 1
+  - 2
+  queue_tiles_capacity: 4
+  max_tiles_inflight: 8
+passes:
+- batch_size: -1
+  tile_size: null
+  tile_step: 0.5
+  model_args:
+  - name: finetune/runs/combined_1m/weights/best.pt
+    minimal_confidence: 0.15
+    use_half: true
+  delineation_config:
+    pixel_area_threshold: 512
+    remaining_area_threshold: 0.8
+    compose_merge_iou: 0.8
+    merge_iou: 0.8
+    merge_relative_area_threshold: 0.5
+    merge_asymetric_pixel_area_threshold: 32
+    merge_asymetric_relative_area_threshold: 0.7
+    merging_edge_width: 4
+    merge_edge_iou: 0.6
+    merge_edge_pixels: 192
+    merge_tile_seams: true
+    seam_min_contact_px: 8
+    seam_min_coverage: 0.3
+    seam_min_evidence: 0.5
+    seam_split_window_px: 1
+    seam_max_colour_diff: 0.2
+    seam_end_tolerance_px: 8
+    seam_end_tolerance_rel: 0.25
+    seam_max_strip_depth_px: 16
+polygonization_args:
+  layer_name: fields
+  override_if_exists: true
+filtering_args:
+  automatic_area_scale: true
+  minimum_area_m2: 2500
+  minimum_part_area_m2: 0
+  minimum_hole_area_m2: 2500
+  minimum_background_field_area_m2: 50000
+  minimum_background_field_hole_area_m2: 25000
+  middleground_offset: null
+  minimum_middleground_field_area_m2: 10000
+  minimum_middleground_field_hole_area_m2: 5000
+simplification_args:
+  simplify: false
+  epsilon_scale: 2
+  num_workers: 2
+  raster_resolution: -1

@@ -1,0 +1,45 @@
+base_config: finetune/conf_combined_1m_tuned.yaml   # repo defaults + Ghana+VIEDIA model
+
+data_root: "finetune/DATASET (GHANA 110, 1m)-20261005T082143Z-1-001/DATASET (GHANA 110, 1m)"
+output_root: finetune/results/combined_tuned_ghana
+temp_root: finetune/temp_combined_tuned_ghana
+keep_temp: false
+mask_root: finetune/no_masks   # no land-cover masks
+
+# the 32 Ghana test images (split == "test"), see yolo_dataset_1m/splits.csv
+include:
+  - GHANA_area004_GH0004386_1m
+  - GHANA_area006_GH0171173_1m
+  - GHANA_area008_GH0022256_1m
+  - GHANA_area012_GH0418403_1m
+  - GHANA_area017_GH0177376_1m
+  - GHANA_area020_GH0193764_1m
+  - GHANA_area029_GH0167033_1m
+  - GHANA_area034_GH0016064_1m
+  - GHANA_area035_GH0442589_1m
+  - GHANA_area036_GH0463047_1m
+  - GHANA_area039_GH0419907_1m
+  - GHANA_area046_GH0163287_1m
+  - GHANA_area052_GH0131337_1m
+  - GHANA_area055_GH0196555_1m
+  - GHANA_area058_GH0419917_1m
+  - GHANA_area060_GH0074950_1m
+  - GHANA_area064_GH0483305_1m
+  - GHANA_area069_GH0482576_1m
+  - GHANA_area072_GH0486996_1m
+  - GHANA_area074_GH0182658_1m
+  - GHANA_area076_GH0486205_1m
+  - GHANA_area079_GH0059408_1m
+  - GHANA_area080_GH0153721_1m
+  - GHANA_area084_GH0010697_1m
+  - GHANA_area085_GH0060014_1m
+  - GHANA_area086_GH0463066_1m
+  - GHANA_area087_GH0048147_1m
+  - GHANA_area094_GH0078300_1m
+  - GHANA_area096_GH0104250_1m
+  - GHANA_area100_GH0079570_1m
+  - GHANA_area105_GH0353750_1m
+  - GHANA_area108_GH0091085_1m
+
+exclude: null
+override: null

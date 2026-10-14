@@ -2,3 +2,21 @@
 /data/**/*.tif
 /data/**/*.tiff
 /data/**/*.vrt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model weights / exports (too large for GitHub; shared separately)
+*.pt
+*.pth
+*.onnx
+delany/finetune/runs/
+
+# Large training datasets and raw imagery downloads (shared separately)
+delany/finetune/yolo_dataset*/
+delany/finetune/DATASET (GHANA 110, 1m)-*/
+delany/finetune/VIEDIA 1m (TIFFANIES)-*/
+
+# Logs
+*.log
