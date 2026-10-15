@@ -3,10 +3,11 @@
   "dataset": "VIEDIA 1m (Cambodia, Vietnam)",
   "coordinate_crs": "EPSG:4326",
   "coordinate_units": "degrees",
-  "area_count": 2,
+  "location_count": 2,
   "subarea_count": 162,
-  "areas": [
+  "locations": [
     {
+      "id": 1,
       "location_label": "CAMBODIA_area13",
       "country": "cambodia",
       "area": 13,
@@ -14,15 +15,16 @@
       "label_year": 2021,
       "green_season_date": "2021-10-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 17639,
       "bounding_box": {
         "north_lat": 11.651888422969186,
         "south_lat": 11.6100837207491,
         "west_lon": 104.47895366570228,
         "east_lon": 104.52135972219716
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "CAMBODIA_area13_tile1(r0c0_1m)",
@@ -2052,6 +2054,7 @@
       ]
     },
     {
+      "id": 2,
       "location_label": "VIETNAM_area44",
       "country": "vietnam",
       "area": 44,
@@ -2059,15 +2062,16 @@
       "label_year": 2021,
       "green_season_date": "2021-07-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 5415,
       "bounding_box": {
         "north_lat": 16.841297261939747,
         "south_lat": 16.7991576264738,
         "west_lon": 107.1388010535441,
         "east_lon": 107.1825516369916
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "VIETNAM_area44_tile244(r0c0_1m)",

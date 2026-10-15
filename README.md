@@ -13,7 +13,7 @@ needed to reproduce its part.
 
 ## Experiments
 
-All experiments use the same 32 held-out Ghana test areas ([downloaders/inputs/test_set.json](downloaders/inputs/test_set.json)),
+All experiments use the same 32 held-out Ghana test areas ([downloaders/inputs/ghana_test.json](downloaders/inputs/ghana_test.json)),
 taken from a set of 110 Ghana areas with field labels.
 
 1. **Base-model comparison.** FTW, FTP and Delineate Anything v2 on the Ghana test areas (a Vietnam and Cambodia
@@ -33,13 +33,18 @@ taken from a set of 110 Ghana areas with field labels.
 The resulting fine-tuned weights (one `.pt` per variant) and a description of the dataset splits are published on
 Hugging Face: [huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2](https://huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2).
 The exact areas of each split are listed in [downloaders/inputs/](downloaders/inputs/) (`ghana_train/val/test.json`,
-`viedia_train/val/test.json`).
+`viedia_train/val/test.json`); all area files share one format, described in
+[downloaders/README.md](downloaders/README.md#input-the-area-list).
 
 ## Setup
 
+### Prerequisites
+
+- **Python 3.12.**
+
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt          # downloaders, FTW, FTP
+python -m venv .venv && source .venv/bin/activate 
+pip install -r requirements.txt          # for downloaders, FTW, FTP
 ```
 
 Delineate Anything v2 needs GDAL and has its own environment; see [delany/README.md](delany/README.md#environment).

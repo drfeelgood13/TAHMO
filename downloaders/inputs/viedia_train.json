@@ -3,10 +3,11 @@
   "dataset": "VIEDIA 1m (Cambodia, Vietnam)",
   "coordinate_crs": "EPSG:4326",
   "coordinate_units": "degrees",
-  "area_count": 6,
+  "location_count": 6,
   "subarea_count": 485,
-  "areas": [
+  "locations": [
     {
+      "id": 1,
       "location_label": "CAMBODIA_area06",
       "country": "cambodia",
       "area": 6,
@@ -14,15 +15,16 @@
       "label_year": 2021,
       "green_season_date": "2021-10-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 15579,
       "bounding_box": {
         "north_lat": 10.772292562933062,
         "south_lat": 10.73049540618342,
         "west_lon": 104.51392896383103,
         "east_lon": 104.55619731280964
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "CAMBODIA_area6_tile649(r0c0_1m)",
@@ -2052,6 +2054,7 @@
       ]
     },
     {
+      "id": 2,
       "location_label": "CAMBODIA_area33",
       "country": "cambodia",
       "area": 33,
@@ -2059,15 +2062,16 @@
       "label_year": 2021,
       "green_season_date": "2021-10-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 28992,
       "bounding_box": {
         "north_lat": 13.391187440454098,
         "south_lat": 13.349440280233884,
         "west_lon": 105.09530602446435,
         "east_lon": 105.13794296126414
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "CAMBODIA_area33_tile82(r0c0_1m)",
@@ -4097,6 +4101,7 @@
       ]
     },
     {
+      "id": 3,
       "location_label": "CAMBODIA_area35",
       "country": "cambodia",
       "area": 35,
@@ -4104,15 +4109,16 @@
       "label_year": 2021,
       "green_season_date": "2021-10-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 13137,
       "bounding_box": {
         "north_lat": 11.478983783600192,
         "south_lat": 11.437161521690708,
         "west_lon": 104.34680289735284,
         "east_lon": 104.38920032404943
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "CAMBODIA_area35_tile163(r0c0_1m)",
@@ -6142,6 +6148,7 @@
       ]
     },
     {
+      "id": 4,
       "location_label": "VIETNAM_area45",
       "country": "vietnam",
       "area": 45,
@@ -6149,15 +6156,16 @@
       "label_year": 2021,
       "green_season_date": "2021-07-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 6291,
       "bounding_box": {
         "north_lat": 15.91736096363014,
         "south_lat": 15.875065215190075,
         "west_lon": 108.21317201787642,
         "east_lon": 108.2568750435837
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "VIETNAM_area45_tile325(r0c0_1m)",
@@ -8187,6 +8195,7 @@
       ]
     },
     {
+      "id": 5,
       "location_label": "VIETNAM_area48",
       "country": "vietnam",
       "area": 48,
@@ -8194,15 +8203,16 @@
       "label_year": 2021,
       "green_season_date": "2021-07-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 80,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 9550,
       "bounding_box": {
         "north_lat": 11.831632293550546,
         "south_lat": 11.7894289491805,
         "west_lon": 108.75628493501002,
         "east_lon": 108.79912353554573
       },
+      "tile_count": 80,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "VIETNAM_area48_tile487(r0c0_1m)",
@@ -10207,6 +10217,7 @@
       ]
     },
     {
+      "id": 6,
       "location_label": "VIETNAM_area49",
       "country": "vietnam",
       "area": 49,
@@ -10214,15 +10225,16 @@
       "label_year": 2021,
       "green_season_date": "2021-07-01",
       "utm_epsg": "EPSG:32648",
-      "tile_count": 81,
-      "rows": 9,
-      "cols": 9,
+      "n_fields": 8504,
       "bounding_box": {
         "north_lat": 11.271915920129938,
         "south_lat": 11.229761242676487,
         "west_lon": 108.50374326391719,
         "east_lon": 108.5464463018344
       },
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
       "subareas": [
         {
           "location_label": "VIETNAM_area49_tile568(r0c0_1m)",

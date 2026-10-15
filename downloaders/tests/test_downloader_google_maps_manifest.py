@@ -1,11 +1,28 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from downloader_google_maps import (
     format_location_label,
     load_areas,
     zoom_from_target_resolution,
 )
+
+INPUTS = Path(__file__).resolve().parents[1] / "inputs"
+
+
+@pytest.mark.parametrize("name", sorted(path.name for path in INPUTS.glob("*.json")))
+def test_repository_inputs_load(name):
+    locations = json.loads((INPUTS / name).read_text(encoding="utf-8"))["locations"]
+
+    areas = load_areas(INPUTS / name)
+
+    assert [area["label"] for area in areas] == [location["location_label"] for location in locations]
+    assert [area["bbox"] for area in areas] == [
+        tuple(location["bounding_box"][key] for key in ("west_lon", "south_lat", "east_lon", "north_lat"))
+        for location in locations
+    ]
 
 
 def test_load_test_set_areas_preserves_boxes_and_labels(tmp_path: Path):

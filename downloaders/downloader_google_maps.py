@@ -48,8 +48,8 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
 
 def load_areas(path):
-    """Load labeled boxes from a test-set manifest or legacy coordinate JSON."""
-    data = json.loads(Path(path).read_text())
+    """Load labeled boxes from a 'locations' manifest or legacy coordinate JSON."""
+    data = json.loads(Path(path).read_text(encoding="utf-8-sig"))
     if "locations" in data:
         if data.get("coordinate_crs", "EPSG:4326") != "EPSG:4326":
             raise ValueError("Location bounding boxes must use EPSG:4326")
@@ -784,7 +784,7 @@ def parse_args(argv=None):
 
 def main(argv=None):
     cli = parse_args(argv)
-    input_data = json.loads(cli.input.read_text())
+    input_data = json.loads(cli.input.read_text(encoding="utf-8-sig"))
     manifest_input = "locations" in input_data
     areas = load_areas(cli.input)
     if cli.start_index < 1:

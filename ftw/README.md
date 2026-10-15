@@ -74,7 +74,7 @@ small smallholder areas.
 ```bash
 export PYTHONPATH="$PWD/ftw"          # so that ftw_tools is importable without installing it
 python ftw/run_ftw_coordinates.py \
-    --input downloaders/inputs/test_set.json \
+    --input downloaders/inputs/ghana_test.json \
     --output ftw/output/test_set \
     --year 2024 --gpu 0 --num-workers 4
 ```
@@ -90,7 +90,7 @@ with [uv](https://docs.astral.sh/uv/) (Python ≥ 3.12):
 
 ```bash
 cd ftw && uv sync
-uv run python run_ftw_coordinates.py --input ../downloaders/inputs/test_set.json --output output/test_set --gpu 0
+uv run python run_ftw_coordinates.py --input ../downloaders/inputs/ghana_test.json --output output/test_set --gpu 0
 ```
 
 ## Tests

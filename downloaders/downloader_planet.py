@@ -49,25 +49,19 @@ class NoEligibleSceneError(RuntimeError):
     """Raised when no acquisition matches one bounded scene-search attempt."""
 
 
-def manifest_key(data):
-    """List key of a labeled-area manifest: 'locations' (Ghana) or 'areas' (VIEDIA), else None (legacy)."""
-    return next((key for key in ("locations", "areas") if key in data), None)
-
-
 def load_areas(path):
     """Load labeled AOIs from a manifest or legacy coordinate JSON.
 
-    Manifests list areas under 'locations' (Ghana) or 'areas' (VIEDIA, one AOI per area: the bounding box
-    around all its sub-tiles; 'subareas' are not read).
+    Manifests list areas under 'locations', one AOI per location bounding box (for VIEDIA the box around
+    all its sub-tiles; 'subareas' are not read).
     """
     data = json.loads(Path(path).read_text(encoding="utf-8-sig"))
-    key = manifest_key(data)
-    if key:
+    if "locations" in data:
         if data.get("coordinate_crs", "EPSG:4326") != "EPSG:4326":
             raise ValueError("Location bounding boxes must use EPSG:4326")
-        locations = data[key]
+        locations = data["locations"]
         if not isinstance(locations, list) or not locations:
-            raise ValueError(f"'{key}' must be a non-empty list")
+            raise ValueError("'locations' must be a non-empty list")
         areas = []
         labels = set()
         for index, location in enumerate(locations, start=1):
@@ -420,7 +414,7 @@ def finalize_order(order, root, state, windows, out_dir, folder, file_prefix, ut
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True,
-                        help="area JSON: 'locations' (Ghana), 'areas' (VIEDIA) or legacy prefix/width_km/coordinates")
+                        help="area JSON: 'locations' manifest or legacy prefix/width_km/coordinates")
     parser.add_argument("--output", type=Path, required=True, help="Output directory; reuse it to resume")
     parser.add_argument("--area", type=int, action="append", dest="areas",
                          help="Restrict to one area (1-based position in --input); repeatable. Default: all areas")
@@ -442,7 +436,7 @@ def main(argv=None):
         raise ValueError(f"--area must be between 1 and {len(areas)}")
     if args.start_index < 1:
         raise ValueError("--start-index must be at least 1")
-    if args.start_index != 1 and manifest_key(json.loads(args.input.read_text(encoding="utf-8-sig"))):
+    if args.start_index != 1 and "legacy_number" not in areas[0]:
         raise ValueError("--start-index only applies to legacy coordinate JSON files")
     selected_areas = sorted(args.areas) if args.areas else range(1, len(areas) + 1)
 

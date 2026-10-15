@@ -17,15 +17,39 @@ from downloaders.downloader_planet import (
 
 BOX = {"west_lon": -1.651377, "south_lat": 7.664563, "east_lon": -1.645764, "north_lat": 7.670644}
 INPUTS = Path(__file__).resolve().parents[1] / "inputs"
+INPUT_NAMES = sorted(path.name for path in INPUTS.glob("*.json"))
+LOCATION_FIELDS = ("id", "location_label", "country", "area", "split", "label_year",
+                   "green_season_date", "utm_epsg", "n_fields", "bounding_box")
 
 
-@pytest.mark.parametrize("name", [
-    "ghana_110.json", "test_set.json", "ghana_train.json", "ghana_val.json", "ghana_test.json",
-    "viedia_all.json", "viedia_train.json", "viedia_val.json", "viedia_test.json",
-])
+def test_repository_inputs_are_present():
+    assert INPUT_NAMES == [
+        "ghana_all_110.json", "ghana_test.json", "ghana_train.json", "ghana_val.json",
+        "viedia_all_10.json", "viedia_test.json", "viedia_train.json", "viedia_val.json",
+    ]
+
+
+@pytest.mark.parametrize("name", INPUT_NAMES)
+def test_repository_inputs_share_one_format(name):
+    data = json.loads((INPUTS / name).read_text(encoding="utf-8"))
+    locations = data["locations"]
+
+    assert list(data)[:6] == ["split", "dataset", "coordinate_crs", "coordinate_units", "location_count",
+                              *(["subarea_count"] if name.startswith("viedia") else ["locations"])]
+    assert data["coordinate_crs"] == "EPSG:4326"
+    assert data["location_count"] == len(locations)
+    assert [location["id"] for location in locations] == list(range(1, len(locations) + 1))
+    for location in locations:
+        assert all(field in location for field in LOCATION_FIELDS)
+        assert data["split"] in ("all", location["split"])
+    if name.startswith("viedia"):
+        assert data["subarea_count"] == sum(len(location["subareas"]) for location in locations)
+
+
+@pytest.mark.parametrize("name", INPUT_NAMES)
 def test_repository_inputs_load_with_green_season_dates(name):
     data = json.loads((INPUTS / name).read_text(encoding="utf-8-sig"))
-    entries = data.get("locations", data.get("areas"))
+    entries = data["locations"]
 
     areas = load_areas(INPUTS / name)
 

@@ -92,7 +92,7 @@ Delineate Anything also runs on the 4-band PlanetScope surface reflectance from
   16-bit values are stretched by the model's own normalization (1st to 99th percentile per band).
 
 ```bash
-python ../downloaders/downloader_planet.py --input ../downloaders/inputs/test_set.json \
+python ../downloaders/downloader_planet.py --input ../downloaders/inputs/ghana_test.json \
     --output /abs/path/data/planet_test_set_2021
 ```
 

@@ -17,7 +17,7 @@ two-window FTW model, and writes polygons for each area.
 Example, run from the repository root::
 
         uv run python ftw/run_ftw_coordinates.py \
-            --input test_set.json \
+            --input downloaders/inputs/ghana_test.json \
             --output ftw/output/test_set
 
 The default acquisition year is 2024; override it with --year.

@@ -19,6 +19,6 @@ export PYTHONUNBUFFERED=1
 nvidia-smi
 .venv/bin/python -c 'import torch; assert torch.cuda.is_available(), "CUDA is unavailable"; print(torch.cuda.get_device_name(0))'
 srun .venv/bin/python ftw/run_ftw_coordinates.py \
-    --input test_set.json \
+    --input downloaders/inputs/ghana_test.json \
     --output ftw/output/test_set \
     --year 2024 --gpu 0 --num-workers 4
