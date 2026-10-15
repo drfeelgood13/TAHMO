@@ -82,6 +82,8 @@ python ftw/run_ftw_coordinates.py \
 The machine needs internet access (Planetary Computer for Sentinel-2, GitHub for the model weights on first use).
 Note that the scene search is live: results can differ if Planetary Computer's catalogue changes.
 
+Score the result with `python evaluate.py ftw/output/test_set` (see [../README.md](../README.md#evaluation)).
+
 ### Environment
 
 We used a virtual environment at the repository root (`.venv`) created from

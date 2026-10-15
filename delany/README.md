@@ -55,6 +55,8 @@ python delany/delineate.py -b delany/batch_1m.yaml
 ```
 
 Output: `data/delany_1m/<area>.gpkg` (layer `fields`, one polygon per field). We used this file, not `<area>.simp.gpkg`.
+Score it with `python evaluate.py data/delany_1m` (add `--areas downloaders/inputs/viedia_test.json` for VIEDIA; see
+[../README.md](../README.md#evaluation)).
 
 - **Other resolutions:** download with `--resolutions 0.3 1 2 5 10 20` and write one batch file per resolution. Pixel
   sizes ≥ 4 m are upsampled 2× automatically (`super_resolution: null`).

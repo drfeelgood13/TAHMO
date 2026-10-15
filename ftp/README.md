@@ -62,6 +62,7 @@ python ftp/run_ftp_prue.py \
 ```
 
 Everything else uses the script defaults: 512 px tiles, 128 px overlap, TTA on, `--min-area-ha 0.05`, `--h-seed 2.0`.
+Score the result with `python evaluate.py ftp/output/test_set_b7` (see [../README.md](../README.md#evaluation)).
 
 Two settings matter for reproducing the numbers:
 
