@@ -30,7 +30,10 @@ taken from a set of 110 Ghana areas with field labels.
    - fine-tuned on the Ghana + VIEDIA (Vietnam, Cambodia) split (backbone frozen)
    - fine-tuned on the Ghana + VIEDIA split with the backbone unfrozen
 
-The fine-tuned weights and the dataset splits are described in [data/weights/README.md](data/weights/README.md).
+The resulting fine-tuned weights (one `.pt` per variant) and a description of the dataset splits are published on
+Hugging Face: [huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2](https://huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2).
+The exact areas of each split are listed in [downloaders/inputs/](downloaders/inputs/) (`ghana_train/val/test.json`,
+`viedia_train/val/test.json`).
 
 ## Setup
 
@@ -40,4 +43,4 @@ pip install -r requirements.txt          # downloaders, FTW, FTP
 ```
 
 Delineate Anything v2 needs GDAL and has its own environment; see [delany/README.md](delany/README.md#environment).
-Large data (imagery, datasets, weights) is not in git; it goes under `data/`.
+Large data (imagery, datasets) is not in git; it goes under `data/`. The fine-tuned weights are on Hugging Face (see above).

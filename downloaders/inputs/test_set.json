@@ -21,7 +21,9 @@
                                                      "lat":  10.9771585,
                                                      "lon":  -0.318535
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  2,
@@ -39,7 +41,9 @@
                                                      "lat":  9.602516,
                                                      "lon":  -1.033554
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  3,
@@ -57,7 +61,9 @@
                                                      "lat":  10.8175,
                                                      "lon":  -0.9735
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  4,
@@ -75,7 +81,9 @@
                                                      "lat":  7.6676035,
                                                      "lon":  -1.6485705
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  5,
@@ -93,7 +101,9 @@
                                                      "lat":  9.5524935,
                                                      "lon":  -0.97348
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  6,
@@ -111,7 +121,9 @@
                                                      "lat":  9.417567,
                                                      "lon":  -1.0985615
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  7,
@@ -129,7 +141,9 @@
                                                      "lat":  9.6375185,
                                                      "lon":  0.191503
                                                  },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  8,
@@ -147,7 +161,9 @@
                                                      "lat":  10.8725,
                                                      "lon":  -0.6585
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  9,
@@ -165,7 +181,9 @@
                                                      "lat":  7.4923245,
                                                      "lon":  -1.823699
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  10,
@@ -183,7 +201,9 @@
                                                      "lat":  7.349638,
                                                      "lon":  -1.393613
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  11,
@@ -201,7 +221,9 @@
                                                      "lat":  7.6574925,
                                                      "lon":  -1.083527
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  12,
@@ -219,7 +241,9 @@
                                                      "lat":  9.667446,
                                                      "lon":  0.1814275
                                                  },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  13,
@@ -237,7 +261,9 @@
                                                      "lat":  9.9225155,
                                                      "lon":  -0.8884305
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  14,
@@ -255,7 +281,9 @@
                                                      "lat":  9.397493,
                                                      "lon":  -0.108508
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  15,
@@ -273,7 +301,9 @@
                                                      "lat":  7.657501,
                                                      "lon":  -1.033474
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  16,
@@ -291,7 +321,9 @@
                                                      "lat":  10.3674615,
                                                      "lon":  -2.288517
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  17,
@@ -309,7 +341,9 @@
                                                      "lat":  7.207452,
                                                      "lon":  -1.3685345
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  18,
@@ -327,7 +361,9 @@
                                                      "lat":  7.2125365,
                                                      "lon":  -1.4086155
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  19,
@@ -345,7 +381,9 @@
                                                      "lat":  7.1825,
                                                      "lon":  -0.9885
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  20,
@@ -363,7 +401,9 @@
                                                      "lat":  9.5075,
                                                      "lon":  -1.2835
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  21,
@@ -381,7 +421,9 @@
                                                      "lat":  7.1875,
                                                      "lon":  -1.3235
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  22,
@@ -399,7 +441,9 @@
                                                      "lat":  10.4975,
                                                      "lon":  -0.9985
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  23,
@@ -417,7 +461,9 @@
                                                      "lat":  9.742616,
                                                      "lon":  -0.8485345
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  24,
@@ -435,7 +481,9 @@
                                                      "lat":  10.9175,
                                                      "lon":  -2.1285
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  25,
@@ -453,7 +501,9 @@
                                                      "lat":  10.4924985,
                                                      "lon":  -0.9985
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  26,
@@ -471,7 +521,9 @@
                                                      "lat":  7.3475,
                                                      "lon":  -1.2985
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  27,
@@ -489,7 +541,9 @@
                                                      "lat":  10.5925,
                                                      "lon":  -0.2785
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  28,
@@ -507,7 +561,9 @@
                                                      "lat":  10.3424375,
                                                      "lon":  -1.2884925
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  29,
@@ -525,7 +581,9 @@
                                                      "lat":  10.137529,
                                                      "lon":  -0.963498
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  30,
@@ -543,7 +601,9 @@
                                                      "lat":  10.332485,
                                                      "lon":  -1.2633925
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       },
                       {
                           "id":  31,
@@ -561,7 +621,9 @@
                                                      "lat":  8.1472945,
                                                      "lon":  -2.343312
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15"
                       },
                       {
                           "id":  32,
@@ -579,7 +641,9 @@
                                                      "lat":  10.242486,
                                                      "lon":  -0.828496
                                                  },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15"
                       }
                   ]
 }

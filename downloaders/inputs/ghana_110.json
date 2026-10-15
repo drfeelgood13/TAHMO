@@ -17,7 +17,10 @@
                                                "west_lon":  -2.800999,
                                                "east_lon":  -2.796001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  199
                       },
                       {
                           "id":  2,
@@ -31,7 +34,10 @@
                                                "west_lon":  -0.986585,
                                                "east_lon":  -0.980403
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  190
                       },
                       {
                           "id":  3,
@@ -45,7 +51,10 @@
                                                "west_lon":  -1.026691,
                                                "east_lon":  -1.020396
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  182
                       },
                       {
                           "id":  4,
@@ -59,7 +68,10 @@
                                                "west_lon":  -0.321617,
                                                "east_lon":  -0.315453
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  161
                       },
                       {
                           "id":  5,
@@ -73,7 +85,10 @@
                                                "west_lon":  -0.306566,
                                                "east_lon":  -0.300385
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  157
                       },
                       {
                           "id":  6,
@@ -87,7 +102,10 @@
                                                "west_lon":  -1.036675,
                                                "east_lon":  -1.030433
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  133
                       },
                       {
                           "id":  7,
@@ -101,7 +119,10 @@
                                                "west_lon":  -1.425999,
                                                "east_lon":  -1.421001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  123
                       },
                       {
                           "id":  8,
@@ -115,7 +136,10 @@
                                                "west_lon":  -0.976,
                                                "east_lon":  -0.971
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  122
                       },
                       {
                           "id":  9,
@@ -129,7 +153,10 @@
                                                "west_lon":  -0.961655,
                                                "east_lon":  -0.955485
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  118
                       },
                       {
                           "id":  10,
@@ -143,7 +170,10 @@
                                                "west_lon":  -0.526609,
                                                "east_lon":  -0.520549
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  117
                       },
                       {
                           "id":  11,
@@ -157,7 +187,10 @@
                                                "west_lon":  -0.526651,
                                                "east_lon":  -0.520535
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  116
                       },
                       {
                           "id":  12,
@@ -171,7 +204,10 @@
                                                "west_lon":  -1.651377,
                                                "east_lon":  -1.645764
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  113
                       },
                       {
                           "id":  13,
@@ -185,7 +221,10 @@
                                                "west_lon":  -0.31649,
                                                "east_lon":  -0.310325
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  109
                       },
                       {
                           "id":  14,
@@ -199,7 +238,10 @@
                                                "west_lon":  -0.336608,
                                                "east_lon":  -0.330546
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  109
                       },
                       {
                           "id":  15,
@@ -213,7 +255,10 @@
                                                "west_lon":  -0.556617,
                                                "east_lon":  -0.550442
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  106
                       },
                       {
                           "id":  16,
@@ -227,7 +272,10 @@
                                                "west_lon":  -1.826614,
                                                "east_lon":  -1.82037
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  105
                       },
                       {
                           "id":  17,
@@ -241,7 +289,10 @@
                                                "west_lon":  -0.976612,
                                                "east_lon":  -0.970348
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  105
                       },
                       {
                           "id":  18,
@@ -255,7 +306,10 @@
                                                "west_lon":  -1.061606,
                                                "east_lon":  -1.055382
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  103
                       },
                       {
                           "id":  19,
@@ -269,7 +323,10 @@
                                                "west_lon":  -1.411661,
                                                "east_lon":  -1.405457
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  101
                       },
                       {
                           "id":  20,
@@ -283,7 +340,10 @@
                                                "west_lon":  -1.101705,
                                                "east_lon":  -1.095418
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  99
                       },
                       {
                           "id":  21,
@@ -297,7 +357,10 @@
                                                "west_lon":  -0.136502,
                                                "east_lon":  -0.13036
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  93
                       },
                       {
                           "id":  22,
@@ -311,7 +374,10 @@
                                                "west_lon":  -2.680999,
                                                "east_lon":  -2.676001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  92
                       },
                       {
                           "id":  23,
@@ -325,7 +391,10 @@
                                                "west_lon":  -0.536632,
                                                "east_lon":  -0.53047
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  91
                       },
                       {
                           "id":  24,
@@ -339,7 +408,10 @@
                                                "west_lon":  -2.790999,
                                                "east_lon":  -2.786001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  90
                       },
                       {
                           "id":  25,
@@ -353,7 +425,10 @@
                                                "west_lon":  -1.016662,
                                                "east_lon":  -1.010425
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  90
                       },
                       {
                           "id":  26,
@@ -367,7 +442,10 @@
                                                "west_lon":  -2.795999,
                                                "east_lon":  -2.791001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  74
                       },
                       {
                           "id":  27,
@@ -381,7 +459,10 @@
                                                "west_lon":  -0.951601,
                                                "east_lon":  -0.945435
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  74
                       },
                       {
                           "id":  28,
@@ -395,7 +476,10 @@
                                                "west_lon":  -1.026678,
                                                "east_lon":  -1.020391
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  65
                       },
                       {
                           "id":  29,
@@ -409,7 +493,10 @@
                                                "west_lon":  0.188314,
                                                "east_lon":  0.194692
                                            },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  65
                       },
                       {
                           "id":  30,
@@ -423,7 +510,10 @@
                                                "west_lon":  -0.655999,
                                                "east_lon":  -0.651001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  63
                       },
                       {
                           "id":  31,
@@ -437,7 +527,10 @@
                                                "west_lon":  -0.346553,
                                                "east_lon":  -0.340637
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  58
                       },
                       {
                           "id":  32,
@@ -451,7 +544,10 @@
                                                "west_lon":  0.183334,
                                                "east_lon":  0.189652
                                            },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  55
                       },
                       {
                           "id":  33,
@@ -465,7 +561,10 @@
                                                "west_lon":  -1.106614,
                                                "east_lon":  -1.100436
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  52
                       },
                       {
                           "id":  34,
@@ -479,7 +578,10 @@
                                                "west_lon":  -0.660999,
                                                "east_lon":  -0.656001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  52
                       },
                       {
                           "id":  35,
@@ -493,7 +595,10 @@
                                                "west_lon":  -1.826397,
                                                "east_lon":  -1.821001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  50
                       },
                       {
                           "id":  36,
@@ -507,7 +612,10 @@
                                                "west_lon":  -1.396534,
                                                "east_lon":  -1.390692
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  50
                       },
                       {
                           "id":  37,
@@ -521,7 +629,10 @@
                                                "west_lon":  -0.871642,
                                                "east_lon":  -0.86537
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  50
                       },
                       {
                           "id":  38,
@@ -535,7 +646,10 @@
                                                "west_lon":  -1.816567,
                                                "east_lon":  -1.810627
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  48
                       },
                       {
                           "id":  39,
@@ -549,7 +663,10 @@
                                                "west_lon":  -1.086388,
                                                "east_lon":  -1.080666
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  48
                       },
                       {
                           "id":  40,
@@ -563,7 +680,10 @@
                                                "west_lon":  -0.41169,
                                                "east_lon":  -0.405335
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  47
                       },
                       {
                           "id":  41,
@@ -577,7 +697,10 @@
                                                "west_lon":  -0.105999,
                                                "east_lon":  -0.101001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  46
                       },
                       {
                           "id":  42,
@@ -591,7 +714,10 @@
                                                "west_lon":  0.198389,
                                                "east_lon":  0.204563
                                            },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  45
                       },
                       {
                           "id":  43,
@@ -605,7 +731,10 @@
                                                "west_lon":  -1.036398,
                                                "east_lon":  -1.03062
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  44
                       },
                       {
                           "id":  44,
@@ -619,7 +748,10 @@
                                                "west_lon":  -1.361247,
                                                "east_lon":  -1.355528
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  44
                       },
                       {
                           "id":  45,
@@ -633,7 +765,10 @@
                                                "west_lon":  -0.856788,
                                                "east_lon":  -0.850363
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  44
                       },
                       {
                           "id":  46,
@@ -647,7 +782,10 @@
                                                "west_lon":  0.178272,
                                                "east_lon":  0.184583
                                            },
-                          "utm_epsg":  "EPSG:32631"
+                          "utm_epsg":  "EPSG:32631",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  44
                       },
                       {
                           "id":  47,
@@ -661,7 +799,10 @@
                                                "west_lon":  -1.036351,
                                                "east_lon":  -1.030519
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  43
                       },
                       {
                           "id":  48,
@@ -675,7 +816,10 @@
                                                "west_lon":  -1.686372,
                                                "east_lon":  -1.680702
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  43
                       },
                       {
                           "id":  49,
@@ -689,7 +833,10 @@
                                                "west_lon":  -1.026566,
                                                "east_lon":  -1.020314
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  41
                       },
                       {
                           "id":  50,
@@ -703,7 +850,10 @@
                                                "west_lon":  -1.825999,
                                                "east_lon":  -1.821001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  40
                       },
                       {
                           "id":  51,
@@ -717,7 +867,10 @@
                                                "west_lon":  -0.88659,
                                                "east_lon":  -0.880368
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  40
                       },
                       {
                           "id":  52,
@@ -731,7 +884,10 @@
                                                "west_lon":  -0.891514,
                                                "east_lon":  -0.885347
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  40
                       },
                       {
                           "id":  53,
@@ -745,7 +901,10 @@
                                                "west_lon":  -1.606498,
                                                "east_lon":  -1.600771
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  39
                       },
                       {
                           "id":  54,
@@ -759,7 +918,10 @@
                                                "west_lon":  -1.320999,
                                                "east_lon":  -1.316001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  39
                       },
                       {
                           "id":  55,
@@ -773,7 +935,10 @@
                                                "west_lon":  -0.111574,
                                                "east_lon":  -0.105442
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  38
                       },
                       {
                           "id":  56,
@@ -787,7 +952,10 @@
                                                "west_lon":  -1.421544,
                                                "east_lon":  -1.415711
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  37
                       },
                       {
                           "id":  57,
@@ -801,7 +969,10 @@
                                                "west_lon":  -1.851006,
                                                "east_lon":  -1.845992
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  37
                       },
                       {
                           "id":  58,
@@ -815,7 +986,10 @@
                                                "west_lon":  -1.036433,
                                                "east_lon":  -1.030515
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  37
                       },
                       {
                           "id":  59,
@@ -829,7 +1003,10 @@
                                                "west_lon":  -2.130999,
                                                "east_lon":  -2.126001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  37
                       },
                       {
                           "id":  60,
@@ -843,7 +1020,10 @@
                                                "west_lon":  -2.291481,
                                                "east_lon":  -2.285553
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  37
                       },
                       {
                           "id":  61,
@@ -857,7 +1037,10 @@
                                                "west_lon":  -1.061381,
                                                "east_lon":  -1.055678
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  36
                       },
                       {
                           "id":  62,
@@ -871,7 +1054,10 @@
                                                "west_lon":  -2.145999,
                                                "east_lon":  -2.141001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  36
                       },
                       {
                           "id":  63,
@@ -885,7 +1071,10 @@
                                                "west_lon":  -1.656,
                                                "east_lon":  -1.651
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  35
                       },
                       {
                           "id":  64,
@@ -899,7 +1088,10 @@
                                                "west_lon":  -1.371381,
                                                "east_lon":  -1.365688
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  35
                       },
                       {
                           "id":  65,
@@ -913,7 +1105,10 @@
                                                "west_lon":  -0.816591,
                                                "east_lon":  -0.81021
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  35
                       },
                       {
                           "id":  66,
@@ -927,7 +1122,10 @@
                                                "west_lon":  -1.141451,
                                                "east_lon":  -1.135675
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  34
                       },
                       {
                           "id":  67,
@@ -941,7 +1139,10 @@
                                                "west_lon":  -1.670899,
                                                "east_lon":  -1.665837
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  34
                       },
                       {
                           "id":  68,
@@ -955,7 +1156,10 @@
                                                "west_lon":  -1.566358,
                                                "east_lon":  -1.560632
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  34
                       },
                       {
                           "id":  69,
@@ -969,7 +1173,10 @@
                                                "west_lon":  -1.411562,
                                                "east_lon":  -1.405669
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  34
                       },
                       {
                           "id":  70,
@@ -983,7 +1190,10 @@
                                                "west_lon":  -2.145999,
                                                "east_lon":  -2.141001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  33
                       },
                       {
                           "id":  71,
@@ -997,7 +1207,10 @@
                                                "west_lon":  -1.070999,
                                                "east_lon":  -1.066001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  32
                       },
                       {
                           "id":  72,
@@ -1011,7 +1224,10 @@
                                                "west_lon":  -0.990999,
                                                "east_lon":  -0.986001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  32
                       },
                       {
                           "id":  73,
@@ -1025,7 +1241,10 @@
                                                "west_lon":  -0.866,
                                                "east_lon":  -0.861
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  32
                       },
                       {
                           "id":  74,
@@ -1039,7 +1258,10 @@
                                                "west_lon":  -1.285999,
                                                "east_lon":  -1.281001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  32
                       },
                       {
                           "id":  75,
@@ -1053,7 +1275,10 @@
                                                "west_lon":  -1.396,
                                                "east_lon":  -1.391
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  31
                       },
                       {
                           "id":  76,
@@ -1067,7 +1292,10 @@
                                                "west_lon":  -1.325999,
                                                "east_lon":  -1.321001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  31
                       },
                       {
                           "id":  77,
@@ -1081,7 +1309,10 @@
                                                "west_lon":  -0.846612,
                                                "east_lon":  -0.84034
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  31
                       },
                       {
                           "id":  78,
@@ -1095,7 +1326,10 @@
                                                "west_lon":  -1.246444,
                                                "east_lon":  -1.240518
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  28
                       },
                       {
                           "id":  79,
@@ -1109,7 +1343,10 @@
                                                "west_lon":  -1.000999,
                                                "east_lon":  -0.996001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  28
                       },
                       {
                           "id":  80,
@@ -1123,7 +1360,10 @@
                                                "west_lon":  -0.851675,
                                                "east_lon":  -0.845394
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  26
                       },
                       {
                           "id":  81,
@@ -1137,7 +1377,10 @@
                                                "west_lon":  -1.290999,
                                                "east_lon":  -1.286001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  25
                       },
                       {
                           "id":  82,
@@ -1151,7 +1394,10 @@
                                                "west_lon":  -0.733323,
                                                "east_lon":  -0.730377
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  25
                       },
                       {
                           "id":  83,
@@ -1165,7 +1411,10 @@
                                                "west_lon":  -0.801632,
                                                "east_lon":  -0.795287
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  24
                       },
                       {
                           "id":  84,
@@ -1179,7 +1428,10 @@
                                                "west_lon":  -2.130999,
                                                "east_lon":  -2.126001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  24
                       },
                       {
                           "id":  85,
@@ -1193,7 +1445,10 @@
                                                "west_lon":  -1.000999,
                                                "east_lon":  -0.996001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  24
                       },
                       {
                           "id":  86,
@@ -1207,7 +1462,10 @@
                                                "west_lon":  -1.300999,
                                                "east_lon":  -1.296001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  23
                       },
                       {
                           "id":  87,
@@ -1221,7 +1479,10 @@
                                                "west_lon":  -0.280999,
                                                "east_lon":  -0.276001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  23
                       },
                       {
                           "id":  88,
@@ -1235,7 +1496,10 @@
                                                "west_lon":  -1.845626,
                                                "east_lon":  -1.841001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  22
                       },
                       {
                           "id":  89,
@@ -1249,7 +1513,10 @@
                                                "west_lon":  -0.990999,
                                                "east_lon":  -0.986001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  22
                       },
                       {
                           "id":  90,
@@ -1263,7 +1530,10 @@
                                                "west_lon":  -1.070999,
                                                "east_lon":  -1.066001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  20
                       },
                       {
                           "id":  91,
@@ -1277,7 +1547,10 @@
                                                "west_lon":  -1.295999,
                                                "east_lon":  -1.291001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  20
                       },
                       {
                           "id":  92,
@@ -1291,7 +1564,10 @@
                                                "west_lon":  -1.290999,
                                                "east_lon":  -1.286001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  20
                       },
                       {
                           "id":  93,
@@ -1305,7 +1581,10 @@
                                                "west_lon":  -0.696588,
                                                "east_lon":  -0.690388
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  20
                       },
                       {
                           "id":  94,
@@ -1319,7 +1598,10 @@
                                                "west_lon":  -1.291557,
                                                "east_lon":  -1.285428
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  20
                       },
                       {
                           "id":  95,
@@ -1333,7 +1615,10 @@
                                                "west_lon":  -1.330491,
                                                "east_lon":  -1.326001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  19
                       },
                       {
                           "id":  96,
@@ -1347,7 +1632,10 @@
                                                "west_lon":  -0.966576,
                                                "east_lon":  -0.96042
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  19
                       },
                       {
                           "id":  97,
@@ -1361,7 +1649,10 @@
                                                "west_lon":  -1.320999,
                                                "east_lon":  -1.316001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  18
                       },
                       {
                           "id":  98,
@@ -1375,7 +1666,10 @@
                                                "west_lon":  -0.826554,
                                                "east_lon":  -0.820418
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  18
                       },
                       {
                           "id":  99,
@@ -1389,7 +1683,10 @@
                                                "west_lon":  -1.856156,
                                                "east_lon":  -1.850809
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  17
                       },
                       {
                           "id":  100,
@@ -1403,7 +1700,10 @@
                                                "west_lon":  -1.266432,
                                                "east_lon":  -1.260353
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  17
                       },
                       {
                           "id":  101,
@@ -1417,7 +1717,10 @@
                                                "west_lon":  -1.671393,
                                                "east_lon":  -1.665625
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  16
                       },
                       {
                           "id":  102,
@@ -1431,7 +1734,10 @@
                                                "west_lon":  -1.641295,
                                                "east_lon":  -1.635402
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  16
                       },
                       {
                           "id":  103,
@@ -1445,7 +1751,10 @@
                                                "west_lon":  -1.650999,
                                                "east_lon":  -1.646001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  16
                       },
                       {
                           "id":  104,
@@ -1459,7 +1768,10 @@
                                                "west_lon":  -0.791668,
                                                "east_lon":  -0.785331
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  14
                       },
                       {
                           "id":  105,
@@ -1473,7 +1785,10 @@
                                                "west_lon":  -2.345858,
                                                "east_lon":  -2.340766
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  13
                       },
                       {
                           "id":  106,
@@ -1487,7 +1802,10 @@
                                                "west_lon":  -0.866599,
                                                "east_lon":  -0.860251
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  12
                       },
                       {
                           "id":  107,
@@ -1501,7 +1819,10 @@
                                                "west_lon":  -1.275999,
                                                "east_lon":  -1.271001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  11
                       },
                       {
                           "id":  108,
@@ -1515,7 +1836,10 @@
                                                "west_lon":  -0.831614,
                                                "east_lon":  -0.825378
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  10
                       },
                       {
                           "id":  109,
@@ -1529,7 +1853,10 @@
                                                "west_lon":  -1.016612,
                                                "east_lon":  -1.010827
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-09-15",
+                          "n_fields":  9
                       },
                       {
                           "id":  110,
@@ -1543,7 +1870,10 @@
                                                "west_lon":  -1.670999,
                                                "east_lon":  -1.666001
                                            },
-                          "utm_epsg":  "EPSG:32630"
+                          "utm_epsg":  "EPSG:32630",
+                          "label_year":  2021,
+                          "green_season_date":  "2021-10-15",
+                          "n_fields":  7
                       }
                   ]
 }

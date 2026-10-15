@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Order and download PlanetScope imagery for areas listed in an input JSON file.
 
-Usage: python downloader_planet.py --input AREAS.json --output OUTPUT
+Usage: python downloader_planet.py --input AREAS.json --output OUTPUT [--window a|b] [--fixed-windows]
 Set PL_API_KEY in the environment before running. Reuse OUTPUT to resume.
 New orders consume Planet quota; edit WINDOW_A/WINDOW_B/MAX_CLOUD/MIN_COVERAGE
 below only to request an intentional new dataset.
+
+Areas with a green_season_date get one scene acquired as close as possible to
+that date (DATE_SEARCH_DAYS); other areas, or all with --fixed-windows, get the
+scenes of windows A and B.
 """
 
 import argparse
@@ -15,7 +19,7 @@ import math
 import os
 import shutil
 import time
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import rasterio
@@ -33,6 +37,8 @@ MIN_COVERAGE = 0.999
 SEARCH_WINDOWS_A = (WINDOW_A, ("2025-03-01", "2025-06-30"), ("2025-01-01", "2025-07-15"))
 SEARCH_WINDOWS_B = (WINDOW_B, ("2025-07-16", "2025-11-30"), ("2025-07-16", "2025-12-31"))
 SEARCH_FILTERS = ((MAX_CLOUD, MIN_COVERAGE), (0.20, 0.99), (0.35, 0.95))
+# Search windows (days either side of green_season_date), widened in this order
+DATE_SEARCH_DAYS = (15, 45, 90)
 POLL_SECONDS = 30
 WAIT_HOURS = 12
 API = "https://api.planet.com"
@@ -43,15 +49,25 @@ class NoEligibleSceneError(RuntimeError):
     """Raised when no acquisition matches one bounded scene-search attempt."""
 
 
+def manifest_key(data):
+    """List key of a labeled-area manifest: 'locations' (Ghana) or 'areas' (VIEDIA), else None (legacy)."""
+    return next((key for key in ("locations", "areas") if key in data), None)
+
+
 def load_areas(path):
-    """Load labeled AOIs from a test-set manifest or legacy coordinate JSON."""
-    data = json.loads(Path(path).read_text())
-    if "locations" in data:
+    """Load labeled AOIs from a manifest or legacy coordinate JSON.
+
+    Manifests list areas under 'locations' (Ghana) or 'areas' (VIEDIA, one AOI per area: the bounding box
+    around all its sub-tiles; 'subareas' are not read).
+    """
+    data = json.loads(Path(path).read_text(encoding="utf-8-sig"))
+    key = manifest_key(data)
+    if key:
         if data.get("coordinate_crs", "EPSG:4326") != "EPSG:4326":
             raise ValueError("Location bounding boxes must use EPSG:4326")
-        locations = data["locations"]
+        locations = data[key]
         if not isinstance(locations, list) or not locations:
-            raise ValueError("'locations' must be a non-empty list")
+            raise ValueError(f"'{key}' must be a non-empty list")
         areas = []
         labels = set()
         for index, location in enumerate(locations, start=1):
@@ -81,14 +97,30 @@ def load_areas(path):
             if label in labels:
                 raise ValueError(f"Duplicate location label: {label}")
             labels.add(label)
+            target = location.get("green_season_date")
+            if target is not None:
+                try:
+                    target = date.fromisoformat(target).isoformat()
+                except (TypeError, ValueError):
+                    raise ValueError(f"Location {index} needs green_season_date as YYYY-MM-DD") from None
             aoi = mapping(box(west, south, east, north))
+            # the manifest's zone keeps imagery on the labels' grid (VIEDIA areas east of 108°E are labelled in 48N)
+            utm_epsg = location.get("utm_epsg")
+            if utm_epsg is None:
+                utm_epsg = utm_epsg_for_aoi(aoi)
+            else:
+                code = utm_epsg.removeprefix("EPSG:") if isinstance(utm_epsg, str) else ""
+                if not (code.isdigit() and (32601 <= int(code) <= 32660 or 32701 <= int(code) <= 32760)):
+                    raise ValueError(f"Location {index} needs utm_epsg as EPSG:326xx or EPSG:327xx")
+                utm_epsg = int(code)
             areas.append({
                 "label": label,
                 "folder": label,
                 "work_folder": f".orders/{label}",
                 "file_prefix": label.lower(),
                 "aoi": aoi,
-                "utm_epsg": utm_epsg_for_aoi(aoi),
+                "utm_epsg": utm_epsg,
+                "target_date": target,
             })
         return areas
 
@@ -184,7 +216,8 @@ def api_json(http, method, url, **kwargs):
         raise RuntimeError("Planet API network failure; rerun with the same output directory") from None
 
 
-def find_best_scene(http, aoi, start, end, max_cloud, min_coverage):
+def find_best_scene(http, aoi, start, end, max_cloud, min_coverage, target=None):
+    """Least cloudy eligible scene, or with target (YYYY-MM-DD) the one acquired closest to it."""
     filters = [
         {"type": "GeometryFilter", "field_name": "geometry", "config": aoi},
         {"type": "DateRangeFilter", "field_name": "acquired",
@@ -217,11 +250,25 @@ def find_best_scene(http, aoi, start, end, max_cloud, min_coverage):
             f"No eligible scene for {start} through {end} at cloud <= {max_cloud:.0%} "
             f"and AOI coverage >= {min_coverage:.1%}"
         )
-    candidates.sort(key=lambda x: (x["cloud_cover"], -x["coverage"], x["acquired"], x["id"]))
+    if target is None:
+        candidates.sort(key=lambda x: (x["cloud_cover"], -x["coverage"], x["acquired"], x["id"]))
+    else:
+        # acquired is UTC like 2021-09-14T10:12:34.123456Z; seconds are enough, and parse on any Python 3.9+
+        noon = datetime.fromisoformat(target + "T12:00:00")
+        candidates.sort(key=lambda x: (
+            abs(datetime.fromisoformat(x["acquired"][:19]) - noon),
+            x["cloud_cover"], -x["coverage"], x["id"]))
     return candidates[0]
 
 
-def find_scene_with_fallback(http, aoi, windows, search=find_best_scene):
+def date_search_windows(target):
+    """Search windows centred on target (YYYY-MM-DD), narrowest first."""
+    centre = date.fromisoformat(target)
+    return tuple(((centre - timedelta(days=d)).isoformat(), (centre + timedelta(days=d)).isoformat())
+                 for d in DATE_SEARCH_DAYS)
+
+
+def find_scene_with_fallback(http, aoi, windows, search=find_best_scene, target=None):
     attempts = [
         (window, max_cloud, min_coverage)
         for window in windows
@@ -230,7 +277,10 @@ def find_scene_with_fallback(http, aoi, windows, search=find_best_scene):
     last_error = None
     for index, ((start, end), max_cloud, min_coverage) in enumerate(attempts):
         try:
-            scene = search(http, aoi, start, end, max_cloud, min_coverage)
+            if target is None:
+                scene = search(http, aoi, start, end, max_cloud, min_coverage)
+            else:
+                scene = search(http, aoi, start, end, max_cloud, min_coverage, target=target)
         except NoEligibleSceneError as exc:
             last_error = exc
             continue
@@ -244,13 +294,14 @@ def find_scene_with_fallback(http, aoi, windows, search=find_best_scene):
     raise last_error
 
 
-def build_order_request(name, aoi, scene_a, scene_b, utm_epsg):
+def build_order_request(name, aoi, scenes, utm_epsg):
+    """Order the scenes clipped and reprojected; two scenes are coregistered to the first."""
+    tools = [{"coregister": {"anchor_item": scenes[0]["id"]}}] if len(scenes) > 1 else []
     return {
         "name": name, "source_type": "scenes", "order_type": "full",
-        "products": [{"item_ids": [scene_a["id"], scene_b["id"]], "item_type": "PSScene",
+        "products": [{"item_ids": [scene["id"] for scene in scenes], "item_type": "PSScene",
                       "product_bundle": "analytic_sr_udm2"}],
-        "tools": [
-            {"coregister": {"anchor_item": scene_a["id"]}},
+        "tools": tools + [
             {"clip": {"aoi": aoi}},
             {"reproject": {"projection": f"EPSG:{utm_epsg}", "resolution": 3, "kernel": "bilinear"}},
             {"file_format": {"format": "COG"}},
@@ -263,12 +314,14 @@ def ensure_order(http, state, state_path):
         return state["order_id"]
     # Recover by unique name even after a lost POST response. A missing match
     # after an uncertain submission never triggers a second automatic POST.
-    url = ORDERS
+    url, params = ORDERS, {"name": state["request"]["name"]}
     matches = []
     while url:
-        page = api_json(http, "GET", url, params={"name": state["request"]["name"]})
+        page = api_json(http, "GET", url, params=params)
         matches.extend(o for o in page.get("orders", []) if o["name"] == state["request"]["name"])
-        url = page.get("_links", {}).get("_next")
+        # The Orders API links the next page as "next" (the Data API uses "_next"); the link keeps the query
+        links = page.get("_links", {})
+        url, params = links.get("next") or links.get("_next"), None
     if len(matches) > 1:
         raise RuntimeError("Multiple matching orders; inspect them before proceeding")
     if matches:
@@ -315,8 +368,8 @@ def download_file(http, url, path):
         raise RuntimeError("Download interrupted; rerun to repair the same order") from None
 
 
-def finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg):
-    """Download the order's delivery, verify the two SR rasters, and move them to out_dir."""
+def finalize_order(order, root, state, windows, out_dir, folder, file_prefix, utm_epsg):
+    """Download the order's delivery, verify one SR raster per window, and move them to out_dir."""
     # Signed delivery URLs must not receive API credentials or enter state/logs.
     results = {r["name"]: r["location"] for r in order.get("_links", {}).get("results", [])}
     manifests = [n for n in results if Path(n).name == "manifest.json"]
@@ -338,7 +391,7 @@ def finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg):
                     raise RuntimeError(f"Checksum mismatch for {name}; rerun to repair")
 
     rasters = {}
-    for window in ("a", "b"):
+    for window in windows:
         scene_id = state[window]["id"]
         matches = [safe_path(manifest_path.parent, f["path"]) for f in entries
                    if f.get("annotations", {}).get("planet/asset_type") == "ortho_analytic_4b_sr"
@@ -366,12 +419,19 @@ def finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg):
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True, help="JSON file with prefix, width_km, coordinates")
+    parser.add_argument("--input", type=Path, required=True,
+                        help="area JSON: 'locations' (Ghana), 'areas' (VIEDIA) or legacy prefix/width_km/coordinates")
     parser.add_argument("--output", type=Path, required=True, help="Output directory; reuse it to resume")
     parser.add_argument("--area", type=int, action="append", dest="areas",
                          help="Restrict to one area (1-based position in --input); repeatable. Default: all areas")
     parser.add_argument("--start-index", type=int, default=1,
                          help="Label/folder number for the first coordinate in --input; use to continue numbering across batches")
+    parser.add_argument("--window", choices=("a", "b"),
+                        help="Order only the scene of window A or B (one GeoTIFF per area, e.g. for Delineate Anything). "
+                             "Default: both windows, coregistered (for FTP)")
+    parser.add_argument("--fixed-windows", action="store_true",
+                        help="Ignore green_season_date in --input and use windows A and B for every area "
+                             "(as for the FTP experiment)")
     return parser.parse_args(argv)
 
 
@@ -382,7 +442,7 @@ def main(argv=None):
         raise ValueError(f"--area must be between 1 and {len(areas)}")
     if args.start_index < 1:
         raise ValueError("--start-index must be at least 1")
-    if args.start_index != 1 and "locations" in json.loads(args.input.read_text()):
+    if args.start_index != 1 and manifest_key(json.loads(args.input.read_text(encoding="utf-8-sig"))):
         raise ValueError("--start-index only applies to legacy coordinate JSON files")
     selected_areas = sorted(args.areas) if args.areas else range(1, len(areas) + 1)
 
@@ -399,13 +459,24 @@ def main(argv=None):
     ):
         raise ValueError("Fallback acquisition windows must keep A earlier than B")
 
+    if args.fixed_windows:
+        areas = [{**area, "target_date": None} for area in areas]
+    if args.window and any(areas[i - 1].get("target_date") for i in selected_areas):
+        raise ValueError("--window only applies to areas without green_season_date; "
+                         "add --fixed-windows to use windows A and B instead of the dates")
+    if not all(d > 0 for d in DATE_SEARCH_DAYS):
+        raise ValueError("DATE_SEARCH_DAYS must be positive")
+
     for i in selected_areas:
         area = apply_start_index(areas[i - 1], args.start_index)
-        print(f"{area['label']}: {area['aoi']['coordinates'][0]}, EPSG:{area['utm_epsg']}", flush=True)
+        when = f", near {area['target_date']}" if area.get("target_date") else ""
+        print(f"{area['label']}: {area['aoi']['coordinates'][0]}, EPSG:{area['utm_epsg']}{when}", flush=True)
     key = os.environ.get("PL_API_KEY")
     if not key:
         raise ValueError("Set PL_API_KEY in your environment")
 
+    windows = (args.window,) if args.window else ("a", "b")
+    search_windows = {"a": SEARCH_WINDOWS_A, "b": SEARCH_WINDOWS_B}
     out_dir = args.output.resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     failures = []
@@ -423,36 +494,51 @@ def main(argv=None):
             file_prefix = area["file_prefix"]
             aoi = area["aoi"]
             utm_epsg = area["utm_epsg"]
+            target = area.get("target_date")
+            # one scene near the area's green-season date, or the scenes of windows A/B
+            area_windows = ("date",) if target else windows
             finished = sorted((out_dir / folder).glob(f"{file_prefix}-*.tif"))
-            if len(finished) == 2:
+            if len(finished) > len(area_windows):
+                raise RuntimeError(f"{label}: {len(finished)} rasters already in {out_dir / folder}; "
+                                   "use a separate output directory for single-scene downloads")
+            if len(finished) == len(area_windows):
                 print(label, "already finalized:", *(p.name for p in finished), flush=True)
                 continue
             root = out_dir / work_folder
             root.mkdir(parents=True, exist_ok=True)
             state_path = root / "state.json"
-            config = {"aoi": aoi, "windows": [window_a_start.isoformat(), window_a_end.isoformat(),
-                                               window_b_start.isoformat(), window_b_end.isoformat()],
-                      "utm_epsg": utm_epsg,
-                      "max_cloud": MAX_CLOUD, "min_coverage": MIN_COVERAGE}
+            if target:
+                config = {"aoi": aoi, "target_date": target, "search_days": list(DATE_SEARCH_DAYS),
+                          "utm_epsg": utm_epsg, "max_cloud": MAX_CLOUD, "min_coverage": MIN_COVERAGE}
+            else:
+                config = {"aoi": aoi, "windows": [window_a_start.isoformat(), window_a_end.isoformat(),
+                                                   window_b_start.isoformat(), window_b_end.isoformat()],
+                          "utm_epsg": utm_epsg,
+                          "max_cloud": MAX_CLOUD, "min_coverage": MIN_COVERAGE}
+                if args.window:
+                    # Only set for single-window runs, so existing two-window plans still resume.
+                    config["window"] = args.window
             if state_path.exists():
                 state = json.loads(state_path.read_text())
                 if state["config"] != config:
                     raise RuntimeError(f"{label}: settings differ from saved plan; use a different output directory for intentional new orders")
             else:
                 try:
-                    scene_a = find_scene_with_fallback(http, aoi, SEARCH_WINDOWS_A)
-                    scene_b = find_scene_with_fallback(http, aoi, SEARCH_WINDOWS_B)
+                    if target:
+                        scenes = [find_scene_with_fallback(http, aoi, date_search_windows(target), target=target)]
+                    else:
+                        scenes = [find_scene_with_fallback(http, aoi, search_windows[w]) for w in windows]
                 except NoEligibleSceneError as exc:
                     failures.append({"location": label, "error": str(exc)})
-                    print(f"{label}: no usable scene pair; continuing: {exc}", flush=True)
+                    print(f"{label}: no usable scene; continuing: {exc}", flush=True)
                     continue
                 signature = hashlib.sha256(
-                    json.dumps([config, scene_a["id"], scene_b["id"]], sort_keys=True).encode()
+                    json.dumps([config, *(scene["id"] for scene in scenes)], sort_keys=True).encode()
                 ).hexdigest()[:16]
-                state = {"config": config, "a": scene_a, "b": scene_b,
-                         "request": build_order_request(f"planet-{label}-{signature}", aoi, scene_a, scene_b, utm_epsg)}
+                state = {"config": config, **dict(zip(area_windows, scenes)),
+                         "request": build_order_request(f"planet-{label}-{signature}", aoi, scenes, utm_epsg)}
                 save_json(state_path, state)
-            print(label, "A:", state["a"], "B:", state["b"], flush=True)
+            print(label, *(f"{w.upper()}: {state[w]}" for w in area_windows), flush=True)
             order_id = ensure_order(http, state, state_path)
             print(label, "order:", order_id, flush=True)
             deadline = time.monotonic() + WAIT_HOURS * 3600
@@ -467,12 +553,16 @@ def main(argv=None):
                     raise RuntimeError("Wait limit reached; rerun the same command to resume")
                 time.sleep(POLL_SECONDS)
             if state["status"] not in {"success", "partial"}:
+                # Planet's own explanation of the failure (contains no credentials or delivery links)
+                for hint in [order.get("last_message"), *(order.get("error_hints") or [])]:
+                    if hint:
+                        print(label, "Planet:", hint, flush=True)
                 raise RuntimeError(f"Order {order_id} ended as {state['status']}; inspect it in Planet Orders. No replacement submitted.")
-            finals = finalize_order(order, root, state, out_dir, folder, file_prefix, utm_epsg)
-            print(label, "final files:", finals["a"], finals["b"], flush=True)
+            finals = finalize_order(order, root, state, area_windows, out_dir, folder, file_prefix, utm_epsg)
+            print(label, "final files:", *finals.values(), flush=True)
     save_json(out_dir / "failed_areas.json", failures)
     if failures:
-        print(f"No eligible scene pair for {len(failures)} location(s):", flush=True)
+        print(f"No eligible scenes for {len(failures)} location(s):", flush=True)
         for failure in failures:
             print(f"  {failure['location']}: {failure['error']}", flush=True)
         raise SystemExit(1)

@@ -1,0 +1,4100 @@
+{
+  "split": "val",
+  "dataset": "VIEDIA 1m (Cambodia, Vietnam)",
+  "coordinate_crs": "EPSG:4326",
+  "coordinate_units": "degrees",
+  "area_count": 2,
+  "subarea_count": 162,
+  "areas": [
+    {
+      "location_label": "CAMBODIA_area08",
+      "country": "cambodia",
+      "area": 8,
+      "split": "val",
+      "label_year": 2021,
+      "green_season_date": "2021-10-01",
+      "utm_epsg": "EPSG:32648",
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
+      "bounding_box": {
+        "north_lat": 12.641468808633354,
+        "south_lat": 12.599557131700543,
+        "west_lon": 103.77751784468327,
+        "east_lon": 103.82019226947763
+      },
+      "subareas": [
+        {
+          "location_label": "CAMBODIA_area8_tile730(r0c0_1m)",
+          "tile": 730,
+          "row": 0,
+          "col": 0,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641299204790524,
+            "south_lat": 12.636588691796266,
+            "west_lon": 103.77751784468327,
+            "east_lon": 103.78231345852083
+          },
+          "center_coordinates": {
+            "lat": 12.63894395,
+            "lon": 103.77991565
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile731(r0c1_1m)",
+          "tile": 731,
+          "row": 0,
+          "col": 1,
+          "n_fields": 81,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641320696847929,
+            "south_lat": 12.636610259006641,
+            "west_lon": 103.78223153490202,
+            "east_lon": 103.7870270726155
+          },
+          "center_coordinates": {
+            "lat": 12.63896548,
+            "lon": 103.7846293
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile732(r0c2_1m)",
+          "tile": 732,
+          "row": 0,
+          "col": 2,
+          "n_fields": 78,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641342105599017,
+            "south_lat": 12.636631742942896,
+            "west_lon": 103.7869452338092,
+            "east_lon": 103.79174069536421
+          },
+          "center_coordinates": {
+            "lat": 12.63898692,
+            "lon": 103.78934296
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile733(r0c3_1m)",
+          "tile": 733,
+          "row": 0,
+          "col": 3,
+          "n_fields": 95,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641363431043084,
+            "south_lat": 12.636653143604311,
+            "west_lon": 103.79165894137117,
+            "east_lon": 103.79645432673335
+          },
+          "center_coordinates": {
+            "lat": 12.63900829,
+            "lon": 103.79405663
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile734(r0c4_1m)",
+          "tile": 734,
+          "row": 0,
+          "col": 4,
+          "n_fields": 94,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641384673179415,
+            "south_lat": 12.636674460990186,
+            "west_lon": 103.79637265755431,
+            "east_lon": 103.80116796668935
+          },
+          "center_coordinates": {
+            "lat": 12.63902957,
+            "lon": 103.79877031
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile735(r0c5_1m)",
+          "tile": 735,
+          "row": 0,
+          "col": 5,
+          "n_fields": 97,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641405832007313,
+            "south_lat": 12.6366956950998,
+            "west_lon": 103.80108638232505,
+            "east_lon": 103.80588161519857
+          },
+          "center_coordinates": {
+            "lat": 12.63905076,
+            "lon": 103.803484
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile736(r0c6_1m)",
+          "tile": 736,
+          "row": 0,
+          "col": 6,
+          "n_fields": 70,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641426907526066,
+            "south_lat": 12.636716845932456,
+            "west_lon": 103.80580011564975,
+            "east_lon": 103.81059527222742
+          },
+          "center_coordinates": {
+            "lat": 12.63907188,
+            "lon": 103.80819769
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile737(r0c7_1m)",
+          "tile": 737,
+          "row": 0,
+          "col": 7,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641447899734981,
+            "south_lat": 12.636737913487451,
+            "west_lon": 103.8105138574948,
+            "east_lon": 103.81530893774227
+          },
+          "center_coordinates": {
+            "lat": 12.63909291,
+            "lon": 103.8129114
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile738(r0c8_1m)",
+          "tile": 738,
+          "row": 0,
+          "col": 8,
+          "n_fields": 92,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.641468808633354,
+            "south_lat": 12.636758897764082,
+            "west_lon": 103.81522760782661,
+            "east_lon": 103.82002261170953
+          },
+          "center_coordinates": {
+            "lat": 12.63911385,
+            "lon": 103.81762511
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1397261.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1397773.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile739(r1c0_1m)",
+          "tile": 739,
+          "row": 1,
+          "col": 0,
+          "n_fields": 77,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636670259006642,
+            "south_lat": 12.631959752523537,
+            "west_lon": 103.77753985311384,
+            "east_lon": 103.782335373452
+          },
+          "center_coordinates": {
+            "lat": 12.63431501,
+            "lon": 103.77993761
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile740(r1c1_1m)",
+          "tile": 740,
+          "row": 1,
+          "col": 1,
+          "n_fields": 68,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636691742942897,
+            "south_lat": 12.63198131158157,
+            "west_lon": 103.78225345852084,
+            "east_lon": 103.78704890276775
+          },
+          "center_coordinates": {
+            "lat": 12.63433653,
+            "lon": 103.78465118
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile741(r1c2_1m)",
+          "tile": 741,
+          "row": 1,
+          "col": 2,
+          "n_fields": 78,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636713143604313,
+            "south_lat": 12.632002787396953,
+            "west_lon": 103.78696707261551,
+            "east_lon": 103.7917624407368
+          },
+          "center_coordinates": {
+            "lat": 12.63435797,
+            "lon": 103.78936476
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile742(r1c3_1m)",
+          "tile": 742,
+          "row": 1,
+          "col": 3,
+          "n_fields": 83,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636734460990187,
+            "south_lat": 12.632024179968978,
+            "west_lon": 103.79168069536422,
+            "east_lon": 103.79647598732558
+          },
+          "center_coordinates": {
+            "lat": 12.63437932,
+            "lon": 103.79407834
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile743(r1c4_1m)",
+          "tile": 743,
+          "row": 1,
+          "col": 4,
+          "n_fields": 75,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.6367556950998,
+            "south_lat": 12.632045489296932,
+            "west_lon": 103.79639432673336,
+            "east_lon": 103.80118954250042
+          },
+          "center_coordinates": {
+            "lat": 12.63440059,
+            "lon": 103.79879193
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile744(r1c5_1m)",
+          "tile": 744,
+          "row": 1,
+          "col": 5,
+          "n_fields": 107,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636776845932458,
+            "south_lat": 12.632066715380109,
+            "west_lon": 103.80110796668936,
+            "east_lon": 103.80590310622777
+          },
+          "center_coordinates": {
+            "lat": 12.63442178,
+            "lon": 103.80350554
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile745(r1c6_1m)",
+          "tile": 745,
+          "row": 1,
+          "col": 6,
+          "n_fields": 52,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636797913487452,
+            "south_lat": 12.632087858217805,
+            "west_lon": 103.80582161519858,
+            "east_lon": 103.810616678474
+          },
+          "center_coordinates": {
+            "lat": 12.63444289,
+            "lon": 103.80821915
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile746(r1c7_1m)",
+          "tile": 746,
+          "row": 1,
+          "col": 7,
+          "n_fields": 70,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636818897764083,
+            "south_lat": 12.632108917809315,
+            "west_lon": 103.81053527222743,
+            "east_lon": 103.81533025920552
+          },
+          "center_coordinates": {
+            "lat": 12.63446391,
+            "lon": 103.81293277
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile747(r1c8_1m)",
+          "tile": 747,
+          "row": 1,
+          "col": 8,
+          "n_fields": 64,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.636839798761658,
+            "south_lat": 12.63212989415394,
+            "west_lon": 103.81524893774228,
+            "east_lon": 103.82004384838872
+          },
+          "center_coordinates": {
+            "lat": 12.63448485,
+            "lon": 103.81764639
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1396749.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1397261.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile748(r2c0_1m)",
+          "tile": 748,
+          "row": 2,
+          "col": 0,
+          "n_fields": 92,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.63204131158157,
+            "south_lat": 12.627330811609898,
+            "west_lon": 103.77756185282315,
+            "east_lon": 103.78235727969626
+          },
+          "center_coordinates": {
+            "lat": 12.62968606,
+            "lon": 103.77995957
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile749(r2c1_1m)",
+          "tile": 749,
+          "row": 2,
+          "col": 1,
+          "n_fields": 99,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.632062787396954,
+            "south_lat": 12.627352362515866,
+            "west_lon": 103.78227537345201,
+            "east_lon": 103.7870707242667
+          },
+          "center_coordinates": {
+            "lat": 12.62970757,
+            "lon": 103.78467305
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile750(r2c2_1m)",
+          "tile": 750,
+          "row": 2,
+          "col": 2,
+          "n_fields": 76,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.63208417996898,
+            "south_lat": 12.627373830210662,
+            "west_lon": 103.78698890276776,
+            "east_lon": 103.79178417748972
+          },
+          "center_coordinates": {
+            "lat": 12.62972901,
+            "lon": 103.78938654
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile751(r2c3_1m)",
+          "tile": 751,
+          "row": 2,
+          "col": 3,
+          "n_fields": 78,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.632105489296933,
+            "south_lat": 12.627395214693575,
+            "west_lon": 103.79170244073681,
+            "east_lon": 103.79649763933168
+          },
+          "center_coordinates": {
+            "lat": 12.62975035,
+            "lon": 103.79410004
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile752(r2c4_1m)",
+          "tile": 752,
+          "row": 2,
+          "col": 4,
+          "n_fields": 88,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.63212671538011,
+            "south_lat": 12.627416515963894,
+            "west_lon": 103.79641598732559,
+            "east_lon": 103.80121110975901
+          },
+          "center_coordinates": {
+            "lat": 12.62977162,
+            "lon": 103.79881355
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile753(r2c5_1m)",
+          "tile": 753,
+          "row": 2,
+          "col": 5,
+          "n_fields": 91,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.632147858217806,
+            "south_lat": 12.627437734020907,
+            "west_lon": 103.80112954250043,
+            "east_lon": 103.8059245887381
+          },
+          "center_coordinates": {
+            "lat": 12.6297928,
+            "lon": 103.80352707
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile754(r2c6_1m)",
+          "tile": 754,
+          "row": 2,
+          "col": 6,
+          "n_fields": 60,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.632168917809317,
+            "south_lat": 12.627458868863915,
+            "west_lon": 103.80584310622778,
+            "east_lon": 103.81063807623532
+          },
+          "center_coordinates": {
+            "lat": 12.62981389,
+            "lon": 103.80824059
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile755(r2c7_1m)",
+          "tile": 755,
+          "row": 2,
+          "col": 7,
+          "n_fields": 71,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.63218989415394,
+            "south_lat": 12.627479920492217,
+            "west_lon": 103.81055667847401,
+            "east_lon": 103.8153515722171
+          },
+          "center_coordinates": {
+            "lat": 12.62983491,
+            "lon": 103.81295413
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile756(r2c8_1m)",
+          "tile": 756,
+          "row": 2,
+          "col": 8,
+          "n_fields": 48,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.632210787250989,
+            "south_lat": 12.627500888905109,
+            "west_lon": 103.81527025920553,
+            "east_lon": 103.82006507664984
+          },
+          "center_coordinates": {
+            "lat": 12.62985584,
+            "lon": 103.81766767
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1396237.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1396749.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile757(r3c0_1m)",
+          "tile": 757,
+          "row": 3,
+          "col": 0,
+          "n_fields": 94,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627412362515868,
+            "south_lat": 12.622701869055918,
+            "west_lon": 103.77758384381195,
+            "east_lon": 103.78237917725436
+          },
+          "center_coordinates": {
+            "lat": 12.62505712,
+            "lon": 103.77998151
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile758(r3c1_1m)",
+          "tile": 758,
+          "row": 3,
+          "col": 1,
+          "n_fields": 86,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627433830210663,
+            "south_lat": 12.6227234118101,
+            "west_lon": 103.78229727969627,
+            "east_lon": 103.7870925371131
+          },
+          "center_coordinates": {
+            "lat": 12.62507862,
+            "lon": 103.78469491
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile759(r3c2_1m)",
+          "tile": 759,
+          "row": 3,
+          "col": 2,
+          "n_fields": 86,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627455214693576,
+            "south_lat": 12.622744871384588,
+            "west_lon": 103.78701072426671,
+            "east_lon": 103.79180590562368
+          },
+          "center_coordinates": {
+            "lat": 12.62510004,
+            "lon": 103.78940831
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile760(r3c3_1m)",
+          "tile": 760,
+          "row": 3,
+          "col": 3,
+          "n_fields": 64,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627476515963895,
+            "south_lat": 12.622766247778669,
+            "west_lon": 103.79172417748973,
+            "east_lon": 103.79651928275244
+          },
+          "center_coordinates": {
+            "lat": 12.62512138,
+            "lon": 103.79412173
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile761(r3c4_1m)",
+          "tile": 761,
+          "row": 3,
+          "col": 4,
+          "n_fields": 89,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627497734020908,
+            "south_lat": 12.622787540991627,
+            "west_lon": 103.79643763933169,
+            "east_lon": 103.80123266846584
+          },
+          "center_coordinates": {
+            "lat": 12.62514264,
+            "lon": 103.79883515
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile762(r3c5_1m)",
+          "tile": 762,
+          "row": 3,
+          "col": 5,
+          "n_fields": 85,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627518868863916,
+            "south_lat": 12.622808751022758,
+            "west_lon": 103.80115110975902,
+            "east_lon": 103.80594606273026
+          },
+          "center_coordinates": {
+            "lat": 12.62516381,
+            "lon": 103.80354859
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile763(r3c6_1m)",
+          "tile": 763,
+          "row": 3,
+          "col": 6,
+          "n_fields": 78,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.627539920492218,
+            "south_lat": 12.622829877871357,
+            "west_lon": 103.8058645887381,
+            "east_lon": 103.81065946551209
+          },
+          "center_coordinates": {
+            "lat": 12.6251849,
+            "lon": 103.80826203
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile764(r3c7_1m)",
+          "tile": 764,
+          "row": 3,
+          "col": 7,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.62756088890511,
+            "south_lat": 12.622850921536724,
+            "west_lon": 103.81057807623533,
+            "east_lon": 103.81537287677774
+          },
+          "center_coordinates": {
+            "lat": 12.62520591,
+            "lon": 103.81297548
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile765(r3c8_1m)",
+          "tile": 765,
+          "row": 3,
+          "col": 8,
+          "n_fields": 67,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.6275817741019,
+            "south_lat": 12.622871882018158,
+            "west_lon": 103.8152915722171,
+            "east_lon": 103.82008629649361
+          },
+          "center_coordinates": {
+            "lat": 12.62522683,
+            "lon": 103.81768893
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1395725.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1396237.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile766(r4c0_1m)",
+          "tile": 766,
+          "row": 4,
+          "col": 0,
+          "n_fields": 74,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.6227834118101,
+            "south_lat": 12.618072924862151,
+            "west_lon": 103.77760582608101,
+            "east_lon": 103.78240106612702
+          },
+          "center_coordinates": {
+            "lat": 12.62042817,
+            "lon": 103.78000345
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile767(r4c1_1m)",
+          "tile": 767,
+          "row": 4,
+          "col": 1,
+          "n_fields": 99,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.62280487138459,
+            "south_lat": 12.618094459464833,
+            "west_lon": 103.78231917725437,
+            "east_lon": 103.78711434130769
+          },
+          "center_coordinates": {
+            "lat": 12.62044967,
+            "lon": 103.78471676
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile768(r4c2_1m)",
+          "tile": 768,
+          "row": 4,
+          "col": 2,
+          "n_fields": 101,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.62282624777867,
+            "south_lat": 12.618115910919297,
+            "west_lon": 103.7870325371131,
+            "east_lon": 103.7918276251394
+          },
+          "center_coordinates": {
+            "lat": 12.62047108,
+            "lon": 103.78943008
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile769(r4c3_1m)",
+          "tile": 769,
+          "row": 4,
+          "col": 3,
+          "n_fields": 93,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.622847540991629,
+            "south_lat": 12.61813727922482,
+            "west_lon": 103.79174590562369,
+            "east_lon": 103.79654091758859
+          },
+          "center_coordinates": {
+            "lat": 12.62049241,
+            "lon": 103.79414341
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile770(r4c4_1m)",
+          "tile": 770,
+          "row": 4,
+          "col": 4,
+          "n_fields": 92,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.622868751022759,
+            "south_lat": 12.618158564380698,
+            "west_lon": 103.79645928275245,
+            "east_lon": 103.80125421862165
+          },
+          "center_coordinates": {
+            "lat": 12.62051366,
+            "lon": 103.79885675
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile771(r4c5_1m)",
+          "tile": 771,
+          "row": 4,
+          "col": 5,
+          "n_fields": 105,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.622889877871359,
+            "south_lat": 12.618179766386223,
+            "west_lon": 103.80117266846585,
+            "east_lon": 103.805967528205
+          },
+          "center_coordinates": {
+            "lat": 12.62053482,
+            "lon": 103.8035701
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile772(r4c6_1m)",
+          "tile": 772,
+          "row": 4,
+          "col": 6,
+          "n_fields": 112,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.622910921536725,
+            "south_lat": 12.618200885240686,
+            "west_lon": 103.80588606273027,
+            "east_lon": 103.81068084630503
+          },
+          "center_coordinates": {
+            "lat": 12.6205559,
+            "lon": 103.80828345
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile773(r4c7_1m)",
+          "tile": 773,
+          "row": 4,
+          "col": 7,
+          "n_fields": 85,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.62293188201816,
+            "south_lat": 12.618221920943395,
+            "west_lon": 103.8105994655121,
+            "east_lon": 103.81539417288815
+          },
+          "center_coordinates": {
+            "lat": 12.6205769,
+            "lon": 103.81299682
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile774(r4c8_1m)",
+          "tile": 774,
+          "row": 4,
+          "col": 8,
+          "n_fields": 74,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.622952759314968,
+            "south_lat": 12.618242873493644,
+            "west_lon": 103.81531287677775,
+            "east_lon": 103.82010750792077
+          },
+          "center_coordinates": {
+            "lat": 12.62059782,
+            "lon": 103.81771019
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1395213.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1395725.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile775(r5c0_1m)",
+          "tile": 775,
+          "row": 5,
+          "col": 0,
+          "n_fields": 74,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618154459464835,
+            "south_lat": 12.613443979029165,
+            "west_lon": 103.77762779963105,
+            "east_lon": 103.78242294631507
+          },
+          "center_coordinates": {
+            "lat": 12.61579922,
+            "lon": 103.78002537
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile776(r5c1_1m)",
+          "tile": 776,
+          "row": 5,
+          "col": 1,
+          "n_fields": 84,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618175910919298,
+            "south_lat": 12.613465505480633,
+            "west_lon": 103.78234106612703,
+            "east_lon": 103.7871361368512
+          },
+          "center_coordinates": {
+            "lat": 12.61582071,
+            "lon": 103.7847386
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile777(r5c2_1m)",
+          "tile": 777,
+          "row": 5,
+          "col": 2,
+          "n_fields": 105,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618197279224821,
+            "south_lat": 12.613486948815344,
+            "west_lon": 103.7870543413077,
+            "east_lon": 103.79184933603767
+          },
+          "center_coordinates": {
+            "lat": 12.61584211,
+            "lon": 103.78945184
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile778(r5c3_1m)",
+          "tile": 778,
+          "row": 5,
+          "col": 3,
+          "n_fields": 101,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.6182185643807,
+            "south_lat": 12.613508309032593,
+            "west_lon": 103.79176762513941,
+            "east_lon": 103.79656254384086
+          },
+          "center_coordinates": {
+            "lat": 12.61586344,
+            "lon": 103.79416508
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile779(r5c4_1m)",
+          "tile": 779,
+          "row": 5,
+          "col": 4,
+          "n_fields": 80,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618239766386225,
+            "south_lat": 12.61352958613167,
+            "west_lon": 103.7964809175886,
+            "east_lon": 103.80127576022718
+          },
+          "center_coordinates": {
+            "lat": 12.61588468,
+            "lon": 103.79887834
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile780(r5c5_1m)",
+          "tile": 780,
+          "row": 5,
+          "col": 5,
+          "n_fields": 104,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618260885240687,
+            "south_lat": 12.61355078011186,
+            "west_lon": 103.80119421862166,
+            "east_lon": 103.80598898516305
+          },
+          "center_coordinates": {
+            "lat": 12.61590583,
+            "lon": 103.8035916
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile781(r5c6_1m)",
+          "tile": 781,
+          "row": 5,
+          "col": 6,
+          "n_fields": 80,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618281920943396,
+            "south_lat": 12.613571890972471,
+            "west_lon": 103.80590752820501,
+            "east_lon": 103.81070221861488
+          },
+          "center_coordinates": {
+            "lat": 12.61592691,
+            "lon": 103.80830487
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile782(r5c7_1m)",
+          "tile": 782,
+          "row": 5,
+          "col": 7,
+          "n_fields": 70,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618302873493645,
+            "south_lat": 12.613592918712797,
+            "west_lon": 103.81062084630504,
+            "east_lon": 103.81541546054906
+          },
+          "center_coordinates": {
+            "lat": 12.6159479,
+            "lon": 103.81301815
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile783(r5c8_1m)",
+          "tile": 783,
+          "row": 5,
+          "col": 8,
+          "n_fields": 104,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.618323742890743,
+            "south_lat": 12.613613863332132,
+            "west_lon": 103.81533417288816,
+            "east_lon": 103.82012871093201
+          },
+          "center_coordinates": {
+            "lat": 12.6159688,
+            "lon": 103.81773144
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1394701.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1395213.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile784(r6c0_1m)",
+          "tile": 784,
+          "row": 6,
+          "col": 0,
+          "n_fields": 71,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613525505480634,
+            "south_lat": 12.608815031557526,
+            "west_lon": 103.77764976446284,
+            "east_lon": 103.78244481781917
+          },
+          "center_coordinates": {
+            "lat": 12.61117027,
+            "lon": 103.78004729
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile785(r6c1_1m)",
+          "tile": 785,
+          "row": 6,
+          "col": 1,
+          "n_fields": 97,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613546948815346,
+            "south_lat": 12.608836549858058,
+            "west_lon": 103.78236294631508,
+            "east_lon": 103.7871579237444
+          },
+          "center_coordinates": {
+            "lat": 12.61119175,
+            "lon": 103.78476044
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile786(r6c2_1m)",
+          "tile": 786,
+          "row": 6,
+          "col": 2,
+          "n_fields": 118,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613568309032594,
+            "south_lat": 12.608857985073303,
+            "west_lon": 103.78707613685121,
+            "east_lon": 103.7918710383192
+          },
+          "center_coordinates": {
+            "lat": 12.61121315,
+            "lon": 103.78947359
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile787(r6c3_1m)",
+          "tile": 787,
+          "row": 6,
+          "col": 3,
+          "n_fields": 84,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.61358958613167,
+            "south_lat": 12.608879337202556,
+            "west_lon": 103.79178933603768,
+            "east_lon": 103.79658416151
+          },
+          "center_coordinates": {
+            "lat": 12.61123446,
+            "lon": 103.79418675
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile788(r6c4_1m)",
+          "tile": 788,
+          "row": 6,
+          "col": 4,
+          "n_fields": 76,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.61361078011186,
+            "south_lat": 12.608900606245106,
+            "west_lon": 103.79650254384087,
+            "east_lon": 103.80129729328317
+          },
+          "center_coordinates": {
+            "lat": 12.61125569,
+            "lon": 103.79889992
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile789(r6c5_1m)",
+          "tile": 789,
+          "row": 6,
+          "col": 5,
+          "n_fields": 110,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613631890972473,
+            "south_lat": 12.608921792200245,
+            "west_lon": 103.8012157602272,
+            "east_lon": 103.80601043360517
+          },
+          "center_coordinates": {
+            "lat": 12.61127684,
+            "lon": 103.8036131
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile790(r6c6_1m)",
+          "tile": 790,
+          "row": 6,
+          "col": 6,
+          "n_fields": 82,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613652918712798,
+            "south_lat": 12.608942895067273,
+            "west_lon": 103.80592898516306,
+            "east_lon": 103.81072358244238
+          },
+          "center_coordinates": {
+            "lat": 12.61129791,
+            "lon": 103.80832628
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile791(r6c7_1m)",
+          "tile": 791,
+          "row": 6,
+          "col": 7,
+          "n_fields": 71,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613673863332133,
+            "south_lat": 12.608963914845486,
+            "west_lon": 103.81064221861489,
+            "east_lon": 103.81543673976121
+          },
+          "center_coordinates": {
+            "lat": 12.61131889,
+            "lon": 103.81303948
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile792(r6c8_1m)",
+          "tile": 792,
+          "row": 6,
+          "col": 8,
+          "n_fields": 75,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.613694724829795,
+            "south_lat": 12.60898485153419,
+            "west_lon": 103.81535546054907,
+            "east_lon": 103.82014990552808
+          },
+          "center_coordinates": {
+            "lat": 12.61133979,
+            "lon": 103.81775268
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1394189.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1394701.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile793(r7c0_1m)",
+          "tile": 793,
+          "row": 7,
+          "col": 0,
+          "n_fields": 30,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.60889654985806,
+            "south_lat": 12.6041860824478,
+            "west_lon": 103.77767172057712,
+            "east_lon": 103.78246668064013
+          },
+          "center_coordinates": {
+            "lat": 12.60654132,
+            "lon": 103.7800692
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile794(r7c1_1m)",
+          "tile": 794,
+          "row": 7,
+          "col": 1,
+          "n_fields": 44,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.608917985073305,
+            "south_lat": 12.604207592597671,
+            "west_lon": 103.78238481781918,
+            "east_lon": 103.78717970198802
+          },
+          "center_coordinates": {
+            "lat": 12.60656279,
+            "lon": 103.78478226
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile795(r7c2_1m)",
+          "tile": 795,
+          "row": 7,
+          "col": 2,
+          "n_fields": 77,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.608939337202557,
+            "south_lat": 12.604229019693733,
+            "west_lon": 103.78709792374441,
+            "east_lon": 103.79189273198475
+          },
+          "center_coordinates": {
+            "lat": 12.60658418,
+            "lon": 103.78949533
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile796(r7c3_1m)",
+          "tile": 796,
+          "row": 7,
+          "col": 3,
+          "n_fields": 83,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.608960606245107,
+            "south_lat": 12.604250363735268,
+            "west_lon": 103.79181103831921,
+            "east_lon": 103.79660577059671
+          },
+          "center_coordinates": {
+            "lat": 12.60660548,
+            "lon": 103.7942084
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile797(r7c4_1m)",
+          "tile": 797,
+          "row": 7,
+          "col": 4,
+          "n_fields": 73,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.608981792200247,
+            "south_lat": 12.60427162472157,
+            "west_lon": 103.79652416151,
+            "east_lon": 103.80131881779036
+          },
+          "center_coordinates": {
+            "lat": 12.60662671,
+            "lon": 103.79892149
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile798(r7c5_1m)",
+          "tile": 798,
+          "row": 7,
+          "col": 5,
+          "n_fields": 92,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.609002895067274,
+            "south_lat": 12.604292802651932,
+            "west_lon": 103.80123729328318,
+            "east_lon": 103.80603187353205
+          },
+          "center_coordinates": {
+            "lat": 12.60664785,
+            "lon": 103.80363458
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile799(r7c6_1m)",
+          "tile": 799,
+          "row": 7,
+          "col": 6,
+          "n_fields": 74,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.609023914845487,
+            "south_lat": 12.604313897525655,
+            "west_lon": 103.80595043360518,
+            "east_lon": 103.81074493778824
+          },
+          "center_coordinates": {
+            "lat": 12.60666891,
+            "lon": 103.80834769
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile800(r7c7_1m)",
+          "tile": 800,
+          "row": 7,
+          "col": 7,
+          "n_fields": 67,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.609044851534192,
+            "south_lat": 12.604334909342034,
+            "west_lon": 103.81066358244239,
+            "east_lon": 103.81545801052532
+          },
+          "center_coordinates": {
+            "lat": 12.60668988,
+            "lon": 103.8130608
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile801(r7c8_1m)",
+          "tile": 801,
+          "row": 7,
+          "col": 8,
+          "n_fields": 87,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.609065705132688,
+            "south_lat": 12.604355838100373,
+            "west_lon": 103.81537673976122,
+            "east_lon": 103.82017109170971
+          },
+          "center_coordinates": {
+            "lat": 12.60671077,
+            "lon": 103.81777392
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1393677.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1394189.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile802(r8c0_1m)",
+          "tile": 802,
+          "row": 8,
+          "col": 0,
+          "n_fields": 71,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604267592597672,
+            "south_lat": 12.599557131700543,
+            "west_lon": 103.77769366797466,
+            "east_lon": 103.78248853477866
+          },
+          "center_coordinates": {
+            "lat": 12.60191236,
+            "lon": 103.7800911
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367238.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 367750.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile803(r8c1_1m)",
+          "tile": 803,
+          "row": 8,
+          "col": 1,
+          "n_fields": 5,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604289019693734,
+            "south_lat": 12.59957863370004,
+            "west_lon": 103.78240668064014,
+            "east_lon": 103.78720147158282
+          },
+          "center_coordinates": {
+            "lat": 12.60193383,
+            "lon": 103.78480408
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 367750.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 368262.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile804(r8c2_1m)",
+          "tile": 804,
+          "row": 8,
+          "col": 2,
+          "n_fields": 43,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.60431036373527,
+            "south_lat": 12.599600052677193,
+            "west_lon": 103.78711970198803,
+            "east_lon": 103.79191441703504
+          },
+          "center_coordinates": {
+            "lat": 12.60195521,
+            "lon": 103.78951706
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368262.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 368774.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile805(r8c3_1m)",
+          "tile": 805,
+          "row": 8,
+          "col": 3,
+          "n_fields": 79,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.60433162472157,
+            "south_lat": 12.59962138863129,
+            "west_lon": 103.79183273198475,
+            "east_lon": 103.79662737110179
+          },
+          "center_coordinates": {
+            "lat": 12.60197651,
+            "lon": 103.79423005
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 368774.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 369286.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile806(r8c4_1m)",
+          "tile": 806,
+          "row": 8,
+          "col": 4,
+          "n_fields": 107,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604352802651933,
+            "south_lat": 12.599642641561623,
+            "west_lon": 103.79654577059672,
+            "east_lon": 103.80134033374947
+          },
+          "center_coordinates": {
+            "lat": 12.60199772,
+            "lon": 103.79894305
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369286.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 369798.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile807(r8c5_1m)",
+          "tile": 807,
+          "row": 8,
+          "col": 5,
+          "n_fields": 107,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604373897525656,
+            "south_lat": 12.599663811467488,
+            "west_lon": 103.80125881779037,
+            "east_lon": 103.80605330494446
+          },
+          "center_coordinates": {
+            "lat": 12.60201885,
+            "lon": 103.80365606
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 369798.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 370310.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile808(r8c6_1m)",
+          "tile": 808,
+          "row": 8,
+          "col": 6,
+          "n_fields": 69,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604394909342036,
+            "south_lat": 12.59968489834818,
+            "west_lon": 103.80597187353206,
+            "east_lon": 103.8107662846532
+          },
+          "center_coordinates": {
+            "lat": 12.6020399,
+            "lon": 103.80836908
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370310.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 370822.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile809(r8c7_1m)",
+          "tile": 809,
+          "row": 8,
+          "col": 7,
+          "n_fields": 85,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604415838100374,
+            "south_lat": 12.599705902202999,
+            "west_lon": 103.81068493778825,
+            "east_lon": 103.81547927284213
+          },
+          "center_coordinates": {
+            "lat": 12.60206087,
+            "lon": 103.81308211
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 370822.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 371334.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        },
+        {
+          "location_label": "CAMBODIA_area8_tile810(r8c8_1m)",
+          "tile": 810,
+          "row": 8,
+          "col": 8,
+          "n_fields": 109,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 12.604436683799976,
+            "south_lat": 12.599726823031247,
+            "west_lon": 103.81539801052533,
+            "east_lon": 103.82019226947763
+          },
+          "center_coordinates": {
+            "lat": 12.60208175,
+            "lon": 103.81779514
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 371334.6281893929,
+            "ymin": 1393165.1736787842,
+            "xmax": 371846.6281893929,
+            "ymax": 1393677.1736787842
+          }
+        }
+      ]
+    },
+    {
+      "location_label": "VIETNAM_area46",
+      "country": "vietnam",
+      "area": 46,
+      "split": "val",
+      "label_year": 2021,
+      "green_season_date": "2021-07-01",
+      "utm_epsg": "EPSG:32648",
+      "tile_count": 81,
+      "rows": 9,
+      "cols": 9,
+      "bounding_box": {
+        "north_lat": 14.030911845665864,
+        "south_lat": 13.988582342964529,
+        "west_lon": 108.9983878043322,
+        "east_lon": 109.0417385244605
+      },
+      "subareas": [
+        {
+          "location_label": "VIETNAM_area46_tile406(r0c0_1m)",
+          "tile": 406,
+          "row": 0,
+          "col": 0,
+          "n_fields": 47,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030911845665864,
+            "south_lat": 14.026155395598716,
+            "west_lon": 108.99902806080104,
+            "east_lon": 109.00389837379075
+          },
+          "center_coordinates": {
+            "lat": 14.02853362,
+            "lon": 109.00146322
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile407(r0c1_1m)",
+          "tile": 407,
+          "row": 0,
+          "col": 1,
+          "n_fields": 77,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030833520951726,
+            "south_lat": 14.026077005705915,
+            "west_lon": 109.00375811676183,
+            "east_lon": 109.008628494846
+          },
+          "center_coordinates": {
+            "lat": 14.02845526,
+            "lon": 109.00619331
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile408(r0c2_1m)",
+          "tile": 408,
+          "row": 0,
+          "col": 2,
+          "n_fields": 76,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030755104227568,
+            "south_lat": 14.02599852383717,
+            "west_lon": 109.0084881436216,
+            "east_lon": 109.01335858676332
+          },
+          "center_coordinates": {
+            "lat": 14.02837681,
+            "lon": 109.01092337
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile409(r0c3_1m)",
+          "tile": 409,
+          "row": 0,
+          "col": 3,
+          "n_fields": 111,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030676595496004,
+            "south_lat": 14.025919949995092,
+            "west_lon": 109.01321814134624,
+            "east_lon": 109.01808864950861
+          },
+          "center_coordinates": {
+            "lat": 14.02829827,
+            "lon": 109.0156534
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile410(r0c4_1m)",
+          "tile": 410,
+          "row": 0,
+          "col": 4,
+          "n_fields": 84,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.03059799475964,
+            "south_lat": 14.025841284182293,
+            "west_lon": 109.01794810990162,
+            "east_lon": 109.02281868304776
+          },
+          "center_coordinates": {
+            "lat": 14.02821964,
+            "lon": 109.0203834
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile411(r0c5_1m)",
+          "tile": 411,
+          "row": 0,
+          "col": 5,
+          "n_fields": 67,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030519302021094,
+            "south_lat": 14.02576252640139,
+            "west_lon": 109.02267804925363,
+            "east_lon": 109.02754868734664
+          },
+          "center_coordinates": {
+            "lat": 14.02814091,
+            "lon": 109.02511337
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile412(r0c6_1m)",
+          "tile": 412,
+          "row": 0,
+          "col": 6,
+          "n_fields": 86,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.03044051728298,
+            "south_lat": 14.025683676655001,
+            "west_lon": 109.02740795936813,
+            "east_lon": 109.03227866237113
+          },
+          "center_coordinates": {
+            "lat": 14.0280621,
+            "lon": 109.02984331
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile413(r0c7_1m)",
+          "tile": 413,
+          "row": 0,
+          "col": 7,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030361640547923,
+            "south_lat": 14.025604734945752,
+            "west_lon": 109.03213784021104,
+            "east_lon": 109.0370086080871
+          },
+          "center_coordinates": {
+            "lat": 14.02798319,
+            "lon": 109.03457322
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile414(r0c8_1m)",
+          "tile": 414,
+          "row": 0,
+          "col": 8,
+          "n_fields": 57,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.030282671818547,
+            "south_lat": 14.025525701276267,
+            "west_lon": 109.03686769174823,
+            "east_lon": 109.0417385244605
+          },
+          "center_coordinates": {
+            "lat": 14.02790419,
+            "lon": 109.03930311
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1554290.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1554802.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile415(r1c0_1m)",
+          "tile": 415,
+          "row": 1,
+          "col": 0,
+          "n_fields": 50,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.026293693512962,
+            "south_lat": 14.021537268037271,
+            "west_lon": 108.99894792703726,
+            "east_lon": 109.00381811676182
+          },
+          "center_coordinates": {
+            "lat": 14.02391548,
+            "lon": 109.00138302
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile416(r1c1_1m)",
+          "tile": 416,
+          "row": 1,
+          "col": 1,
+          "n_fields": 142,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.026215395598717,
+            "south_lat": 14.0214589049748,
+            "west_lon": 109.00367788883393,
+            "east_lon": 109.0085481436216
+          },
+          "center_coordinates": {
+            "lat": 14.02383715,
+            "lon": 109.00611302
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile417(r1c2_1m)",
+          "tile": 417,
+          "row": 1,
+          "col": 2,
+          "n_fields": 94,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.026137005705916,
+            "south_lat": 14.021380449967847,
+            "west_lon": 109.00840782153237,
+            "east_lon": 109.01327814134623
+          },
+          "center_coordinates": {
+            "lat": 14.02375873,
+            "lon": 109.01084298
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile418(r1c3_1m)",
+          "tile": 418,
+          "row": 1,
+          "col": 3,
+          "n_fields": 83,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.026058523837172,
+            "south_lat": 14.021301903019024,
+            "west_lon": 109.01313772509843,
+            "east_lon": 109.01800810990161
+          },
+          "center_coordinates": {
+            "lat": 14.02368021,
+            "lon": 109.01557292
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile419(r1c4_1m)",
+          "tile": 419,
+          "row": 1,
+          "col": 4,
+          "n_fields": 130,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.025979949995094,
+            "south_lat": 14.021223264130937,
+            "west_lon": 109.01786759949799,
+            "east_lon": 109.02273804925362
+          },
+          "center_coordinates": {
+            "lat": 14.02360161,
+            "lon": 109.02030282
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile420(r1c5_1m)",
+          "tile": 420,
+          "row": 1,
+          "col": 5,
+          "n_fields": 102,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.025901284182295,
+            "south_lat": 14.021144533306206,
+            "west_lon": 109.02259744469696,
+            "east_lon": 109.02746795936812
+          },
+          "center_coordinates": {
+            "lat": 14.02352291,
+            "lon": 109.0250327
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile421(r1c6_1m)",
+          "tile": 421,
+          "row": 1,
+          "col": 6,
+          "n_fields": 72,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.025822526401392,
+            "south_lat": 14.021065710547449,
+            "west_lon": 109.02732726066121,
+            "east_lon": 109.03219784021103
+          },
+          "center_coordinates": {
+            "lat": 14.02344412,
+            "lon": 109.02976255
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile422(r1c7_1m)",
+          "tile": 422,
+          "row": 1,
+          "col": 7,
+          "n_fields": 97,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.025743676655003,
+            "south_lat": 14.02098679585729,
+            "west_lon": 109.03205704735664,
+            "east_lon": 109.03692769174822
+          },
+          "center_coordinates": {
+            "lat": 14.02336524,
+            "lon": 109.03449237
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile423(r1c8_1m)",
+          "tile": 423,
+          "row": 1,
+          "col": 8,
+          "n_fields": 70,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.025664734945753,
+            "south_lat": 14.02090778923835,
+            "west_lon": 109.03678680474916,
+            "east_lon": 109.0416575139456
+          },
+          "center_coordinates": {
+            "lat": 14.02328626,
+            "lon": 109.03922216
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1553778.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1554290.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile424(r2c0_1m)",
+          "tile": 424,
+          "row": 2,
+          "col": 0,
+          "n_fields": 34,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021675539152653,
+            "south_lat": 14.016919138268099,
+            "west_lon": 108.99886782233763,
+            "east_lon": 109.00373788883392
+          },
+          "center_coordinates": {
+            "lat": 14.01929734,
+            "lon": 109.00130286
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile425(r2c1_1m)",
+          "tile": 425,
+          "row": 2,
+          "col": 1,
+          "n_fields": 103,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021597268037272,
+            "south_lat": 14.016840802034928,
+            "west_lon": 109.0035976900043,
+            "east_lon": 109.00846782153236
+          },
+          "center_coordinates": {
+            "lat": 14.01921904,
+            "lon": 109.00603276
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile426(r2c2_1m)",
+          "tile": 426,
+          "row": 2,
+          "col": 2,
+          "n_fields": 138,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021518904974801,
+            "south_lat": 14.016762373888733,
+            "west_lon": 109.0083275285755,
+            "east_lon": 109.01319772509842
+          },
+          "center_coordinates": {
+            "lat": 14.01914064,
+            "lon": 109.01076263
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile427(r2c3_1m)",
+          "tile": 427,
+          "row": 2,
+          "col": 3,
+          "n_fields": 61,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021440449967848,
+            "south_lat": 14.016683853832129,
+            "west_lon": 109.01305733801709,
+            "east_lon": 109.01792759949798
+          },
+          "center_coordinates": {
+            "lat": 14.01906215,
+            "lon": 109.01549247
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile428(r2c4_1m)",
+          "tile": 428,
+          "row": 2,
+          "col": 4,
+          "n_fields": 11,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021361903019026,
+            "south_lat": 14.01660524186772,
+            "west_lon": 109.01778711829495,
+            "east_lon": 109.02265744469695
+          },
+          "center_coordinates": {
+            "lat": 14.01898357,
+            "lon": 109.02022228
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile429(r2c5_1m)",
+          "tile": 429,
+          "row": 2,
+          "col": 5,
+          "n_fields": 57,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021283264130938,
+            "south_lat": 14.016526537998136,
+            "west_lon": 109.022516869375,
+            "east_lon": 109.0273872606612
+          },
+          "center_coordinates": {
+            "lat": 14.0189049,
+            "lon": 109.02495207
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile430(r2c6_1m)",
+          "tile": 430,
+          "row": 2,
+          "col": 6,
+          "n_fields": 108,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021204533306207,
+            "south_lat": 14.01644774222597,
+            "west_lon": 109.02724659122312,
+            "east_lon": 109.03211704735664
+          },
+          "center_coordinates": {
+            "lat": 14.01882614,
+            "lon": 109.02968182
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile431(r2c7_1m)",
+          "tile": 431,
+          "row": 2,
+          "col": 7,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.02112571054745,
+            "south_lat": 14.016368854553868,
+            "west_lon": 109.0319762838052,
+            "east_lon": 109.03684680474915
+          },
+          "center_coordinates": {
+            "lat": 14.01874728,
+            "lon": 109.03441154
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile432(r2c8_1m)",
+          "tile": 432,
+          "row": 2,
+          "col": 8,
+          "n_fields": 63,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.021046795857291,
+            "south_lat": 14.016289874984437,
+            "west_lon": 109.03670594708713,
+            "east_lon": 109.04157653280463
+          },
+          "center_coordinates": {
+            "lat": 14.01866834,
+            "lon": 109.03914124
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1553266.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1553778.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile433(r3c0_1m)",
+          "tile": 433,
+          "row": 3,
+          "col": 0,
+          "n_fields": 49,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.017057382585644,
+            "south_lat": 14.012301006291903,
+            "west_lon": 108.99878774669936,
+            "east_lon": 109.00365769000429
+          },
+          "center_coordinates": {
+            "lat": 14.01467919,
+            "lon": 109.00122272
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile434(r3c1_1m)",
+          "tile": 434,
+          "row": 3,
+          "col": 1,
+          "n_fields": 78,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.0169791382681,
+            "south_lat": 14.012222696887001,
+            "west_lon": 109.00351752027017,
+            "east_lon": 109.0083875285755
+          },
+          "center_coordinates": {
+            "lat": 14.01460092,
+            "lon": 109.00595252
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile435(r3c2_1m)",
+          "tile": 435,
+          "row": 3,
+          "col": 2,
+          "n_fields": 84,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016900802034929,
+            "south_lat": 14.012144295600535,
+            "west_lon": 109.00824726474822,
+            "east_lon": 109.01311733801708
+          },
+          "center_coordinates": {
+            "lat": 14.01452255,
+            "lon": 109.0106823
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile436(r3c3_1m)",
+          "tile": 436,
+          "row": 3,
+          "col": 3,
+          "n_fields": 79,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016822373888735,
+            "south_lat": 14.01206580243512,
+            "west_lon": 109.01297698009947,
+            "east_lon": 109.01784711829494
+          },
+          "center_coordinates": {
+            "lat": 14.01444409,
+            "lon": 109.01541205
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile437(r3c4_1m)",
+          "tile": 437,
+          "row": 3,
+          "col": 4,
+          "n_fields": 68,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.01674385383213,
+            "south_lat": 14.011987217393363,
+            "west_lon": 109.01770666628974,
+            "east_lon": 109.02257686937499
+          },
+          "center_coordinates": {
+            "lat": 14.01436554,
+            "lon": 109.02014177
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile438(r3c5_1m)",
+          "tile": 438,
+          "row": 3,
+          "col": 5,
+          "n_fields": 72,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016665241867722,
+            "south_lat": 14.011908540477878,
+            "west_lon": 109.02243632328498,
+            "east_lon": 109.02730659122311
+          },
+          "center_coordinates": {
+            "lat": 14.01428689,
+            "lon": 109.02487146
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile439(r3c6_1m)",
+          "tile": 439,
+          "row": 3,
+          "col": 6,
+          "n_fields": 83,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016586537998137,
+            "south_lat": 14.011829771691279,
+            "west_lon": 109.02716595105106,
+            "east_lon": 109.03203628380518
+          },
+          "center_coordinates": {
+            "lat": 14.01420815,
+            "lon": 109.02960112
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile440(r3c7_1m)",
+          "tile": 440,
+          "row": 3,
+          "col": 7,
+          "n_fields": 46,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016507742225972,
+            "south_lat": 14.011750911036192,
+            "west_lon": 109.03189554955388,
+            "east_lon": 109.03676594708712
+          },
+          "center_coordinates": {
+            "lat": 14.01412933,
+            "lon": 109.03433075
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile441(r3c8_1m)",
+          "tile": 441,
+          "row": 3,
+          "col": 8,
+          "n_fields": 47,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.016428854553869,
+            "south_lat": 14.011671958515233,
+            "west_lon": 109.03662511875935,
+            "east_lon": 109.04149558103481
+          },
+          "center_coordinates": {
+            "lat": 14.01405041,
+            "lon": 109.03906035
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1552754.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1553266.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile442(r4c0_1m)",
+          "tile": 442,
+          "row": 4,
+          "col": 0,
+          "n_fields": 23,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012439223812638,
+            "south_lat": 14.007682872109378,
+            "west_lon": 108.99870770011972,
+            "east_lon": 109.00357752027016
+          },
+          "center_coordinates": {
+            "lat": 14.01006105,
+            "lon": 109.00114261
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile443(r4c1_1m)",
+          "tile": 443,
+          "row": 4,
+          "col": 1,
+          "n_fields": 23,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012361006291904,
+            "south_lat": 14.00760458953172,
+            "west_lon": 109.00343737962874,
+            "east_lon": 109.00830726474821
+          },
+          "center_coordinates": {
+            "lat": 14.0099828,
+            "lon": 109.00587232
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile444(r4c2_1m)",
+          "tile": 444,
+          "row": 4,
+          "col": 2,
+          "n_fields": 45,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012282696887002,
+            "south_lat": 14.007526215103955,
+            "west_lon": 109.0081670300478,
+            "east_lon": 109.01303698009946
+          },
+          "center_coordinates": {
+            "lat": 14.00990446,
+            "lon": 109.01060201
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile445(r4c3_1m)",
+          "tile": 445,
+          "row": 4,
+          "col": 3,
+          "n_fields": 9,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012204295600537,
+            "south_lat": 14.007447748828698,
+            "west_lon": 109.01289665134277,
+            "east_lon": 109.01776666628973
+          },
+          "center_coordinates": {
+            "lat": 14.00982602,
+            "lon": 109.01533166
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile446(r4c4_1m)",
+          "tile": 446,
+          "row": 4,
+          "col": 4,
+          "n_fields": 63,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012125802435122,
+            "south_lat": 14.007369190708557,
+            "west_lon": 109.01762624347958,
+            "east_lon": 109.02249632328497
+          },
+          "center_coordinates": {
+            "lat": 14.0097475,
+            "lon": 109.02006128
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile447(r4c5_1m)",
+          "tile": 447,
+          "row": 4,
+          "col": 5,
+          "n_fields": 62,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.012047217393365,
+            "south_lat": 14.00729054074614,
+            "west_lon": 109.02235580642412,
+            "east_lon": 109.02722595105105
+          },
+          "center_coordinates": {
+            "lat": 14.00966888,
+            "lon": 109.02479088
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile448(r4c6_1m)",
+          "tile": 448,
+          "row": 4,
+          "col": 6,
+          "n_fields": 47,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.011968540477879,
+            "south_lat": 14.007211798944072,
+            "west_lon": 109.02708534014226,
+            "east_lon": 109.03195554955387
+          },
+          "center_coordinates": {
+            "lat": 14.00959017,
+            "lon": 109.02952044
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile449(r4c7_1m)",
+          "tile": 449,
+          "row": 4,
+          "col": 7,
+          "n_fields": 97,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.01188977169128,
+            "south_lat": 14.007132965304963,
+            "west_lon": 109.03181484459994,
+            "east_lon": 109.03668511875934
+          },
+          "center_coordinates": {
+            "lat": 14.00951137,
+            "lon": 109.03424998
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile450(r4c8_1m)",
+          "tile": 450,
+          "row": 4,
+          "col": 8,
+          "n_fields": 46,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.011810911036193,
+            "south_lat": 14.00705403983144,
+            "west_lon": 109.03654431976302,
+            "east_lon": 109.04141465863333
+          },
+          "center_coordinates": {
+            "lat": 14.00943248,
+            "lon": 109.03897949
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1552242.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1552754.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile451(r5c0_1m)",
+          "tile": 451,
+          "row": 5,
+          "col": 0,
+          "n_fields": 65,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007821062834338,
+            "south_lat": 14.003064735721239,
+            "west_lon": 108.99862768259595,
+            "east_lon": 109.00349737962873
+          },
+          "center_coordinates": {
+            "lat": 14.0054429,
+            "lon": 109.00106253
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile452(r5c1_1m)",
+          "tile": 452,
+          "row": 5,
+          "col": 1,
+          "n_fields": 40,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007742872109379,
+            "south_lat": 14.00298647996979,
+            "west_lon": 109.0033572680773,
+            "east_lon": 109.00822703004779
+          },
+          "center_coordinates": {
+            "lat": 14.00536468,
+            "lon": 109.00579215
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile453(r5c2_1m)",
+          "tile": 453,
+          "row": 5,
+          "col": 2,
+          "n_fields": 18,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007664589531721,
+            "south_lat": 14.002908132399702,
+            "west_lon": 109.00808682447143,
+            "east_lon": 109.01295665134276
+          },
+          "center_coordinates": {
+            "lat": 14.00528636,
+            "lon": 109.01052174
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile454(r5c3_1m)",
+          "tile": 454,
+          "row": 5,
+          "col": 3,
+          "n_fields": 23,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007586215103956,
+            "south_lat": 14.00282969301357,
+            "west_lon": 109.01281635174428,
+            "east_lon": 109.01768624347957
+          },
+          "center_coordinates": {
+            "lat": 14.00520795,
+            "lon": 109.0152513
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile455(r5c4_1m)",
+          "tile": 455,
+          "row": 5,
+          "col": 4,
+          "n_fields": 37,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007507748828699,
+            "south_lat": 14.002751161814011,
+            "west_lon": 109.0175458498617,
+            "east_lon": 109.0224158064241
+          },
+          "center_coordinates": {
+            "lat": 14.00512946,
+            "lon": 109.01998083
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile456(r5c5_1m)",
+          "tile": 456,
+          "row": 5,
+          "col": 5,
+          "n_fields": 7,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007429190708558,
+            "south_lat": 14.002672538803635,
+            "west_lon": 109.02227531878962,
+            "east_lon": 109.02714534014225
+          },
+          "center_coordinates": {
+            "lat": 14.00505086,
+            "lon": 109.02471033
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile457(r5c6_1m)",
+          "tile": 457,
+          "row": 5,
+          "col": 6,
+          "n_fields": 64,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007350540746142,
+            "south_lat": 14.002593823985052,
+            "west_lon": 109.02700475849394,
+            "east_lon": 109.03187484459993
+          },
+          "center_coordinates": {
+            "lat": 14.00497218,
+            "lon": 109.0294398
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile458(r5c7_1m)",
+          "tile": 458,
+          "row": 5,
+          "col": 7,
+          "n_fields": 95,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007271798944073,
+            "south_lat": 14.00251501736089,
+            "west_lon": 109.03173416894056,
+            "east_lon": 109.03660431976301
+          },
+          "center_coordinates": {
+            "lat": 14.00489341,
+            "lon": 109.03416924
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile459(r5c8_1m)",
+          "tile": 459,
+          "row": 5,
+          "col": 8,
+          "n_fields": 100,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.007192965304965,
+            "south_lat": 14.002436118933765,
+            "west_lon": 109.03646355009538,
+            "east_lon": 109.04133376559743
+          },
+          "center_coordinates": {
+            "lat": 14.00481454,
+            "lon": 109.03889866
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1551730.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1552242.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile460(r6c0_1m)",
+          "tile": 460,
+          "row": 6,
+          "col": 0,
+          "n_fields": 89,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.003202899651441,
+            "south_lat": 13.998446597128178,
+            "west_lon": 108.99854769412528,
+            "east_lon": 109.00341726807729
+          },
+          "center_coordinates": {
+            "lat": 14.00082475,
+            "lon": 109.00098248
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile461(r6c1_1m)",
+          "tile": 461,
+          "row": 6,
+          "col": 1,
+          "n_fields": 81,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.00312473572124,
+            "south_lat": 13.998368368201916,
+            "west_lon": 109.00327718561306,
+            "east_lon": 109.00814682447142
+          },
+          "center_coordinates": {
+            "lat": 14.00074655,
+            "lon": 109.00571201
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile462(r6c2_1m)",
+          "tile": 462,
+          "row": 6,
+          "col": 2,
+          "n_fields": 41,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.003046479969791,
+            "south_lat": 13.998290047488466,
+            "west_lon": 109.00800664801639,
+            "east_lon": 109.01287635174427
+          },
+          "center_coordinates": {
+            "lat": 14.00066826,
+            "lon": 109.0104415
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile463(r6c3_1m)",
+          "tile": 463,
+          "row": 6,
+          "col": 3,
+          "n_fields": 45,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002968132399703,
+            "south_lat": 13.998211634990431,
+            "west_lon": 109.01273608130117,
+            "east_lon": 109.0176058498617
+          },
+          "center_coordinates": {
+            "lat": 14.00058988,
+            "lon": 109.01517097
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile464(r6c4_1m)",
+          "tile": 464,
+          "row": 6,
+          "col": 4,
+          "n_fields": 69,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002889693013572,
+            "south_lat": 13.998133130710425,
+            "west_lon": 109.01746548543332,
+            "east_lon": 109.02233531878962
+          },
+          "center_coordinates": {
+            "lat": 14.00051141,
+            "lon": 109.0199004
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile465(r6c5_1m)",
+          "tile": 465,
+          "row": 6,
+          "col": 5,
+          "n_fields": 31,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002811161814012,
+            "south_lat": 13.998054534651054,
+            "west_lon": 109.02219486037875,
+            "east_lon": 109.02706475849394
+          },
+          "center_coordinates": {
+            "lat": 14.00043285,
+            "lon": 109.02462981
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile466(r6c6_1m)",
+          "tile": 466,
+          "row": 6,
+          "col": 6,
+          "n_fields": 88,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002732538803636,
+            "south_lat": 13.997975846814935,
+            "west_lon": 109.02692420610333,
+            "east_lon": 109.03179416894055
+          },
+          "center_coordinates": {
+            "lat": 14.00035419,
+            "lon": 109.02935919
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile467(r6c7_1m)",
+          "tile": 467,
+          "row": 6,
+          "col": 7,
+          "n_fields": 115,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002653823985053,
+            "south_lat": 13.997897067204683,
+            "west_lon": 109.031653522573,
+            "east_lon": 109.03652355009537
+          },
+          "center_coordinates": {
+            "lat": 14.00027545,
+            "lon": 109.03408854
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile468(r6c8_1m)",
+          "tile": 468,
+          "row": 6,
+          "col": 8,
+          "n_fields": 119,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 14.002575017360892,
+            "south_lat": 13.99781819582292,
+            "west_lon": 109.03638280975363,
+            "east_lon": 109.0412529019243
+          },
+          "center_coordinates": {
+            "lat": 14.00019661,
+            "lon": 109.03881786
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1551218.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1551730.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile469(r7c0_1m)",
+          "tile": 469,
+          "row": 7,
+          "col": 0,
+          "n_fields": 136,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998584734264655,
+            "south_lat": 13.993828456330906,
+            "west_lon": 108.99846773470495,
+            "east_lon": 109.00333718561305
+          },
+          "center_coordinates": {
+            "lat": 13.9962066,
+            "lon": 109.00090246
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile470(r7c1_1m)",
+          "tile": 470,
+          "row": 7,
+          "col": 1,
+          "n_fields": 109,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998506597128179,
+            "south_lat": 13.9937502542288,
+            "west_lon": 109.00319713223324,
+            "east_lon": 109.00806664801638
+          },
+          "center_coordinates": {
+            "lat": 13.99612843,
+            "lon": 109.00563189
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile471(r7c2_1m)",
+          "tile": 471,
+          "row": 7,
+          "col": 2,
+          "n_fields": 90,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998428368201917,
+            "south_lat": 13.99367196037096,
+            "west_lon": 109.00792650067987,
+            "east_lon": 109.01279608130116
+          },
+          "center_coordinates": {
+            "lat": 13.99605016,
+            "lon": 109.01036129
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile472(r7c3_1m)",
+          "tile": 472,
+          "row": 7,
+          "col": 3,
+          "n_fields": 79,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998350047488467,
+            "south_lat": 13.993593574759997,
+            "west_lon": 109.01265584001072,
+            "east_lon": 109.01752548543331
+          },
+          "center_coordinates": {
+            "lat": 13.99597181,
+            "lon": 109.01509066
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile473(r7c4_1m)",
+          "tile": 473,
+          "row": 7,
+          "col": 4,
+          "n_fields": 84,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998271634990433,
+            "south_lat": 13.993515097398511,
+            "west_lon": 109.0173851501917,
+            "east_lon": 109.02225486037874
+          },
+          "center_coordinates": {
+            "lat": 13.99589337,
+            "lon": 109.01982001
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile474(r7c5_1m)",
+          "tile": 474,
+          "row": 7,
+          "col": 5,
+          "n_fields": 201,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998193130710426,
+            "south_lat": 13.993436528289111,
+            "west_lon": 109.0221144311887,
+            "east_lon": 109.02698420610332
+          },
+          "center_coordinates": {
+            "lat": 13.99581483,
+            "lon": 109.02454932
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile475(r7c6_1m)",
+          "tile": 475,
+          "row": 7,
+          "col": 6,
+          "n_fields": 169,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998114534651055,
+            "south_lat": 13.993357867434419,
+            "west_lon": 109.02684368296765,
+            "east_lon": 109.03171352257299
+          },
+          "center_coordinates": {
+            "lat": 13.9957362,
+            "lon": 109.0292786
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile476(r7c7_1m)",
+          "tile": 476,
+          "row": 7,
+          "col": 7,
+          "n_fields": 136,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.998035846814936,
+            "south_lat": 13.993279114837042,
+            "west_lon": 109.03157290549444,
+            "east_lon": 109.03644280975362
+          },
+          "center_coordinates": {
+            "lat": 13.99565748,
+            "lon": 109.03400786
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile477(r7c8_1m)",
+          "tile": 477,
+          "row": 7,
+          "col": 8,
+          "n_fields": 109,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.997957067204684,
+            "south_lat": 13.993200270499603,
+            "west_lon": 109.03630209873499,
+            "east_lon": 109.04117206761116
+          },
+          "center_coordinates": {
+            "lat": 13.99557867,
+            "lon": 109.03873708
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1550706.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1551218.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile478(r8c0_1m)",
+          "tile": 478,
+          "row": 8,
+          "col": 0,
+          "n_fields": 130,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.99396656667468,
+            "south_lat": 13.989210313330124,
+            "west_lon": 108.9983878043322,
+            "east_lon": 109.00325713223323
+          },
+          "center_coordinates": {
+            "lat": 13.99158844,
+            "lon": 109.00082247
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932124.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 932636.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile479(r8c1_1m)",
+          "tile": 479,
+          "row": 8,
+          "col": 1,
+          "n_fields": 74,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993888456330907,
+            "south_lat": 13.989132138051145,
+            "west_lon": 109.00311710793513,
+            "east_lon": 109.00798650067986
+          },
+          "center_coordinates": {
+            "lat": 13.9915103,
+            "lon": 109.0055518
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 932636.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 933148.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile480(r8c2_1m)",
+          "tile": 480,
+          "row": 8,
+          "col": 2,
+          "n_fields": 61,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993810254228801,
+            "south_lat": 13.989053871047894,
+            "west_lon": 109.00784638245915,
+            "east_lon": 109.01271584001071
+          },
+          "center_coordinates": {
+            "lat": 13.99143206,
+            "lon": 109.01028111
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933148.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 933660.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile481(r8c3_1m)",
+          "tile": 481,
+          "row": 8,
+          "col": 3,
+          "n_fields": 63,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993731960370962,
+            "south_lat": 13.988975512322966,
+            "west_lon": 109.01257562787013,
+            "east_lon": 109.01744515019169
+          },
+          "center_coordinates": {
+            "lat": 13.99135374,
+            "lon": 109.01501039
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 933660.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 934172.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile482(r8c4_1m)",
+          "tile": 482,
+          "row": 8,
+          "col": 4,
+          "n_fields": 133,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993653574759998,
+            "south_lat": 13.98889706187897,
+            "west_lon": 109.01730484413402,
+            "east_lon": 109.02217443118869
+          },
+          "center_coordinates": {
+            "lat": 13.99127532,
+            "lon": 109.01973964
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934172.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 934684.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile483(r8c5_1m)",
+          "tile": 483,
+          "row": 8,
+          "col": 5,
+          "n_fields": 104,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993575097398512,
+            "south_lat": 13.988818519718514,
+            "west_lon": 109.0220340312167,
+            "east_lon": 109.02690368296764
+          },
+          "center_coordinates": {
+            "lat": 13.99119681,
+            "lon": 109.02446886
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 934684.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 935196.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile484(r8c6_1m)",
+          "tile": 484,
+          "row": 8,
+          "col": 6,
+          "n_fields": 120,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993496528289112,
+            "south_lat": 13.988739885844211,
+            "west_lon": 109.02676318908411,
+            "east_lon": 109.03163290549443
+          },
+          "center_coordinates": {
+            "lat": 13.99111821,
+            "lon": 109.02919805
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935196.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 935708.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile485(r8c7_1m)",
+          "tile": 485,
+          "row": 8,
+          "col": 7,
+          "n_fields": 107,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.99341786743442,
+            "south_lat": 13.988661160258676,
+            "west_lon": 109.03149231770213,
+            "east_lon": 109.03636209873498
+          },
+          "center_coordinates": {
+            "lat": 13.99103951,
+            "lon": 109.03392721
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 935708.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 936220.105764846,
+            "ymax": 1550706.282172318
+          }
+        },
+        {
+          "location_label": "VIETNAM_area46_tile486(r8c8_1m)",
+          "tile": 486,
+          "row": 8,
+          "col": 8,
+          "n_fields": 86,
+          "in_label_split": true,
+          "bounding_box": {
+            "north_lat": 13.993339114837044,
+            "south_lat": 13.988582342964529,
+            "west_lon": 109.03622141703669,
+            "east_lon": 109.04109126265521
+          },
+          "center_coordinates": {
+            "lat": 13.99096073,
+            "lon": 109.03865634
+          },
+          "utm_epsg": "EPSG:32648",
+          "bounds_utm": {
+            "xmin": 936220.105764846,
+            "ymin": 1550194.282172318,
+            "xmax": 936732.105764846,
+            "ymax": 1550706.282172318
+          }
+        }
+      ]
+    }
+  ]
+}

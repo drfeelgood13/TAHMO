@@ -1,0 +1,201 @@
+{
+  "split": "val",
+  "dataset": "GHANA 110",
+  "coordinate_crs": "EPSG:4326",
+  "coordinate_units": "degrees",
+  "location_count": 12,
+  "locations": [
+    {
+      "id": 1,
+      "location_label": "GHANA_area019_GH0495616",
+      "region": "ej",
+      "area": 19,
+      "grid": "GH0495616",
+      "bounding_box": {
+        "north_lat": 7.12569,
+        "south_lat": 7.119191,
+        "west_lon": -1.411661,
+        "east_lon": -1.405457
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-10-15"
+    },
+    {
+      "id": 2,
+      "location_label": "GHANA_area023_GH0013257",
+      "region": "north",
+      "area": 23,
+      "grid": "GH0013257",
+      "bounding_box": {
+        "north_lat": 10.900844,
+        "south_lat": 10.894293,
+        "west_lon": -0.536632,
+        "east_lon": -0.53047
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 3,
+      "location_label": "GHANA_area030_GH0016065",
+      "region": "north",
+      "area": 30,
+      "grid": "GH0016065",
+      "bounding_box": {
+        "north_lat": 10.874999,
+        "south_lat": 10.870001,
+        "west_lon": -0.655999,
+        "east_lon": -0.651001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 4,
+      "location_label": "GHANA_area033_GH0190609",
+      "region": "north",
+      "area": 33,
+      "grid": "GH0190609",
+      "bounding_box": {
+        "north_lat": 9.445771,
+        "south_lat": 9.439203,
+        "west_lon": -1.106614,
+        "east_lon": -1.100436
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 5,
+      "location_label": "GHANA_area041_GH0043509",
+      "region": "north",
+      "area": 41,
+      "grid": "GH0043509",
+      "bounding_box": {
+        "north_lat": 10.634999,
+        "south_lat": 10.630001,
+        "west_lon": -0.105999,
+        "east_lon": -0.101001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 6,
+      "location_label": "GHANA_area059_GH0011255",
+      "region": "north",
+      "area": 59,
+      "grid": "GH0011255",
+      "bounding_box": {
+        "north_lat": 10.914999,
+        "south_lat": 10.910001,
+        "west_lon": -2.130999,
+        "east_lon": -2.126001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 7,
+      "location_label": "GHANA_area062_GH0007358",
+      "region": "north",
+      "area": 62,
+      "grid": "GH0007358",
+      "bounding_box": {
+        "north_lat": 10.949999,
+        "south_lat": 10.945001,
+        "west_lon": -2.145999,
+        "east_lon": -2.141001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 8,
+      "location_label": "GHANA_area067_GH0449527",
+      "region": "ej",
+      "area": 67,
+      "grid": "GH0449527",
+      "bounding_box": {
+        "north_lat": 7.445663,
+        "south_lat": 7.439469,
+        "west_lon": -1.670899,
+        "east_lon": -1.665837
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-10-15"
+    },
+    {
+      "id": 9,
+      "location_label": "GHANA_area083_GH0157466",
+      "region": "north",
+      "area": 83,
+      "grid": "GH0157466",
+      "bounding_box": {
+        "north_lat": 9.715926,
+        "south_lat": 9.709026,
+        "west_lon": -0.801632,
+        "east_lon": -0.795287
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-09-15"
+    },
+    {
+      "id": 10,
+      "location_label": "GHANA_area090_GH0406693",
+      "region": "ej",
+      "area": 90,
+      "grid": "GH0406693",
+      "bounding_box": {
+        "north_lat": 7.754999,
+        "south_lat": 7.750001,
+        "west_lon": -1.070999,
+        "east_lon": -1.066001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-10-15"
+    },
+    {
+      "id": 11,
+      "location_label": "GHANA_area095_GH0486928",
+      "region": "ej",
+      "area": 95,
+      "grid": "GH0486928",
+      "bounding_box": {
+        "north_lat": 7.184999,
+        "south_lat": 7.180001,
+        "west_lon": -1.330491,
+        "east_lon": -1.326001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-10-15"
+    },
+    {
+      "id": 12,
+      "location_label": "GHANA_area107_GH0435813",
+      "region": "ej",
+      "area": 107,
+      "grid": "GH0435813",
+      "bounding_box": {
+        "north_lat": 7.544999,
+        "south_lat": 7.540001,
+        "west_lon": -1.275999,
+        "east_lon": -1.271001
+      },
+      "utm_epsg": "EPSG:32630",
+      "label_year": 2021,
+      "green_season_date": "2021-10-15"
+    }
+  ]
+}

@@ -78,6 +78,28 @@ The settings that matter for our experiments:
 
 The same config was used for the zero-shot model and for all fine-tuned models; only the model path differs.
 
+### PlanetScope imagery
+
+Delineate Anything also runs on the 4-band PlanetScope surface reflectance from
+[../downloaders/downloader_planet.py](../downloaders/README.md#planetscope). Two things differ from Google Maps:
+
+- **One scene per area folder.** All `.tif` files in a folder are read as one mosaic, so the two dates the downloader
+  fetches for FTP would be run together and their fields merged. The Ghana area files have a `green_season_date`, for
+  which the downloader fetches one 2021 scene per area (the year of the labels). For the 2025 windows use
+  `--fixed-windows --window a` (or `b`), or copy one of the two FTP files of each area into a folder of its own.
+- **Config [finetune/conf_planet.yaml](finetune/conf_planet.yaml).** The same as `conf_zero_shot.yaml` except
+  `bands: [1, 2, 3]`: the files are B, G, R, NIR, so `[3, 2, 1]` would swap red and blue. NIR is not used. The
+  16-bit values are stretched by the model's own normalization (1st to 99th percentile per band).
+
+```bash
+python ../downloaders/downloader_planet.py --input ../downloaders/inputs/test_set.json \
+    --output /abs/path/data/planet_test_set_2021
+```
+
+Then use `base_config: finetune/conf_planet.yaml` and `data_root: /abs/path/data/planet_test_set_2021` in the batch file;
+the area folders are named by the plain label (e.g. `GHANA_area004_GH0004386`). At 3 m no super-resolution is applied
+(`super_resolution: null` only upsamples from 4 m); set it to 2 to try 1.5 m.
+
 ### Experiments using inference only
 
 - **Base-model comparison:** `large_v2` zero-shot on the Ghana test areas at 1 m Google Maps imagery.
@@ -110,11 +132,14 @@ python finetune/prepare_viedia.py --images /abs/path/data/viedia_1m --labels /ab
 - **Ghana.** Imagery is cut into 512 × 512 px tiles (stride 256 for training, 512 for validation/test); tiles that are
   more than half nodata are skipped; label polygons under 20 m² are dropped; non-crop labels are excluded. The split is
   **by area, never by tile**: the 32 test areas are the ones marked `ref` in the labels, 12 of the remaining 78 are drawn
-  for validation (seed 0, stratified by region) and the other 66 are training areas. The exact area lists are in
-  [../data/weights/README.md](../data/weights/README.md#data-splits). Train/val/test = 259/46/130 tiles.
+  for validation (seed 0, stratified by region) and the other 66 are training areas. The exact area lists are
+  [../downloaders/inputs/ghana_train.json](../downloaders/inputs/ghana_train.json), `ghana_val.json` and
+  `ghana_test.json`. Train/val/test = 259/46/130 tiles.
 - **VIEDIA.** Every image is already one 512 px tile. Per country, one area is drawn for test and one for validation
   (seed 0), the rest is training. Tiles with an empty label file are dropped. Train/val/test = 483/162/162 tiles
-  (test: Cambodia area 13, Vietnam area 44).
+  (test: Cambodia area 13, Vietnam area 44). The areas and their tiles are listed in
+  [../downloaders/inputs/viedia_train.json](../downloaders/inputs/viedia_train.json), `viedia_val.json` and
+  `viedia_test.json`.
 - **Combined dataset.** For the Ghana + VIEDIA models, write a `data.yaml` that lists both datasets under `train:` and
   `val:` (each dataset keeps its own test split):
 
@@ -154,12 +179,15 @@ python finetune/train.py ... --name combined_1m_unfrozen  --data /abs/path/data/
 
 The exact `--mosaic` setting of the unfrozen run was not recorded and is a best guess (the original run name
 contained "mosaic"). Treat the unfrozen variant as the least certain to reproduce. The original fine-tuned weights are
-listed in [../data/weights/README.md](../data/weights/README.md).
+published on Hugging Face at [huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2](https://huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2)
+(`best_trained_on_ghana.pt`, `best_trained_on_ghana_viedia.pt`, `best_trained_on_ghana_viedia_unfrozen.pt`).
 
 ### 3. Run the fine-tuned model
 
 Same as zero-shot inference: copy `finetune/conf_zero_shot.yaml`, set `model` and `passes[0].model_args[0].name` to
-the `best.pt` path, and point the batch file's `base_config` at that copy.
+the `best.pt` path (or to a `.pt` downloaded from
+[Hugging Face](https://huggingface.co/jimmyoe/ghana-fine-tuned-del-any-v2) to use our weights without training), and
+point the batch file's `base_config` at that copy.
 
 ## Tips
 
