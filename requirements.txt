@@ -3,12 +3,16 @@ dask[distributed]>=2025.5.1
 fiboa-cli>=0.21,<0.22
 fsspec[http]>=2025.7,<2026
 geopandas>=1,<2
+huggingface-hub>=0.32
 kornia>=0.8.2,<0.9
 lightning>=2,<2.6
 matplotlib>=3.7,<4
 notebook>=7,<8
+numba>=0.62
 numpy>=1.24,<3
 odc-stac>=0.5,<1
+opencv-python>=4.11
+pandas
 Pillow
 planetary-computer>=1,<2
 pyarrow>=21,<24
@@ -28,5 +32,9 @@ tensorboard>=2.15,<3
 torch>=2.2,<3
 torchgeo>=0.9,<1
 torchvision>=0.17,<0.26
+tornado>=6.5
 tqdm>=4.65,<5
+ultralytics==8.3.148
 urllib3
+# Delineate Anything (delany/delineate.py) also needs GDAL (osgeo), which pip cannot install on Windows:
+# conda install -c conda-forge gdal

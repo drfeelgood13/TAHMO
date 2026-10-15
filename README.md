@@ -44,8 +44,8 @@ The exact areas of each split are listed in [downloaders/inputs/](downloaders/in
 
 ```bash
 python -m venv .venv && source .venv/bin/activate 
-pip install -r requirements.txt          # for downloaders, FTW, FTP
+pip install -r requirements.txt          # for downloaders, FTW, FTP, Delineate Anything
 ```
 
-Delineate Anything v2 needs GDAL and has its own environment; see [delany/README.md](delany/README.md#environment).
+Delineate Anything inference (`delany/delineate.py`) also needs GDAL; see [delany/README.md](delany/README.md#environment).
 Large data (imagery, datasets) is not in git; it goes under `data/`. The fine-tuned weights are on Hugging Face (see above).
